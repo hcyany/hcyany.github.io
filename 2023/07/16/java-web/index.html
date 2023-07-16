@@ -1,0 +1,3975 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java Web, 博客">
+    <meta name="description" content="Java WebJava Web什么是JavaWeb?
+Web:全球广域网，也称为万维网(WWW),能够通过浏览器访问的网站
+JavaWeb:是用Java技术来解决相关web互联网领域的技术栈
+
+JavaWeb 组成
+1.网页：展现数据
+2">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java Web | 博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">博客</div>
+        <div class="logo-desc">
+            
+            赵燕军的个人博客网站
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java Web</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                                <span class="chip bg-color">作者：赵燕军</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-07-16
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h2 id="Java-Web-1"><a href="#Java-Web-1" class="headerlink" title="Java Web"></a>Java Web</h2><h3 id="什么是JavaWeb"><a href="#什么是JavaWeb" class="headerlink" title="什么是JavaWeb?"></a>什么是JavaWeb?</h3><ul>
+<li>Web:全球广域网，也称为万维网(WWW),能够通过浏览器访问的网站</li>
+<li>JavaWeb:是用Java技术来解决相关web互联网领域的技术栈</li>
+</ul>
+<h3 id="JavaWeb-组成"><a href="#JavaWeb-组成" class="headerlink" title="JavaWeb 组成"></a>JavaWeb 组成</h3><ul>
+<li>1.网页：展现数据</li>
+<li>2.数据库：存储和管理数据</li>
+<li>3.JavaWeb程序：逻辑处理</li>
+</ul>
+<h3 id="Java技术栈"><a href="#Java技术栈" class="headerlink" title="Java技术栈"></a>Java技术栈</h3><ul>
+<li><p>B/S架构</p>
+<ul>
+<li>B/S架构：浏览器/服务器架构模式，它的特点是，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web资源，服务器把Web资源发送给浏览器即可</li>
+<li>好处：易于维护升级：服务器端升级后，客户端无需任何部署就可以使用到新的版本</li>
+</ul>
+</li>
+<li><p>C/S架构</p>
+</li>
+<li><p>静态资源</p>
+<ul>
+<li>静态资源：HTML、CSS、JavaScript、图片等。负责页面展现</li>
+</ul>
+</li>
+<li><p>动态资源</p>
+<ul>
+<li>动态资源：Servlet、JSP等。负责逻辑处理</li>
+</ul>
+</li>
+<li><p>数据库</p>
+<ul>
+<li>存储数据</li>
+</ul>
+</li>
+<li><p>HTTP</p>
+<ul>
+<li>定义通信规则</li>
+</ul>
+</li>
+<li><p>Web服务器</p>
+<ul>
+<li>Web服务器：负责解析HTTP协议，解析请求数据，并发送响应数据</li>
+</ul>
+</li>
+</ul>
+<h3 id="JavaWeb-三大组件-Servlet、Filter、Listener"><a href="#JavaWeb-三大组件-Servlet、Filter、Listener" class="headerlink" title="JavaWeb 三大组件(Servlet、Filter、Listener)"></a>JavaWeb 三大组件(Servlet、Filter、Listener)</h3><h2 id="数据库-MySQL"><a href="#数据库-MySQL" class="headerlink" title="数据库 MySQL"></a>数据库 MySQL</h2><h3 id="数据库相关概念"><a href="#数据库相关概念" class="headerlink" title="数据库相关概念"></a>数据库相关概念</h3><ul>
+<li><p>·数据库</p>
+<ul>
+<li>存储数据的仓库，数据是有组织的进行存储</li>
+<li>英文：DataBase,简称DB</li>
+</ul>
+</li>
+<li><p>·数据库管理系统</p>
+<ul>
+<li>管理数据库的大型软件</li>
+<li>英文：DataBase Management System,简称DBMS</li>
+</ul>
+</li>
+<li><p>·SQL</p>
+<ul>
+<li>英文：Structured Query Language,简称SQL,结构化查询语言</li>
+<li>操作关系型数据库的编程语言</li>
+<li>定义操作所有关系型数据库的统一标准</li>
+</ul>
+</li>
+<li><p>·常见的关系型数据库管理系统</p>
+</li>
+</ul>
+<h3 id="MySQL数据库"><a href="#MySQL数据库" class="headerlink" title="MySQL数据库"></a>MySQL数据库</h3><ul>
+<li><p>登录参数：</p>
+<ul>
+<li>mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址（默认127.0.0.1） -P端口号（默认3306）</li>
+</ul>
+</li>
+<li><p>MySQL数据模型</p>
+<ul>
+<li><p>关系型数据库</p>
+<ul>
+<li><p>关系型数据库是建立在关系模型基础上的数据库，简单说，关系型数据库是由多张能互相连接的二维表组成的数据库</p>
+</li>
+<li><p>·优点</p>
+<ul>
+<li>1.都是使用表结构，格式一致，易于维护。</li>
+<li>2.使用通用的SQL语言操作，使用方便，可用于复杂查询。</li>
+<li>3.数据存储在磁盘中，安全。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><ul>
+<li><p>·SQL简介</p>
+<ul>
+<li>英文：Structured Query Language,简称SQL</li>
+<li>结构化查询语言，一门操作关系型数据库的编程语言</li>
+<li>定义操作所有关系型数据库的统一标准</li>
+<li>对于同一个需求，每一种数据库操作的方式可能会存在一些不一样的地方，我们称为“方言”</li>
+</ul>
+</li>
+<li><p>·SQL通用语法</p>
+<ul>
+<li><p>1.SQL语句可以单行或多行书写，以分号结尾。</p>
+</li>
+<li><p>2.MySQL数据库的SQL语句不区分大小写，关键字建议使用大写。</p>
+</li>
+<li><p>3.注释</p>
+<ul>
+<li>单行注释：– 注释内容(必须加空格) 或 #注释内容(MySQL特有)</li>
+<li>多行注释：/<em>注释</em>/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·SQL分类</p>
+<ul>
+<li>·DDL(Data Definition Language)数据定义语言，用来定义数据库对象：数据库，表，列等</li>
+<li>·DML(Data Manipulation Language)数据操作语言，用来对数据库中表的数据进行增删改</li>
+<li>·DQL(Data Query Language)数据查询语言，用来查询数据库中表的记录（数据）</li>
+<li>·DCL(Data Control Language)数据控制语言，用来定义数据库的访问权限和安全级别，及创建用户</li>
+</ul>
+</li>
+<li><p>·DDL</p>
+<p>  - </p>
+<pre><code>  - show database; -- 查询数据库
+  - create database ddl; -- 创建数据库
+  - create database if not exists ddl; -- 创建数据库(判断)
+  - drop database ddl; -- 删除数据库
+  - drop database if not exists ddl; -- 删除数据库(判断)
+  - select database(); -- 查询当前使用的数据库
+  - use ddl; -- 使用数据库
+</code></pre>
+<ul>
+<li><p>操作表</p>
+<ul>
+<li><p>·创建(Create)</p>
+<ul>
+<li><p>数据类型</p>
+<ul>
+<li><p>·MySQL支持多种类型，可以分为三类：</p>
+<ul>
+<li>数值</li>
+<li>·日期</li>
+<li>·字符串</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·查询(Retrieve)</p>
+<ul>
+<li><p>show tables; – 查询所有表</p>
+</li>
+<li><p>desc student; – 查询表结构</p>
+<ul>
+<li>describe student;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·修改(Update)</p>
+<ul>
+<li>alter table tb_student rename to tb_students; – 修改表名</li>
+<li>alter table tb_student add money double(7,2);– 添加一列</li>
+<li>alter table tb_student modify <code>status</code> int;– 修改数据类型</li>
+<li>alter table tb_student change <code>status</code> state int;– 修改列名和数据类型</li>
+<li>alter table tb_student drop <code>status</code>;– 删除列</li>
+</ul>
+</li>
+<li><p>·删除(Delete)</p>
+<ul>
+<li>drop table tb_user; – 删除表</li>
+<li>drop table if not exists tb_user; – 删除表(判断)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·DML</p>
+<ul>
+<li><p>添加 ( insert )</p>
+</li>
+<li><p>删除 ( delete )</p>
+<ul>
+<li>如果delete语句没有加where子句，就会将所有数据全部删除</li>
+</ul>
+</li>
+<li><p>修改 ( update )</p>
+<ul>
+<li>如果update语句没有加where子句，就会将所有数据全部修改</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·DQL</p>
+<ul>
+<li><p>查询 ( select )</p>
+<ul>
+<li><p>·基础查询</p>
+<ul>
+<li><p>查询多个字段</p>
+<ul>
+<li>select * from student;</li>
+<li>select Sno,Sname from student;</li>
+</ul>
+</li>
+<li><p>取别名 as (可以省略)</p>
+</li>
+<li><p>去除重复的记录 distinct</p>
+</li>
+</ul>
+</li>
+<li><p>·条件查询(where)</p>
+<ul>
+<li><p>1.条件查询语法</p>
+<ul>
+<li>SELECT字段列表FROM表名WHERE条件列表；</li>
+</ul>
+</li>
+<li><p>2.条件</p>
+<p>  - </p>
+<ul>
+<li>and &amp;&amp; 表示与；or || 表示或  not ! 表示非</li>
+<li>between and 用来查询-到-之间的数据</li>
+<li>in 用来查询- -的数据</li>
+<li>null 只能使用 is 或 is not 进行比较</li>
+<li>通配符(用line进行模糊查询) _ 表示单个字符； % 表示多个字符</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·分组查询(group by)</p>
+<ul>
+<li><p>聚合函数</p>
+<ul>
+<li><p>1.概念：</p>
+<ul>
+<li>将一列数据作为一个整体，进行纵向计算。</li>
+</ul>
+</li>
+<li><p>2.聚合函数分类：</p>
+<ul>
+<li>count()</li>
+<li>max()</li>
+<li>min()</li>
+<li>sum()</li>
+<li>avg()</li>
+</ul>
+</li>
+<li><p>3.聚合函数语法：</p>
+<ul>
+<li>SELECT 聚合函数名（列名）FROM 表；</li>
+<li>注意：null值不参与所有聚合函数运算</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分组查询</p>
+<ul>
+<li><p>1.分组查询语法</p>
+<ul>
+<li>注意：分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义</li>
+</ul>
+</li>
+<li><p>where和having区别：</p>
+<ul>
+<li>·执行时机不一样：where是分组之前进行限定，不满足where条件，则不参与分组，而having是分组之后对结果进行过滤，</li>
+<li>·可判断的条件不一样：where不能对聚合函数进行判断，having可以。</li>
+<li>执行顺序：where&gt;聚合函数&gt;having</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·排序查询(order by)</p>
+<ul>
+<li><p>1.排序查询语法；</p>
+<ul>
+<li><p>排序方式：</p>
+<ul>
+<li>ASC:升序排列（默认值）</li>
+<li>DESC:降序排列</li>
+</ul>
+</li>
+<li><p>注意：如果有多个排序条件，当前边的条件值一样时，才会根据第二条件进行排序</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·分页查询(limit)</p>
+<ul>
+<li><p>1.分页查询语法</p>
+<ul>
+<li>起始索引：从0开始</li>
+<li>计算公式：起始索引 =（当前页码1）·每页显示的条数</li>
+</ul>
+</li>
+<li><p>tips:</p>
+<ul>
+<li>分页查询limit是MySQL数据库的方言</li>
+<li>Oracle分页查询使用rownumber</li>
+<li>SQL Server分页查询使用top</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DCL</p>
+<ul>
+<li><p>约束</p>
+<ul>
+<li><p>概念&amp;分类</p>
+<ul>
+<li><p>1.约束的概念</p>
+<ul>
+<li>·约束是作用于表中列上的规侧，用于限制加入表的数据</li>
+<li>·约束的存在保证了数据库中数据的正确性、有效性和完整性</li>
+</ul>
+</li>
+<li><p>2.约束的分类</p>
+<ul>
+<li>Tips:MySQL不支持检查约束</li>
+</ul>
+</li>
+<li><p>主键约束 primary key</p>
+</li>
+<li><p>非空约束 not null</p>
+<ul>
+<li><p>1.概念</p>
+<ul>
+<li>·非空约束用于保证列中所有数据不能有null值</li>
+</ul>
+</li>
+<li><p>2.语法</p>
+<ul>
+<li><p>(1)添加约束</p>
+<ul>
+<li>创建表时添加非空约束</li>
+<li>建完表后添加非空约束</li>
+</ul>
+</li>
+<li><p>(2)删除约束</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>唯一约束 unique</p>
+</li>
+<li><p>外键约束 foreign key</p>
+<ul>
+<li><p>1.概念</p>
+<ul>
+<li>·外键用来让两个表的数据之间建立链接，保证数据的一致性和完整性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>默认约束 default</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据库设计</p>
+<ul>
+<li><p>·数据库设计简介</p>
+<ul>
+<li><p>1.软件的研发步骤</p>
+<p>  - </p>
+</li>
+<li><p>2.数据库设计慨念</p>
+<ul>
+<li>数据库设计就是根据业务系统的具体需求，结合我们所选用的DBMS,为这个业务系统构造出最优的数据存储模型</li>
+<li>建立数据库中的表结构以及表与表之间的关联关系的过程。</li>
+<li>有哪些表？表里有哪些字段？表和表之间有什么关系？</li>
+</ul>
+</li>
+<li><p>3.数据库设计的步骤</p>
+<ul>
+<li>①需求分析（数据是什么？数据具有哪些属性？数据与属性的特点是什么）</li>
+<li>②逻辑分析（通过E-R图对数据库进行逻辑建模，不需要考虑我们所选用的数据库管理系统）</li>
+<li>③物理设计（根据数据库自身的特点把逻辑设计转换为物理设计）</li>
+<li>④维护设计(1对新的需求进行建表2.表优化)</li>
+</ul>
+</li>
+<li><p>1.数据库设计设计什么？</p>
+<ul>
+<li>·表和表之间是什么关系</li>
+<li>表里有哪些字段</li>
+<li>有哪些表</li>
+</ul>
+</li>
+<li><p>2.表关系有哪几种？</p>
+<ul>
+<li>一对一</li>
+<li>一对多</li>
+<li>·多对多</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>表关系</p>
+<ul>
+<li><p>·一对一</p>
+<ul>
+<li>一对一关系多用于表拆分，将一个实体中经常使用的字段放一张表，不经常使用的字段放另一张表，用于提升查询性能</li>
+<li>实现方式：在任意一方加入外键，关联另一方主键，并且设置外键为唯一(UNIQUE)</li>
+</ul>
+</li>
+<li><p>·一对多：</p>
+<ul>
+<li>实现方式：在多的一方建立外键，指向一的一方的主键</li>
+</ul>
+</li>
+<li><p>·多对多：</p>
+<ul>
+<li>实现方式：建立第三张中间表，中间表至少包含两个外键，分别关联两方主键</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·数据库设计案例</p>
+<p>  - </p>
+<pre><code>  - ·数据库设计案例.docx
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>多表查询</p>
+<ul>
+<li><p>多表查询简介</p>
+<ul>
+<li><p>笛卡尔积：取A,B集合所有组合情况</p>
+</li>
+<li><p>多表查询：从多张表查询数据</p>
+<ul>
+<li><p>连接查询</p>
+<ul>
+<li><blockquote>
+<p>内连接：相当于查询AB交集数据</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>外连接：</p>
+</blockquote>
+<ul>
+<li>左外连接：相当于查询A表所有数据和交集部分数据</li>
+<li>右外连接：相当于查询B表所有数据和交集部分数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>子查询</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>内连接</p>
+<ul>
+<li>内连接相当于查询AB交集数据</li>
+</ul>
+</li>
+<li><p>外连接</p>
+<ul>
+<li>左外连接：相当于查询A表所有数据和交集部分数据</li>
+<li>右外连接：相当于查询B表所有数据和交集部分数据</li>
+</ul>
+</li>
+<li><p>子查询</p>
+<ul>
+<li><p>1.子查询概念：</p>
+<ul>
+<li><blockquote>
+<p>查询中嵌套查询，称嵌套查询为子查询</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>2.子查询根据查询结果不同，作用不同：</p>
+<ul>
+<li>单行单列：作为条件值，使用=  != &gt; &lt;等进行条件判断</li>
+<li>多行单列：作为条件值，使用in等关键字进行条件判断</li>
+<li>多行多列：作为虚拟表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>多表查询案例</p>
+</li>
+</ul>
+</li>
+<li><p>事务</p>
+<ul>
+<li><p>事务简介</p>
+<ul>
+<li>数据库的事务 是一种机制、一个操作序列，包含了一组数据库操作命令</li>
+<li>事务把所有的命令作为一个整体一起向系统提交或撤销操作请求，即这一组数据库命令要么同时成功，要么同时失败</li>
+<li>事务是一个不可分割的工作逻辑单元</li>
+</ul>
+</li>
+<li><p>事务四大特征 ( ACID )</p>
+<ul>
+<li>原子性(Atomicity):事务是不可分割的最小操作单位，要么同时成功，要么同时失败</li>
+<li>·一致性(Consistency)事务完成时，必须使所有的数据都保持一致状态</li>
+<li>·隔离性(Isolation):多个事务之间，操作的可见性</li>
+<li>·持久性(Durability):事务一旦提交或回滚，它对数据库中的数据的改变就是永久的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2 id="JDBC-Maven-MyBatis"><a href="#JDBC-Maven-MyBatis" class="headerlink" title="JDBC  Maven   MyBatis"></a>JDBC  Maven   MyBatis</h2><h3 id="数据库连接技术-JDBC"><a href="#数据库连接技术-JDBC" class="headerlink" title="数据库连接技术 JDBC"></a>数据库连接技术 JDBC</h3><ul>
+<li><p>JDBC简介</p>
+<ul>
+<li><p>JDBC概念</p>
+<ul>
+<li>·JDBC就是使用Java语言操作关系型数据库的一套API</li>
+<li>·全称：(Java DataBase Connectivity)Java数据库连接</li>
+</ul>
+</li>
+<li><p>JDBC本质：</p>
+<ul>
+<li>·官方(sum公司)定义的一套操作所有关系型数据库的规则，即接口</li>
+<li>·各个数据库厂商去实现这套接口，提供数据库驱动jar包</li>
+<li>我们可以使用这套接口(UDBC)编程，真正执行的代码是驱动jar包中的实现类</li>
+</ul>
+</li>
+<li><p>JDBC好处：</p>
+<ul>
+<li>·各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发</li>
+<li>·可随时替换底层数据库，访问数据库的Java代码基本不变</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JDBC快速入门</p>
+<ul>
+<li><p>步骤</p>
+<ul>
+<li>0.创健工程，导入驱动jar包</li>
+<li>1.注册驱动</li>
+<li>2.获取连接</li>
+<li>3.定义SQL语句</li>
+<li>4.获取执行SQL对像</li>
+<li>5.执行SQL</li>
+<li>6.处理返回结果</li>
+<li>7.释放资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JDBC API详解</p>
+<ul>
+<li><p>DriverManager</p>
+<ul>
+<li><p>DriverManager(驱动管理类)作用：</p>
+<ul>
+<li>1.注册驱动</li>
+<li>2.获取数据库连接</li>
+</ul>
+</li>
+<li><p>1.注册驱动</p>
+<ul>
+<li><p>提示：</p>
+<ul>
+<li>MySQL5之后的驱动泡，可以省路注册驱动的步骤</li>
+<li>自动加载jar包中META-lNF/services/java.sql.Driver文件中的驱动类</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.获取连接</p>
+<ul>
+<li><p>参数</p>
+<ul>
+<li><p>1.url:连接路径</p>
+<ul>
+<li><p>语法：jdbc:mysql://ip地址（域名）:端口号/数据库名称 ？参数键值对1 &amp; 参数键值对2.…</p>
+</li>
+<li><p>示例：</p>
+<ul>
+<li>jdbc:mysql://127.0.0.1:3306/ddl</li>
+<li>jdbc:mysql://localhost:3306/ddl</li>
+</ul>
+</li>
+<li><p>细节：</p>
+<ul>
+<li>如果连接的是本机mysql服务器，并且mysql服务默认端口是3306，则url可以简写为：jdbc:mysql:///数据库名称？参数键值对</li>
+<li>配置useSSL=false参数，禁用安全连接方式，解决警告提示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.user:用户名</p>
+</li>
+<li><p>3.password:密码</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Connection</p>
+<ul>
+<li><p>·Connection(数据库连接对象)作用：</p>
+<ul>
+<li>1.获取执行SQL的对象</li>
+<li>2.管理事务</li>
+</ul>
+</li>
+<li><p>1.获取执行SQL的对象</p>
+<ul>
+<li><p>普通执行SQL对象</p>
+<ul>
+<li>Statement createStatement()</li>
+</ul>
+</li>
+<li><p>预编译SQL的执行SQL对象：防止SQL注入</p>
+<ul>
+<li>PreparedStatement prepareStatement(sql)</li>
+</ul>
+</li>
+<li><p>执行存储过程的对象</p>
+<ul>
+<li>CallableStatement prepareCall(sql)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.事务管理</p>
+<ul>
+<li><p>MySQL事务管理</p>
+<ul>
+<li>开启事务：BEGIN:START TRANSACTION:</li>
+<li>提交事务：COMMIT</li>
+<li>回滚事务：ROLLBACK</li>
+<li>MySQL默认自动提交事务</li>
+</ul>
+</li>
+<li><p>JDBC事务管理：Connection接口中定义了3个对应的方法</p>
+<ul>
+<li>开启事务：setAutoCommit(boolean autoCommit):true为自动提交事务；false为手动提交事务，即为开启事务</li>
+<li>提交事务：commit()</li>
+<li>回滚事务：rollback()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Statement</p>
+<ul>
+<li><p>Statement作用：</p>
+<ul>
+<li><p>1.执行SQL语句</p>
+<ul>
+<li><p>int executeUpdate(sql): 执行DML、DDL语句</p>
+<ul>
+<li><p>返回值：</p>
+<ul>
+<li>(1)DML语句影响的行数</li>
+<li>(2)DDL语句执行后，执行成功也可能返回0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ResultSet executeQuery(sql): 执行DQL语句</p>
+<ul>
+<li>返回值：ResultSet结果集对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ResultSet</p>
+<ul>
+<li><p>ResultSet(结果集对像)作用：</p>
+<ul>
+<li><p>1.封装了DQL查询语句的结果</p>
+<ul>
+<li><p>获取查询结果</p>
+<ul>
+<li><p>boolean next(): </p>
+<ul>
+<li><p>(1)将光标从当前位置向前移动一行</p>
+</li>
+<li><p>(2)判断当前行是否为有效行</p>
+</li>
+<li><p>返回值：</p>
+<ul>
+<li>true:有效行，当前行有数据</li>
+<li>false:无效行，当前行没有数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>XXX getXxx(参数)：获取数据</p>
+<ul>
+<li><p>xxx:数据类型；如：int getInt(参数)：String getString(参数)</p>
+</li>
+<li><p>参数：</p>
+<ul>
+<li>int:列的编号，从1开始</li>
+<li>String:列的名称</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·使用步骤：</p>
+<ul>
+<li><p>1.游标向下移动一行，并判断该行否有数据：next()</p>
+</li>
+<li><p>2.获取数据：getXxx(参数)</p>
+<ul>
+<li>/循环判断游标是否是最后一行末尾</li>
+<li>while(rs.next(){</li>
+<li>/获取数据</li>
+<li>rs.getXxx(参数)：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PreparedStatement</p>
+<ul>
+<li><p>PreparedStatement作用：</p>
+<ul>
+<li><p>1.预编译SQL语句并执行：预防SQL注入问题</p>
+<ul>
+<li>①获取PreparedStatement对象</li>
+<li>②设置参数值</li>
+<li>③执行SQL</li>
+</ul>
+</li>
+<li><p>·SQL注入</p>
+<ul>
+<li>·SQL注入是通过操作输入来修改事先定义好的SQL语句，用以达到执行代码对服务器进行攻击的方法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PreparedStatement好处：</p>
+<ul>
+<li><p>1.预编译SQL,性能更高</p>
+</li>
+<li><p>2.防止SQL注入：将敏感字符进行转义</p>
+<ul>
+<li>①PreparedStatement预编译功能开启：useServerPrepStmts=true</li>
+<li>②配置MySQL执行日志（重启mysql服务后生效）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PreparedStatement原理</p>
+<ul>
+<li>1.在获取PreparedStatement对象时，将sql语句发送给mysql服务器进行检查，编译（这些步骤很耗时）</li>
+<li>2.执行时就不用再进行这些步骤了，速度更快</li>
+<li>3.如果sql模板一样，则只需要进行一次检查、编译</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据库连接池</p>
+<ul>
+<li><p>数据库连接池简介</p>
+<ul>
+<li><p>数据库连接池是个容器，负责分配、管理数据库连接(Connection)</p>
+</li>
+<li><p>它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个：</p>
+</li>
+<li><p>释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏</p>
+</li>
+<li><p>好处：</p>
+<ul>
+<li>·资源重用</li>
+<li>提升系统响应速度</li>
+<li>避免数据库连接遗漏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据库连接池实现</p>
+<ul>
+<li><p>·标准接口：DataSource</p>
+<ul>
+<li><p>官方(SUM)提供的数据库连接池标准接口，由第三方组织实现此接口。</p>
+</li>
+<li><p>功能：获取连接</p>
+<ul>
+<li>Connection getConnection()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>·常见的数据库连接池：</p>
+<ul>
+<li>·DBCP</li>
+<li>C3PO</li>
+<li>·Druid</li>
+</ul>
+</li>
+<li><p>·Druid(德鲁伊)</p>
+<ul>
+<li>·Druid连接池是阿里巴巴开源的数据库连接池项目</li>
+<li>·功能强大，性能优秀，是Java语言最好的数据库连接池之一</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Druid数据库连接池</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="自动化构建工具-Maven"><a href="#自动化构建工具-Maven" class="headerlink" title="自动化构建工具 Maven"></a>自动化构建工具 Maven</h3><ul>
+<li><p>Maven</p>
+<ul>
+<li><p>主要功能</p>
+<ul>
+<li><p>Maven是专门用于管理和构建ava项目的工具，它的主要功能有：</p>
+<ul>
+<li><blockquote>
+<p>提供了一套标准化的项目结构</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>提供了一套标准化的构建流程（编译，测试，打包，发布…）</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>提供了一套依赖管理机制</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>Maven提供了一套标准化的项目结构，所有IDE使用Maven构建的项目结构完全一样，所有IDE创建的Maven项目可以通用</p>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>标准化的构建流程</p>
+<p>  - </p>
+<ul>
+<li>Maven提供了一套简单的命令来完成项目构建</li>
+</ul>
+</li>
+<li><p>依赖管理</p>
+<ul>
+<li>依赖管理其实就是管理你项目所依赖的第三方资源(jar包、插件.…)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Maven简介</p>
+<ul>
+<li><p>·Apache Maven.是一个项目管理和构建工具，它基于项目对象模型(POM)的概念，通过一小段描述信息来管理项目的构建、报告和文档</p>
+</li>
+<li><p>·官网：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://maven.apache.org/">https://maven.apache.org/</a></li>
+</ul>
+</li>
+<li><p>Maven作用：</p>
+<ul>
+<li>标准化的项目结构</li>
+<li>标准化的构建流程</li>
+<li>方便的依赖管理</li>
+</ul>
+</li>
+<li><p>Moven 模型</p>
+<ul>
+<li>项目对象模型(Project Object Model)</li>
+<li>依赖管理模型(Dependency)</li>
+<li>插件(Plugin)</li>
+</ul>
+</li>
+<li><p>Moven 仓库</p>
+<ul>
+<li><p>本地仓库：自己计算机上的一个目录</p>
+</li>
+<li><p>中央仓库：由Maven团队维护的全球唯一的仓库</p>
+<ul>
+<li>地址：<a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/</a></li>
+</ul>
+</li>
+<li><p>远程仓库(私服)：一般由公司团队搭建的私有仓库</p>
+</li>
+<li><p>当项目中使用坐标引入对应依赖衡jar包后，首先会查找本地仓库中是否有对应的jar包：</p>
+<ul>
+<li>如果有，则在项目直接引用：</li>
+<li>如果没有，则去中央仓库中下载对应的jar包到本地仓库。</li>
+</ul>
+</li>
+<li><p>还可以搭建远程仓库，将来jar包的查找顺序则变为：</p>
+<ul>
+<li>本地仓库→远程仓库→中央仓库</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Maven安装配置</p>
+</li>
+<li><p>Maven基本使用</p>
+<ul>
+<li><p>Maven常用命令</p>
+<ul>
+<li>compile:编译</li>
+<li>clean:清理</li>
+<li>test:测试</li>
+<li>package:打包</li>
+<li>install:安装</li>
+</ul>
+</li>
+<li><p>Maven生命周期</p>
+<ul>
+<li><p>·Maven构建项目生命周期描述的是一次构建过程经历经历了多少个事件</p>
+</li>
+<li><p>Maven对项目构建的生命周期划分为3套</p>
+<ul>
+<li>clean:清理工作</li>
+<li>default:核心工作，例如编译，测试，打包，安装等</li>
+<li>site:产生报告，发布站点等</li>
+</ul>
+</li>
+<li><p>同一生命周期内，执行后边的命令，前边的所有命令会自动执行</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>IDEA配置Maven</strong></p>
+<ul>
+<li><p>IDEA配置Maven环境</p>
+</li>
+<li><p>Maven坐标详解</p>
+<ul>
+<li><p>什么是坐标？</p>
+<ul>
+<li>Maven中的坐标是资源的唯一标识</li>
+<li>使用坐标来定义项目或引入项目中需要的依赖</li>
+</ul>
+</li>
+<li><p>Maven坐标主要组成</p>
+<ul>
+<li>groupld:定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima</li>
+<li>artifactld:定义当前Maven项目名称（通常是模块名称，例如order-service、goods-service)</li>
+<li>version:定义当前项目版本号</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IDEA创建Maven项目</p>
+</li>
+<li><p>IDEA导入Maven项目</p>
+</li>
+</ul>
+</li>
+<li><p>依赖管理</p>
+<ul>
+<li><p>使用坐标导入jar包</p>
+<ul>
+<li>1.在pom.xml中编写<dependencies>标签</dependencies></li>
+<li>2.在<a href="dependencies:">dependencies:</a>标签中使用<dependency>:引l入坐标</dependency></li>
+<li>3.定义坐标的groupld,artifactld,version</li>
+<li>4.点击刷新按钮，使坐标生效</li>
+</ul>
+</li>
+<li><p>依赖范围</p>
+<ul>
+<li>通过设置坐标的依赖范围(scope),可以设置对应jar包的作用范围：编译环境、测试环境、运行环境</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据持久层框架-MyBatis"><a href="#数据持久层框架-MyBatis" class="headerlink" title="数据持久层框架 MyBatis"></a>数据持久层框架 MyBatis</h3><ul>
+<li><p>MyBatis</p>
+<ul>
+<li><p>什么是MyBatis</p>
+<ul>
+<li>MyBatis是一款优秀的持久层框架，用于简化JDBC开发</li>
+<li>MyBatis是Apache的一个开源项目iBatis,2010年这个项由apache software foundation迁移到了google code,.并且改名为MyBatis。2013年11月迁移到Github</li>
+<li>官网：<a target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/index.html">https://mybatis.org/mybatis-3/zh/index.html</a></li>
+</ul>
+</li>
+<li><p>持久层</p>
+<ul>
+<li>·负责将数据到保存到数据库的那一层代码</li>
+<li>JavaEE三层架构：表现层、业务层、持久层</li>
+</ul>
+</li>
+<li><p>框架</p>
+<ul>
+<li>框架就是一个半成品软件，是一套可重用的、通用的、软件基础代码模型</li>
+<li>在框架的基础之上构建软件编写更加高效、规范、通用、可扩展</li>
+</ul>
+</li>
+<li><p>MyBatis免除了几乎所有的JDBC代码以及设置参数和获取结果集的工作</p>
+</li>
+</ul>
+</li>
+<li><p>MyBatis快速入门</p>
+<ul>
+<li><p>解决SQL映射文件的警告提示</p>
+<ul>
+<li>产生原因：Idea和数据库没有建立连接，不识别表信息</li>
+<li>解决方式：在ldea中配置MySQL数据库连接</li>
+</ul>
+</li>
+<li><p>查询user表中所有数据</p>
+<ul>
+<li><p>1.创建user表，添加数据</p>
+</li>
+<li><p>2.创建模块，导入坐标</p>
+</li>
+<li><p>3.编写MyBatis核心配置文件-&gt;替换连接信息解决硬编码问题</p>
+</li>
+<li><p>4.编写SQL映射文件-&gt;统一管理sq语句，解决硬编码问题</p>
+</li>
+<li><p>5.编码</p>
+<ul>
+<li>1.定义P0J0类</li>
+<li>2.加载核心配置文件，获取SqlSessionFactory对象</li>
+<li>3.获取SqlSession对象，执行SQL语句</li>
+<li>4.释放资源</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MyBatis核心配置文件</p>
+</li>
+<li><p>Mapper代理开发</p>
+<ul>
+<li><p>目的</p>
+<ul>
+<li>解决原生方式中的硬编码</li>
+<li>简化后期执行SQL</li>
+</ul>
+</li>
+<li><p>使用Mapper代理方式</p>
+<ul>
+<li><p>1.定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下</p>
+</li>
+<li><p>2.设置SQL映射文件的namespace.属性为Mapperf接口全限定名</p>
+</li>
+<li><p>3.在Mapper接口中定义方法，方法名就是SQL映射文件中sql语句的id,并保持参数类型和返回值类型一致</p>
+</li>
+<li><p>4.编码</p>
+<ul>
+<li>1.通过SqlSession的getMapper方法获取Mapper接口的代理对象</li>
+<li>2.调用对应方法完成sq的执行</li>
+</ul>
+</li>
+<li><p>细节：如果Mapper接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MyBatis核心配置文件详解</p>
+<ul>
+<li><p>MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置和属性信息。 配置文档的顶层结构如下：</p>
+</li>
+<li><p>configuration（配置）</p>
+<ul>
+<li><p>properties（属性）</p>
+</li>
+<li><p>settings（设置）</p>
+</li>
+<li><p>typeAliases（类型别名）</p>
+</li>
+<li><p>typeHandlers（类型处理器）</p>
+</li>
+<li><p>objectFactory（对象工厂）</p>
+</li>
+<li><p>plugins（插件）</p>
+</li>
+<li><p>environments（环境配置）</p>
+<ul>
+<li><p>environment（环境变量）</p>
+<ul>
+<li>transactionManager（事务管理器）</li>
+<li>dataSource（数据源）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>databaseIdProvider（数据库厂商标识）</p>
+</li>
+<li><p>mappers（映射器）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>配置文件完成增删改查</p>
+<ul>
+<li><p>MyBatis完成操作需要几步？</p>
+<ul>
+<li>三步：编写接口方法-&gt;编写$QL-&gt;执行方法</li>
+</ul>
+</li>
+<li><p>数据库表的字段名称  和  实体类的属性名称 不一样，则不能自动封装数据</p>
+<ul>
+<li><ul>
+<li>起别名：对不一样的列名起别名，让别名和实体类的属性名一样</li>
+</ul>
+<ul>
+<li><ul>
+<li>缺点：每次查询都要定义一次别名</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>sql片段</li>
+</ul>
+<ul>
+<li><ul>
+<li>缺点：不灵活</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>resultMap：</li>
+</ul>
+<ul>
+<li><ol>
+<li>定义<resultmap>标签</resultmap></li>
+</ol>
+<ul>
+<li>id：唯一标识</li>
+<li>type：映射的类型，支持别名</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>在<select>标签中，使用resultMap属性替换 resultType属性
+
+
+id：完成主键字段的映射
+
+column：表的列名
+property：实体类的属性名
+
+
+result：完成一般字段的映射
+
+column：表的列名
+property：实体类的属性名
+
+
+
+
+
+
+
+
+参数占位符
+
+
+#{}:会将其替换为 ?，为了防止SQL注入
+
+
+
+${}：拼sql。会存在SQL注入问题
+
+
+
+使用时机：
+
+
+
+参数传递的时候：#{}
+
+
+
+表名或者列名不固定的情况下：${} 会存在SQL注入问题
+
+
+
+
+
+
+
+参数类型：parameterType：可以省略
+
+
+
+特殊字符处理：
+
+
+
+转义字符：
+
+
+
+CDATA区:
+
+
+
+
+MyBatis参数传递
+
+MyBatis接口方法中可以接收各种各样的参数，MyBatis底层对于这些参数进行不同的封装处理方式
+
+单个参数：
+
+1.P00类型：
+
+
+POJO类型：直接使用，属性名 和 参数占位符名称 一致
+
+
+
+
+2.Map集合：
+
+
+Map集合：直接使用，键名 和 参数占位符名称 一致
+
+
+
+
+3.Collection:
+
+
+Collection：封装为Map集合，可以使用@Param注解，替换Map集合中默认的arg键名
+
+
+map.put(“arg()”,collection集合);
+map.put(“collection”,collection集合);
+
+
+
+
+4.List:
+
+
+List：封装为Map集合，可以使用@Param注解，替换Map集合中默认的arg键名
+
+
+map.put(“arg0”,list集合);
+map.put(“collection”,list集合);
+map.put(“list”,list集合);
+
+
+
+
+5.Array:
+
+
+Array：封装为Map集合，可以使用@Param注解，替换Map集合中默认的arg键名
+
+
+map.put(“arg()”,数组);
+map.put(“array”,数组);
+
+
+
+
+6.其他类型：
+
+
+其他类型：直接使用
+
+
+
+
+
+
+多个参数：
+
+多个参数：封装为Map集合,可以使用@Param注解，替换Map集合中默认的arg键名
+
+        map.put("arg0",参数值1)
+
+
+        map.put("param1",参数值1)
+
+
+        map.put("param2",参数值2)
+
+
+        map.put("agr1",参数值2)
+
+
+        ---------------@Param("username")
+
+
+        map.put("username",参数值1)
+
+
+        map.put("param1",参数值1)
+
+
+        map.put("param2",参数值2)
+
+
+        map.put("agr1",参数值2)
+
+
+
+
+
+
+MyBatis提供了ParamNameResolver类来进行参数封装
+
+建议：将来都使用@Param注解来修改Map集合中默认的键名，并使用修改后的名称来获取值，这样可读性更高！
+
+
+
+
+
+注解完成增删改查
+
+使用注解开发会比配置文件开发更加方便
+
+查询：@Select
+添加：@Insert
+修改：@Update
+删除：@Delete
+
+
+提示：
+
+注解完成简单功能
+配置文件完成复杂功能
+
+
+
+
+动态SQL
+
+要完成的功能列表清单：
+
+1.查询
+
+查询所有数据
+
+查看详情
+
+条件查询
+
+参数接收
+
+
+散装参数：如果方法中有多个参数，需要使用@Param(“SQL参数占位符名称”)
+
+
+
+对象参数:对象的属性名称要和参数占位符名称一致
+
+
+
+map集合参数
+
+
+
+
+SQL语句设置多个参数有几种方式？
+
+1)散装参数：需要使用@Param(“SQL中的参数占位符名称)
+
+2)实体类封装参数
+
+*只需要保证SQL中的参数名和实体类属性名对应上，即可设置成功
+
+
+3)map集合
+
+*只需要保证SQL中的参数名和map集合的键的名称对应上，即可设置成功
+
+
+
+
+查询-多条件-动态条件查询
+
+动态条件查询
+
+if: 条件判断
+
+test：逻辑表达式
+
+
+问题：
+
+恒等式
+ 替换 where 关键字
+
+
+
+
+动态SQL
+
+if:用于判断参数是否有值，使用test属性进行条件判断
+
+*存在的问题：第一个条件不需要逻辑运算符
+
+
+*解决方案：
+
+1)使用恒等式让所有条件格式都一样
+2)标签替换where关键字
+
+
+
+
+
+
+查询-单条件-动态条件查询
+
+从多个条件中选择一个
+choose(when,otherwise):选提，类似于Java中的switch语句
+
+
+
+
+
+
+2.添加
+
+主键返回
+
+    delete from tb_brand where id = #{id};    
+
+
+
+
+3.修改
+
+修改全部字段
+修改动态字段
+
+
+4.删除
+
+删除一个
+
+
+批量删除
+
+
+mybatis会将数组参数，封装为一个Map集合。
+默认：array = 数组
+使用@Param注解改变map集合的默认key的名称
+
+
+
+
+
+
+
+HTML   CSS  JS网页开发技术 HTML
+超文本标记语言  HTML  
+
+HTML是一门语言，所有的网页都是用HTML这门语言编写出来的
+
+超文本：超越了文本的限制，比普通文本更强大。除了文字信息，还可以定义图片、音频、视频等内容
+
+标记语言：由标签构成的语言
+
+HTML运行在浏览器上，HTML标签由浏览器来解析
+
+HTML标签都是预定义好的。例如：使用展示图片
+
+W3C标准：网页主要由三部分组成
+
+结构：HTML
+表现：CSS
+行为：JavaScript
+
+
+
+
+HTML快速入门
+
+1.HTML文件以.htm或.html为扩展名
+
+2.HTML结构标签
+
+      定义HTML文档
+     定义关于文档的信息
+      定义文档的标题
+    定义文档的主体
+
+
+3.HTML标签不区分大小写
+
+4.HTML标签属性值单双引皆可
+
+5.HTML语法松散
+
+
+
+基础标签
+
+标题标签
+
+是通过  -  等标签进行定义的
+
+生成h1~h6快捷键：     h$*6
+
+属性
+
+align
+
+left
+
+左对齐（默认）
+
+
+center
+
+居中
+
+
+right
+
+右对齐
+
+
+
+
+
+
+
+
+段落标签
+
+是通过  标签进行定义的
+
+
+链接标签
+
+是通过  标签进行定义的
+
+属性
+
+href
+
+指定链接的地址
+
+
+
+
+
+
+图像标签
+
+是通过  标签进行定义的
+
+属性
+
+src
+
+指定图片的地址
+
+
+width
+
+图片的宽度
+
+
+height
+
+图片的高度
+
+
+
+
+
+
+font
+
+face
+
+字体属性
+
+
+size
+
+字号属性
+
+
+color
+
+颜色属性
+
+
+
+
+子主题 6
+
+子主题 7
+
+子主题 8
+
+子主题 9
+
+子主题 10
+
+子主题 11
+
+
+
+图片、音频、视频标签
+
+超链接标签
+
+列表标签
+
+表格标签
+
+布局标签
+
+表单标签
+
+HTML元素
+
+指的是从开始标签（start tag）到结束标签（end tag）的所有代码
+开始标签常被称为开放标签（opening tag），结束标签常称为闭合标签（closing tag）
+
+
+HTML 属性
+
+HTML 标签可以拥有属性。属性提供了有关 HTML 元素的更多的信息。
+属性总是以名称/值对的形式出现，比如：name=”value”。
+属性总是在 HTML 元素的开始标签中规定
+在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号
+
+
+
+样式表技术 CSS网页脚本技术 JavaScript
+JS
+
+HTTP   Tomcat    ServletJavaWeb技术栈
+B/S架构：Browser/Server,浏览器/服务器架构模式，它的特点是，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web资源，服务器把Web资源发送给浏览器即可
+
+好处：易于维护升级：服务器端升级后，客户端无需任何部署就可以使用到新的版本
+静态资源：HTML、CSS、JavaScript、图片等。负责页面展现
+动态资源：Servlet、JSP等。负责逻辑处理
+数据库：负责存储数据
+Wb服务器：负责解析HTTP协议，解析请求数据，并发送响应数据
+
+
+
+超文本传输协议  HTTP
+概念：超文本传输协议，规定了浏览器和服务器之间数据传输的规则
+
+HTTP协议特点：
+
+1.基于TCP协议：面向连接，安全
+
+2.基于请求-响应模型的：一次请求对应一次响应
+
+3.HTTP协议是无状态的协议：对于事务处理没有记忆能力。每次请求-响应都是独立的
+
+缺点：多次请求间不能共享数据。
+优点：速度快
+
+
+
+
+HTTP请求数据格式
+
+请求数据分为3部分：
+
+1.请求行：请求数据的第一行。其中GET表示请求方式，表示请求资源路径，HTTP/1.1表示协议版本
+
+2.请求头：第二行开始，格式为key:value形式
+
+常见的HTTP请求头：
+Host:表示请求的主机名
+User-Agent:浏览器版本，例如Chrome浏览器的标识类似Mozilla/5.0
+Chrome/79,IE浏览器的标识类似Mozilla/5.0( Vindows NT.)like Gecko:
+Accept:表示浏览器能接收的资源类型，如text/,image/产或者/*表示所有；
+Accept-Language:表示浏览器偏好的语言，服务器可以据此返回不同语言的网页；
+Accept-Encoding:表示浏览器可以支持的压缩类型，例如gzip,deflate等.
+
+
+3.请求体：POST请求的最后一部分，存放请求参数
+
+GET请求和POST请求区别：
+1.GET请求请求参数在请求行中，没有请求体。
+POST请求请求参数在请求体中
+2.GET请求请求参数大小有限制，POST没有
+
+
+
+
+HTTP响应数据格式
+
+响应数据分为3部分：
+
+1.响应行：响应数据的第一行。其中HTTP/1.1表示协议版本，200表示响应状态码，OK表示状态码描述
+
+2.响应头：第二行开始，格式为key:valuej形式
+
+常见的HTTP响应头：
+Content-Type:表示该响应内容的类型，例如text/html,image/jpeg:
+Content–Length:表示该响应内容的长度（字节数）：
+Content-Encoding:表示该响应压缩算法，例如gzip;
+Cache-Control:指示客户端应如何缓存，例如max-age=300
+表示可以最多缓存300秒
+
+
+3.响应体：最后一部分。存放响应数据
+
+状态码
+
+状态码分类
+
+说明
+
+1xx
+
+响应中一一临时状态码，表示请求已经接受，告诉客户端应该继续请求或老如果它已经完戒则忽略它
+
+
+2xx
+
+成功一一表示请求已经被成功接收，处理已完成
+
+
+3xx
+
+重定向一一重定向到其它地方：它让客户端再发起一个请求以完成整个处理.
+
+
+4xx
+
+客户端错误一一处理发生错误。责任在客户端。如：客户端的请求一个不存在的资源，客户端未被授权，禁止访问等
+
+
+5xx
+
+服务器端错误*一一处理发生错误，责任在服务端。如：服务端抛出异常，路由出错。HTTP版本不支持等
+
+
+
+
+https://cloud.tencent.com/developer/chapter/13553
+
+
+
+
+
+
+
+HTTP协议的默认端口号：80
+
+
+Web服务器   Tomcat
+Web服务器是一个应该程序（软件），对HTTP协议的操作进行封装，使得程序员不必直接对协议进行操作，让web开发更加便捷。主要功能是“提供网上信息浏览服务”
+
+简介
+
+概念：Tomcat是Apache软件基金会一个核心项目，是一个开源免费的轻量级Web服务器，支持Servlet/JSP少量JavaEE规范。
+
+JavaEE:Java Enterprise Edition,Java企业版。指ava企业级开发的技术规范总和。包含l3项技术规范：JDBC、JNDI、EJB、RMl、JSP、Servlet、XML、JMS、Java IDL、JTS、JTA、JavaMail、JAF
+
+Tomcat也被称为Web容器、Servlet容器。Servlet需要依赖于Tomcat才能运行
+
+Web服务器作用？
+
+
+封装HTTP协议操作，简化开发
+
+
+
+可以将wb项目部署到服务器中，对外提供网上浏览服务
+
+
+
+
+Tomcat是一个轻量级的Web服务器，支持Servlet/JSP少量JavaEE规范，也称为Web容器，Servlet容器
+
+
+
+基本使用：安装、卸载、启动、关闭、配置、部署项目
+
+HTTP协议默认端口号为80，如果将Tomcati端口号改为80，则将来访问Tomcat时，将不用输入端口号
+
+Tomcat-部署项目
+
+·将项目放置到webapps目录下，即部署完成
+·一般JavaWebl项目会被打成war包，然后将war包放到webapps目录下，Tomcat会自动解压缩war文件
+
+
+
+
+IDEA中创建Maven Web项目
+
+编译后的ava字节码文件和resources的资源文件，放到WEB-lNF下的classes目录下
+pom.xml中依赖坐标对应的jar包，放入WEB-NF下的Iib目录下
+
+
+IDEA中使用Tomcat
+
+
+动态Web资源开发技术   Servle
+快速入门
+
+Servlet是Java提供的一门动态web资源开发技术
+Servlet是avaEE规范之一，其实就是一个接口，将来我们需要定义Servlet类实现Servlet接口，并由web服务器运行Servlet
+1.创建web项目，导入Servlet依赖坐标
+2.创建：定义一个类，实现Servlet接口，并重写接口中所有方法，并在service方法中输入一句话
+3.配置：在类上使用@VebServlet注解，配置该Servlet的访问路径
+4.访问：启动Tomcat,浏览器输入URL访问该Servlet
+
+
+Servlet执行流程
+
+1.Servlet由谁创建？Servlet方法由谁调用？
+
+Servlet由web服务器创建，Servlet方法由web服务器调用。
+
+
+2.服务器怎么知道Servlet中一定有service方法？
+
+,因为我们自定义的Servlet,必须实现Servlet接口并复写其方法，而Servlet接口中有service方法
+
+
+
+
+Servlet生命周期
+
+Servlet生命周期
+
+·对象的生命周期指一个对象从被创建到被销毁的整个过程
+
+
+·Servleti运行在Servlet容器(web服务器)中，其生命周期由容器来管理，分为4个阶段：
+
+1.加载和实例化：默认情况下，当Servlet第一次被访问时，由容器创建Servlet对象
+2.初始化：在Servlet?实例化之后，容器将调用Servlet的init(0方法初始化这个对象，完成一些如
+加载配置文件、创建连接等初始化的工作。该方法只调用一次
+3.请求处理：每次请求Servlet时，Servlet容器都会调用Servlet的service()方法对请求进行处理。
+4.服务终止：当需要释放内存或者容器关闭时，容器就会调用Servlet实例的destroy()方法完成资源的释放，在destroy(）方法调用之后，容器会释放这个Servlet()实例，该实例随后会被Java的垃圾收集器所回收
+
+
+Servlet方法介绍
+
+void init(ServletConfig config)
+
+初始化方法，在Servleti被创建时执行，只执行一次
+
+
+void service(ServletRequest req,ServletResponse res)
+
+提供服务方法，每次Servlet被访问，都会调用该方法
+
+
+void destroy()
+
+销毁方法，当Servleti被销毁时，调用该方法。在内存释放或服务器关闭时销毁Servlet
+
+
+ServletConfig getServletConfig()
+
+获取ServletConfig对象
+
+
+String getServletInfo()
+
+获取Servlet信息
+
+
+
+
+
+
+Servlet体系结构
+
+我们将来开发B/S架构的wb项目，都是针对HTTP协议,所以我们自定义Servlet,会继承HttpServlet
+
+1.HttpServlet中为什么要根据请求方式的不同，调用不同方法？
+
+get和post的请求方式的请求消息不同，所以要分别处理；
+
+
+2.如何调用？
+
+获取请求方式，进行不同判断
+
+
+1.HttpServlet使用步骤
+
+①继承HttpServlet
+②重写doGet和doPost方法
+
+
+2.HttpServlet)原理
+
+获取请求方式，并根据不同的请求方式，调用不同的doXxx方法
+
+
+
+
+Servlet urlPattern配置
+
+Servlet要想被访问，必须配置其访问路径(urlPattern)
+
+1.一个Servlet,可以配置多个urlPattern
+
+@WebServlet(urlPatterns {“/demo1”,”/demo2”})
+
+
+2.urlPattern配置规则
+
+①精确匹配
+
+urlPatterns = “/user/select”
+
+
+②目录匹配
+
+urlPatterns = “/user/*”
+
+
+③扩展名匹配
+
+urlPatterns = “*.do”
+
+
+④任意匹配
+
+urlPatterns = “/“
+urlPatterns = “/*”
+
+
+/和/*区别：
+
+当我们的项目中的Servleti配置了”/”，会覆盖掉tomcat中的DefaultServlet,当其他的url-pattern都匹配不上时都会走这个Servlet
+当我们的项目中配置了”/*”，意味若匹配任意访问路径
+
+
+优先级：
+
+精确路径&gt;目录路径&gt;扩展名路径&gt;/*&gt;/
+
+
+
+
+
+
+
+
+XML配置方式编写Servlet
+
+Servlet从3.0版本后开始支持使用注解配置，3.0版本前只支持XML配置文件的配置方式
+
+步骤：
+
+编写Servlet类
+在web.xml中配置该Servlet
+
+
+
+
+
+Request    Response请求 Request
+Request继承体系
+
+ServletRequest
+
+Java提供的请求对象根接口
+
+
+HttpServletRequest
+
+Java提供的对Http协议封装的请求对象接口
+
+
+RequestFacade
+
+Tomcat定义的实现类
+
+
+Tomcat需要解析请求数据，封装为request对象，并且创建request对象传递到service方法中
+
+使用request对象，查阅)avaEE API文档的HttpServletRequest接口
+
+
+
+Request获取请求数据
+
+获取请求数据
+
+请求行
+
+String getMethod():获取请求方式：GET
+String getContextPath(:获取虚拟目录（项目访问路径）：/request-.demo
+StringBuffer getRequestURL0:获取URL(统一资源定位符)：http://localhost::8080/request-demo/req1
+String getRequestURI():获取URI(统一资源标识符)：/request-demo/req1
+String getQueryString():获取请求参数(GET方式)：username:=zhangsan&amp;password=123
+
+
+请求头
+
+String getHeader(String name):根据请求头名称，获取值
+
+
+请求体
+
+·ServletInputStream getlnputStream0:获取字节输入流
+BufferedReader getReader():获取字符输入流
+
+
+
+
+通用方式获取请求参数
+
+请求参数获取方式：
+
+GET方式：
+
+String getQueryString()
+
+
+POST方式
+
+BufferedReader getReader()
+
+
+
+
+Map&lt;String,String[]&gt;getParameterMap():获取所有参数Map集合
+
+String[]getParameterValues(String name):根据名称获取参数值（数组）
+
+String getParameter(String name):根据名称获取参数值（单个值）
+
+
+
+请求参数中文乱码处理
+
+解决方案：
+
+POST:设置输入流的编码
+
+req.setCharacterEncoding(“UTF-8”):
+
+
+GET:设置输入流的编码
+
+username = new String(username.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+
+
+
+
+URL编码
+
+1.将字符串按照编码方式转为二进制
+2.每个字节转为2个16进制数并在前边加上%
+
+
+Tomcat8.0之后，已将GET请求乱码问题解决，设置默认的解码方式为UTF-8
+
+1.中文乱码解决方案：
+
+POST:设置输入流的编码
+
+reqsetCharacterEncoding(“UTF-8”);
+
+
+通用方式(GET/POST)：先解码，再编码
+
+new String(username.getBytes(“ISO-8859-1”),”UTF-8”);
+
+
+
+
+2.URL编码实现方式：
+
+编码：URLEncoder.encode(str,”utf-8”):
+解码：URLDecoder.decode(s,”ISO-8859-1”);
+
+
+
+
+
+
+Request请求转发
+
+请求转发(forward):一种在服务器内部的资源跳转方式
+
+实现方式：
+
+req.getRequestDispatcher(“资源B路径”).forward(req,resp);
+
+
+请求转发资源间共享数据：使用Request对象
+
+void setAttribute(String name,Object o):存储数据到request域中
+Object getAttribute(String name):根据key,获取值
+void removeAttribute(String name):根据key,删除该键值对
+
+
+请求转发特点：
+
+浏览器地址栏路径不发生变化
+只能转发到当前服务器的内部资源
+一次请求，可以在转发的资源间使用request共享数据
+
+
+
+
+
+响应 Response- 
+
+Response设置响应数据功能介绍
+
+响应数据分为3部分：
+
+1.响应行：
+
+void setStatus(int sc):设置响应状态码
+
+
+2.响应头：
+
+·void setHeader(String name,String value):设置响应头键值对
+
+
+3.响应体：
+
+·PrintWriter getWriter():获取字符输出流
+ServletOutputStream getOutputStream():获取字节输出流
+
+
+
+
+Response完成重定向
+
+重定向(Redirect):一种资源跳转方式
+
+实现方式：
+
+resp.setStatus(302);
+
+
+
+
+
+resp.setHeader(“location,“资源B的路径”);        - resp.sendRedirect(资源B的路径”)：
+- 重定向特点：
+
+    - 浏览器地址栏路径发生变化
+    - 可以重定向到任意位置的资源（服务器内部、外部均可）
+    - 两次请求，不能在多个资源使用request共享数据
+
+
+资源路径问题
+
+明确路径谁使用？
+
+浏览器使用：需要加虚拟目录项目访问路径)
+服务端使用：不需要加虚拟目录
+
+
+
+
+Response响应字符数据
+
+使用：
+
+1,通过Response对象获取字符输出流
+
+PrintWriter writer resp.getWriter();
+
+
+2.写数据
+
+writer.write(“aaa”);
+
+
+
+
+注意：
+
+该流不需要关闭，随着响应结束，response对象销毁，由服务器关闭
+中文数据乱码：原因通过Response获取的字符输出流默认编码：ISO-8859-1
+resp.setContentType(“text/html;charset=utf-8”);
+
+
+
+
+Response响应字节数据
+
+使用：
+
+1.通过Response对象获取字符输出流
+
+ServletOutputStream outputStream resp.getOutputStream();
+
+
+2.写数据
+
+outputStream.write(字节数据);
+
+
+
+
+1 DUtils工具类使用
+
+1.导入坐标
+
+2.使用
+
+IOUtils.copy(输入流，输出流)：
+
+
+
+
+
+
+
+代码优化
+创建SqlSessionFactory代码优化
+
+问题：
+
+1,代码重复：工具类
+2.SqlSessionFactory工厂只创建一次，不要重复创建：静态代码块
+
+
+
+JSP    Cookie  Session动态网页开发技术 Jsp
+JSP
+
+·概念：Java Server Pages,Java服务端页面
+一种动态的网页技术，其中既可以定义HTML、JS、CSS等静态内容，还可以定义Java代码的动态内容
+JSP=HTML+Java
+JSP的作用：简化开发，避免了在Servlete中直接输出HTML标签
+
+
+JSP快速入门
+
+1.导入JSP坐标
+2.创建SP文件
+3.编写HTML标签和Java代码
+
+
+JSP原理
+
+概念：Java Server Pages,Java服务端顷面
+JSP=HTML+Java,用于简化开发的
+JSP本质上就是个Servlet
+JSP在被访问时，由JSP容器(Tomcat)将其转换为Java文件(Servlet),在由JSP容器Tomcat，将其编译，最终对外提供服务的其实就是这个字节码文件
+
+
+JSP脚本
+
+JSP脚本用于在JSP页面内定义Java代码
+
+JSP脚本分类：
+
+1.&lt;%..%&gt;:内容会直接放到_jspService()方法之中
+2.&lt;%=…%&gt;:内容会放到out.print()中，作为out.print()的参数
+3.&lt;%!…%&gt;:内容会放到_jspService()方法之外，被类直接包含
+
+
+JSP缺点
+
+·由于JSP页面内，既可以定义HTML标签，又可以定义Java代码，造成了以下问题：
+1,书写麻烦：特别是复杂的页面
+2.阅读麻烦
+3.复杂度高：运行需要依赖于各种环境，JRE,JSP容器，JavaEE…
+4.占内存和磁盘：JSP会自动生成，java和.class.文件占磁盘，运行的是.class.文件占内存
+5.调试困难：出错后，需要找到自动生成的java文件进行调试
+6.不利于团队协作：前端人员不会Java,后端人员不精HTML
+
+
+
+
+EL表达式
+
+EL表达式语言，用于简化JSP页面内的Java代码
+
+主要功能：获取数据
+
+语法：${expression}
+
+$(brands)
+获取域中存储的key为brands的数据
+
+
+●JavaWeb中的四大域对象：
+
+1.page:当前页面有效
+2.request:当前请求有效
+3.session：当前会话有效
+4.application:当前应用有效
+
+
+EL表达式获取数据，会依次从这4个域中寻找，直到找到为止
+
+
+
+JSTL标签
+
+JSP标准标签库,使用标签取代JSP页面上的，Java代码
+
+if
+
+&lt;c:if test=”true”&gt;
+
+
+for
+
+items:被遍历的容器
+var:遍历产生的临时变量
+varStatus:遍历状态对象
+begin:开始数
+end:结束数
+step:步长
+
+
+
+
+MVC模式和三层架构
+
+MVC模式
+
+MVC是一种分层开发的模式，其中：
+
+M:Model,业务模型，处理业务
+V:View,视图，界面展示
+C:Controller,控制器，处理请求，调用模型和视图
+
+
+MVC好处
+
+职责单一，互不影响
+有利于分工协作
+有利于组件重用
+
+
+
+
+三层架构
+
+数据访问层：对数据库的CRUD基本操作
+
+业务逻辑层：对业务逻辑进行封装，组合数据访问层层中基本功能，形成复杂的业务逻辑功能
+
+表现层：接收请求，封装数据，调用业务逻辑层，响应数据高
+
+表现层
+
+com.itheima.web/controller
+
+
+业务逻辑层
+
+com.itheima.service
+
+
+数据访问层
+
+com.itheima.dao/mapper
+
+
+
+
+三层框架
+
+表现层
+
+SpringMVC
+Struts2
+
+
+业务逻辑层
+
+Spring
+
+
+数据访问层
+
+MyBatis
+Hibername
+
+
+
+
+
+
+
+会话跟踪技术 Cookie Session
+概念
+
+会话：用户打开浏览器，访问web服务器的资源，会话建立，直到有一方断开连接，会话结束。在一次会话中可以包含多次请求和响应
+会话跟踪：一种维护浏览器状态的方法，服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据
+HTTP协议是无状态的，每次浏览器向服务器请求时，服务器都会将该请求视为新的请求，因此我们需要会话跟踪技术来实现会话内数据共享
+
+
+客户端会话跟踪技术：Cookie
+
+Cookie基本使用
+
+Cookie:：客户端会话技术，将数据保存到客户端，以后每次请求都携带Cookie数据进行访问
+
+发送Cookie
+
+1.创建Cookie对象，设置数据
+
+Cookie cookie = new Cookie(“key”,”value”);
+
+
+2.发送Cookie到客户端：使用response.对象
+
+response.addCookie(cookie);
+
+
+
+
+获取Cookie
+
+3.获取客户端携带的所有Cookie,使用requesti对象
+
+Cookie[] cookies = request.getCookies();
+
+
+4.遍历数组，获取每一个Cookie对象：for
+
+5.使用Cookie对象方法获取数据
+
+cookie.getName();
+cookie.getValue();
+
+
+
+
+
+
+Cookie原理
+
+Cookiel的实现是基于HTTP协议的
+
+响应头：set-cookie
+请求头：cookie
+
+
+
+
+Cookie使用细节
+
+Cookie存活时间
+
+
+默认情况下，Cookie存储在浏览器内存中，当浏览器关闭，内存释放，则Cookie被销毁
+
+
+
+setMaxAge(int seconds):设置Cookie存活时间
+
+
+1.正数：将Cookie写入浏览器所在电脑的硬盘，持久化存储。到时间自动删除
+2.负数：默认值，Cookie在当前浏览器内存中，当浏览器关闭，则Cookie被销毁
+3.零：删除对应Cookie
+
+
+
+
+Cookie存储中文
+
+Cookie不能直接存储中文
+如需要存储，则需要进行转码：URL编码
+
+
+
+
+
+
+服务端会话跟踪技术：Session
+
+Session基本使用
+
+服务端会话跟踪技术：将数据保存到服务端
+
+JavaEE提供HttpSession接口，来实现一次会话的多次请求间数据共享功能
+
+使用：
+
+1.获取Session对象
+
+HttpSession session request.getSession();
+
+
+2.Session对象功能：
+
+void setAttribute(String name,Object o):存储数据到session域中
+Object getAttribute(String name):根据key,获取值
+void removeAttribute(String name)):根据key,制除该键值对
+
+
+
+
+
+
+Session原理
+
+Session是基于Cookie实现的
+
+
+Session使用细节
+
+Session钝化、活化：
+
+服务器重启后，Session中的数据是香否还在？
+钝化：在服务器正常关闭后，Tomcats会自动将Session数据写入硬盘的文件中
+活化：再次启动服务器后，从文件中加载数据到Session中
+
+
+Seesion销毁：
+
+默认情况下，无操作，30分钟自动销毁
+调用Session对象的invalidate()方法
+
+
+
+
+
+
+总结
+
+Cookie和Session都是来完成一次会话内多次请求间数据共享的
+
+区别：
+
+存储位置：Cookie是将数据存储在客户端，Session将数据存储在服务端
+安全性：Cookie不安全，Session安全
+数据大小：Cookie最大3KB,Session无大小限制
+●存储时间：Cookie可以长期存储，Session默认30分钟
+●服务器性能：Cookie不占服务器资源，Session占用服务器资源
+
+
+
+
+
+会话技术.pdfFilter   Listener   Ajax过滤器   Filter
+概念
+
+Filter表示过滤器，是JavaWeb三大组件(Servlet,Filter、Listener)之一。
+过滤器可以把对资源的请求拦截下来，从而实现一些特殊的功能。
+过滤器一般完成一些通用的操作，比如：权限控制、统一编码处理、敏感字符处理等等…
+
+
+Filter 快速入门
+
+开发步骤
+
+进行 Filter 开发分成以下三步实现
+定义类，实现 Filter接口，并重写其所有方法
+配置Filter拦截资源的路径：在类上定义 @WebFilter 注解。而注解的 value 属性值 /* 表示拦截所有的资源
+在doFilter方法中输出一句话，并放行
+
+
+
+
+Filter 执行流程
+  - 
+
+放行后访问对应资源，资源访问完成后，还会回到Filter中
+访问完资源后，会回到 放行后逻辑，执行该部分代码。
+
+
+Filter 使用细节
+
+Filter 拦截路径配置
+
+拦截路径表示 Filter 会对请求的哪些资源进行拦截，使用 @WebFilter 注解进行配置。如：@WebFilter(“拦截路径”)
+
+拦截路径有如下四种配置方式：
+
+拦截具体的资源：/index.jsp：只有访问index.jsp时才会被拦截
+目录拦截：/user/*：访问/user下的所有资源，都会被拦截
+后缀名拦截：*.jsp：访问后缀名为jsp的资源，都会被拦截
+拦截所有：/*：访问所有资源，都会被拦截
+
+
+
+
+过滤器链
+
+过滤器链是指在一个Web应用，可以配置多个过滤器，这多个过滤器称为过滤器链。
+我们现在使用的是注解配置Filter，而这种配置方式的优先级是按照过滤器类名(字符串)的自然排序。
+比如有如下两个名称的过滤器 ： BFilterDemo 和 AFilterDemo 。那一定是 AFilterDemo 过滤器先执行。
+
+
+
+
+案例
+
+
+监听器  Listener
+概念
+
+Listener 表示监听器，是 JavaWeb 三大组件(Servlet、Filter、Listener)之一。
+
+监听器可以监听就是在application,session,.request三个对象创建、销毁或者往其中添加修改删除，属性时自动执行代码的功能组件
+
+Listener分类：JavaWeb中提供了8个监听器
+
+
+
+
+
+
+启动服务器，就可以在启动的日志信息中看到 contextInitialized() 方法输出的内容，同时也说明了 ServletContext对象在服务器启动的时候被创建了。
+
+
+异步交互技术 Ajax
+概念
+
+AJAX (Asynchronous JavaScript And XML)：异步的 JavaScript 和 XML。
+
+作用
+
+
+与服务器进行数据交换：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。
+
+
+使用AJAX和服务器进行通信，以达到使用 HTML+AJAX来替换JSP页面
+
+
+
+异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验，等等…
+
+
+
+
+同步和异步
+
+同步
+
+浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后才能，浏览器页面才能继续做其他的操作。
+
+
+异步
+
+浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。
+
+
+
+
+
+
+AJAX快速入门
+
+1.编写AjaxServlet,并使用response输出字符串
+2.创建XMLHttpRequest对象：用于和服务器交换数据
+3.向服务器发送请求
+4.获取服务器响应数据
+
+
+Axios异步框架
+
+概念
+
+Axios 对原生的AJAX进行封装，简化书写。
+
+Axios快速入门
+
+引入 axios 的 js 文件
+使用axios 发送请求，并获取响应结果
+
+
+Axios请求方式别名
+
+为了方便起见， Axios 已经为所有支持的请求方法提供了别名。如下：
+get 请求 ： axios.get(url[,config])
+delete 请求 ： axios.delete(url[,config])
+head 请求 ： axios.head(url[,config])
+options 请求 ： axios.option(url[,config])
+post 请求： axios.post(url[,data[,config])
+put 请求： axios.put(url[,data[,config])
+patch 请求： axios.patch(url[,data[,config])
+
+
+
+
+
+
+
+JSON
+
+JSON基础语法
+
+定义格式
+
+SON 本质就是一个字符串，但是该字符串内容是有一定的格式要求的
+JSON 串的键要求必须使用双引号括起来，而值根据要表示的类型确定。
+
+
+注意
+
+js 提供的 JSON 对象我们只需要了解一下即可。因为 axios 会自动对 js 对象和 JSON 串进行想换转换。
+发送异步请求时，如果请求参数是 JSON 格式，那请求方式必须是 POST 。因为 JSON 串需要放在请求体中。
+
+
+
+
+概念
+
+JavaScript Object Notation 。JavaScript 对象表示法
+作用：由于其语法格式简单，层次结构鲜明，现多用于作为数据载体，在网络中进行数据传输。
+
+
+JSON数据和Java对象转换
+
+概念
+
+请求数据：JSON字符串转为ava对象
+响应数据：Java对象转为SON字符串
+Fastjson 是阿里巴巴提供的一个Java语言编写的高性能功能完善的 JSON 库，是目前Java语言中最快的 JSON 库，可以实现 Java 对象和 JSON 字符串的相互转换。
+
+
+
+
+
+
+
+Filter&amp;Listener&amp;Ajax.pdfVue  ElementUI前端开发框架   Vue
+概念
+
+Vue是一套前端框架，免除原生JavaScript中的DOM操作，简化书写
+
+基于MVVM(Model–View-ViewModel)思想，实现数据的双向绑定，将编程的关注点放在数据上
+
+MVC 和 MVVM
+
+MVC：只能实现模型到视图的单向展示
+MVVM:可以实现数据的双向绑定
+
+
+
+
+Vue快速入门
+
+1.新建HTML页面，引l入Vue.js文件
+2.在S代码区域，创建Vue核心对象，进行数据绑定
+3.编写视图
+
+
+Vue常用指令
+
+指令：HTML标签上带有V-前缀的特殊属性，不同指令具有不同含义。例如：V-if,V-for..
+
+常用指令
+
+v-bind
+
+为HTML标签绑定属性值，如设置href,css样式等
+
+
+v-model
+
+在表单元素上创建双向数据绑定
+
+
+v-on
+
+为HTML标签绑定事件
+
+
+v-if
+
+v-else
+
+条件性的渲染某元素，判定为true时渲染，否则不渲染
+
+
+v-else-if
+
+
+
+v-show
+
+根据条件展示某元素，区别在于切换的是display属性的值
+
+
+v-for
+
+列表渲染，遍历容器的元素或者对象的属性
+
+
+
+
+
+
+Vue生命周期
+
+生命周期的八个阶段：每触发一个生命周期事件，会自动执行一个生命周期方法（钩子）
+
+
+mounted:挂载完成，Vue初始化成功，HTML页面渲染成功
+发送异步请求，加载数据
+
+
+
+
+
+[网站组件库   Element](file://H:\网站\Element - 网站快速成型工具.url)
+概念
+
+Element:是饿了么公司前端开发团队提供的一套基于Vue的网站组件库，用于快速构建网页
+组件：组成网页的部件，例如超链接、按钮、图片、表格等等~
+
+
+Element快速入门
+
+1.引入Element的css、js文件和Vue.js
+2.创建Vue核心对象
+3.官网复制Element组件代码
+
+
+Element布局
+
+Element中有两种布局方式：
+
+Layout布局：通过基础的24分栏，迅速简便地创建布局
+Container布局容器：用于布局的容器组件，方便快速搭建页面的基本结构
+
+
+
+
+Element组件
+
+
+Thymeleaf</select></li></ol></li></ul></li></ul></li></ul></li></ul>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itzyj</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hcyany.github.io/2023/07/16/java-web/">http://hcyany.github.io/2023/07/16/java-web/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itzyj</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                                    <span class="chip bg-color">作者：赵燕军</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/07/16/java-se-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java SE基础">
+                        
+                        <span class="card-title">Java SE基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java SE基础
+Java技术体系
+技术体系
+- 
+
+cmd常用命令
+- 
+开发步骤
+- 
+- 
+
+Java基础语法
+字面量
+- 
+变量
+ * 变量：存储数据的内存区域
+   
+    * 作用：存储数据
+   
+   
+ * • 类变量
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            itzyj
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                        <span class="chip bg-color">作者：赵燕军</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/07/14/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            itzyj
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">itzyj</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

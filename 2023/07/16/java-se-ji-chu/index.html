@@ -1,0 +1,4871 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java SE基础, 博客">
+    <meta name="description" content="Java SE基础Java技术体系技术体系- 
+cmd常用命令- 开发步骤- - 
+Java基础语法字面量- 变量
+变量：存储数据的内存区域
+
+作用：存储数据
+
+
+• 类变量：独立于方法之外的变量，用 static 修饰。
+
+• 实例变量：">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java SE基础 | 博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">博客</div>
+        <div class="logo-desc">
+            
+            赵燕军的个人博客网站
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java SE基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                                <span class="chip bg-color">作者：赵燕军</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-07-16
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java-SE基础"><a href="#Java-SE基础" class="headerlink" title="Java SE基础"></a>Java SE基础</h1><h2 id="Java技术体系"><a href="#Java技术体系" class="headerlink" title="Java技术体系"></a>Java技术体系</h2><h3 id="技术体系"><a href="#技术体系" class="headerlink" title="技术体系"></a>技术体系</h3><p>- </p>
+<h3 id="cmd常用命令"><a href="#cmd常用命令" class="headerlink" title="cmd常用命令"></a>cmd常用命令</h3><h2 id=""><a href="#" class="headerlink" title="- "></a>- </h2><h3 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h3><h2 id="-1"><a href="#-1" class="headerlink" title="- "></a>- </h2><p>- </p>
+<h2 id="Java基础语法"><a href="#Java基础语法" class="headerlink" title="Java基础语法"></a>Java基础语法</h2><h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><h2 id="-2"><a href="#-2" class="headerlink" title="- "></a>- </h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li><p>变量：存储数据的内存区域</p>
+<ul>
+<li>作用：存储数据</li>
+</ul>
+</li>
+<li><p>• 类变量：独立于方法之外的变量，用 static 修饰。</p>
+</li>
+<li><p>• 实例变量：独立于方法之外的变量，不过没有 static 修饰。</p>
+</li>
+<li><p>• 局部变量：类的方法中的变量。</p>
+</li>
+</ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h2 id="-3"><a href="#-3" class="headerlink" title="- "></a>- </h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>- </p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h2 id="-4"><a href="#-4" class="headerlink" title="- "></a>- </h2><p>- </p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h2 id="-5"><a href="#-5" class="headerlink" title="- "></a>- </h2><p>- </p>
+<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ul>
+<li><p>条件语句</p>
+<ul>
+<li><p>if语句</p>
+<p>  - </p>
+</li>
+<li><p>switch语句</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>循环语句</p>
+<ul>
+<li><p>for循环</p>
+<p>  - </p>
+</li>
+<li><p>while循环</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>调整控制语句</p>
+<p>  - </p>
+</li>
+<li><p>Random 生成随机数</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
+<li>数组中存储的元素并不是对象本身，而是对象的地址</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>什么是方法</p>
+<p>  - </p>
+</li>
+<li><p>方法重载</p>
+<h2 id="-6"><a href="#-6" class="headerlink" title="  - "></a>  - </h2><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="Java-面向对象"><a href="#Java-面向对象" class="headerlink" title="Java 面向对象"></a>Java 面向对象</h3><ul>
+<li><p>面向对象</p>
+<ul>
+<li><ol>
+<li>类：是对象共同特征的描述</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>对象：是真实存在的具体实例</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>在Java中，必须先设计类，才能创建对象并使用</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>创建类名：类名 对象名 = new 类名()；</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>类名首字母使用——驼峰模式</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>在Java文件中，可以定义多个class类，但只能有一个类是用public修饰，而且public修饰的类名必须是代码文件名</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>类的五大成分</p>
+<ul>
+<li><p>内存机制</p>
+<ul>
+<li>对象是放在堆内存里</li>
+<li>Car c = new Car(); //c变量名中存储的是对象在堆内存中的地址</li>
+<li>成员变量的数据放在对象中，存在堆内存中。</li>
+<li>垃圾回收：当堆内存中的对象，没有被任何变量引用时，就会被判定位内存中的“垃圾”；</li>
+<li>Java存在自动垃圾回收器，会定期进行清理。</li>
+</ul>
+</li>
+<li><p>public class 类名 {}</p>
+<ul>
+<li><ol>
+<li>成员变量 （对象的属性）</li>
+</ol>
+<ul>
+<li>定义格式：public String getName; //一般不需要指定初始化值，存在默认值</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>成员方法 （对象的行为）</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>构造器</li>
+</ol>
+<ul>
+<li><p>作用：定义在类中，可以用于初始化一个类的对象，并返回对象的地址</p>
+<ul>
+<li>分类：无参数构造器（初始化对象时，成员变量的数据均采用默认值）、有参数构造器（在初始化对象时，同时可以接受参数为对象进行赋值）</li>
+<li>注意：任何类定义出来，默认就自带了无参数构造器，写不写都有；</li>
+<li><pre><code>      ●一旦定义了有参数构造器，无参数构造器就没有了，此时就需要自己写无参数构造器了。
+</code></pre>
+<ul>
+<li><p>//无参数构造器</p>
+<ul>
+<li>public Car(){}</li>
+</ul>
+</li>
+<li><p>//有参数构造器</p>
+<ul>
+<li>public Car(String n,int i){}</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>this关键字</p>
+<ul>
+<li>• 可以出现在构造器、方法中；</li>
+<li>• 代表当前对象的地址</li>
+<li>• 可以用于指定访问当前对象的成员变量、成员方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>代码块</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>内部类</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>• 面向对象的三大特征：封装，继承，多态。</p>
+<ul>
+<li><p>• 封装：告诉我们，如何正确设计对象的属性和方法。</p>
+<ul>
+<li>• 封装的原则：对象代表什么，就得封装对应的数据，并提供数据对应的行为。</li>
+<li>•  一般建议对成员变量使用private(私有、隐藏)关键字修饰,(private修饰的成员只能在当前类中访问)。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><pre><code>JavaBean（实体类）
+</code></pre>
+<p>其对象可以用于在程序中封装数据</p>
+<p>  - </p>
+</li>
+<li><p>成员变量和局部变量的区别：</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><ul>
+<li><p>㈠. 常用API</p>
+<ul>
+<li>●Java写好的技术（功能代码），咱们可以直接调用。</li>
+<li>●Oracle也为ava提供的这些功能代码提供了相应的API文档（技术使用说明书）。</li>
+</ul>
+</li>
+<li><p>㈡. String</p>
+<ul>
+<li><p>String类定义的变量可以用于存储字符串，同时String类提供了很多操作字符串的功能，我们可以直接使用。</p>
+</li>
+<li></li>
+<li><p>String</p>
+<ul>
+<li><p>◆String类概述</p>
+<ul>
+<li><p>² java.lang.String类代表字符串，String类定义的变量可以用于指向字符串对象，然后操作该字符串。</p>
+</li>
+<li><p>² Java程序中的所有字符串文字（例如“abc”)都为此类的对象。</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li>► String其实常被称为不可变字符串类型，它的对象在创建后不能被更改。</li>
+<li>► String变量每次的修改其实都是产生并指向了新的字符串对象。</li>
+<li>► 原来的字符串对象都是没有改变的，所以称不可变字符串。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆String类创建对象的2种方式</p>
+<ul>
+<li>方式一：直接使用””定义。     String name=”传智教育”；</li>
+<li>方式二：通过String类的构造器创建对象。</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>◆String类常用API-遍历、替换、截取、分割操作</p>
+<ul>
+<li>◆String类常用API-字符串内容比较</li>
+<li>字符串的内容比较不适合用“==”比较。</li>
+<li>开发中使用基本数据类型比较时，使用==比较数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>(三) ArrayList</p>
+<ul>
+<li><p>ArrayList代表的是集合类，集合是一种容器，与数组类似，不同的是集合的大小是不固定的。</p>
+</li>
+<li><p>通过创建ArrayList的对象表示得到一个集合容器，同时ArrayList提供了比数组更好用，更丰富的API(功能)给程序员使用。</p>
+</li>
+<li></li>
+<li><blockquote>
+<p>ArrayList</p>
+</blockquote>
+<ul>
+<li><p>◆集合概述</p>
+<ul>
+<li><p>数组：定义以后，类型确定，长度固定</p>
+</li>
+<li><p>ArrayList： 集合的大小不固定，启动后可以动态变化，类型也可以选择不固定。</p>
+<ul>
+<li> ·集合非常适合做元素个数不确定，且要进行增删操作的业务场景。</li>
+<li> ·集合的提供了许多丰富、好用的功能，而数组的功能很单一。</li>
+<li> ●集合适合做数据个数不确定，且要做增删元素的场景</li>
+<li> ●数组适合做数据个数和类型确定的场景</li>
+</ul>
+</li>
+<li><p>在定义集合时，必须采用泛型</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆ArrayList常用API、遍历</p>
+<ul>
+<li>ArrayList<object> list = new ArrayList&lt;&gt; ();
+
+
+
+
+
+<h3 id="static静态关键字"><a href="#static静态关键字" class="headerlink" title="static静态关键字"></a>static静态关键字</h3><ul>
+<li><p>static是什么、修饰成员变量的用法</p>
+</li>
+<li><pre><code> static是静态的意思，可以修饰成员变量和成员方法。
+</code></pre>
+<ul>
+<li>static修饰成员变量表示该成员变量只在内存中只存储一份，可以被共享访问、修改。</li>
+</ul>
+</li>
+<li><p>◆static修饰成员变量的内存原理</p>
+</li>
+<li><p>◆static修饰成员方法的基本用法</p>
+</li>
+<li><p>◆static修饰成员方法的内存原理</p>
+</li>
+<li><p>◆static的注意事项</p>
+</li>
+<li><blockquote>
+</blockquote>
+</li>
+<li><p>㈡. static应用知识：工具类</p>
+</li>
+<li><p>工具类是什么？</p>
+</li>
+<li><p>·类中都是一些静态方法，每个方法都是以完成一个共用的功能为目的，这个类用来给系统开发人员共同使用的。</p>
+</li>
+<li><p>工具类的好处：一次编写，处处可用</p>
+</li>
+</ul>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><h2 id="API-1"><a href="#API-1" class="headerlink" title="API"></a>API</h2><h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><h3 id="时间-日期"><a href="#时间-日期" class="headerlink" title="时间 日期"></a>时间 日期</h3><h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h3><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><h3 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h3><h3 id="集合-1"><a href="#集合-1" class="headerlink" title="集合"></a>集合</h3><h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><ul>
+<li><p>List</p>
+<ul>
+<li>ArrayList</li>
+<li>LinkedList</li>
+</ul>
+</li>
+<li><p>Set</p>
+<ul>
+<li><p>HashSet</p>
+<ul>
+<li>LinkedHashSet</li>
+</ul>
+</li>
+<li><p>TreeSet</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><ul>
+<li><p>数据结构概述、栈、队列 </p>
+<ul>
+<li><p>数据结构概述</p>
+<ul>
+<li>数据结构是计算机底层存储、组织数据的方式。是指数据相互之间是以什么方式排列在一起的。</li>
+<li>·通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>栈</p>
+<ul>
+<li><p>栈数据结构的执行特点</p>
+<ul>
+<li>●后进先出，先进后出</li>
+</ul>
+</li>
+<li><p>数据进入栈模型的过程称为：压/进栈</p>
+</li>
+<li><p>数据离开栈模型的过程称为：弹/出栈</p>
+</li>
+</ul>
+</li>
+<li><p>队列</p>
+<ul>
+<li><p>常见数据结构之队列</p>
+<ul>
+<li>●先进先出，后进后出</li>
+</ul>
+</li>
+<li><p>数据从后端进入队列模型的过程称为：入队列</p>
+</li>
+<li><p>数据从前端离开队列模型的过程称为：出队列</p>
+</li>
+</ul>
+</li>
+<li><p>数组</p>
+<ul>
+<li>数组是一种查询快，增删慢的模型</li>
+<li>●查询速度快：查询数据通过地址值和索引定位，查询任意数据耗时相同。（元素在内存中是连续存储的）</li>
+<li>●删除效率低：要将原始数据删除，同时后面每个数据前移。</li>
+<li>●添加效率极低：添加位置后的每个数据后移，再添加元素。</li>
+</ul>
+</li>
+<li><p>链表</p>
+<ul>
+<li><p>链表的特点</p>
+<ul>
+<li>·链表中的元素是游离存储的，每个元素节点包含数据值和下一个元素的地址。</li>
+<li>·链表查询慢。无论查询哪个数据都要从头开始找</li>
+</ul>
+</li>
+<li><p>链表是一种增删快的模型（对比数组）</p>
+</li>
+<li><p>链表是一种查询慢的模型（对比数组）</p>
+</li>
+<li><p>链表的种类</p>
+<ul>
+<li>单向链表</li>
+<li>双向链表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>二叉树</p>
+<ul>
+<li>·只能有一个根节点，每个节点最多支特2个直接子节点。</li>
+<li>·节点的度：节点拥有的子树的个数，二叉树的度不大于2</li>
+<li>叶子节点度为0的节点，也称之为终端结点。</li>
+<li>●高度：叶子结点的高度为1，叶子结点的父节点高度为2，</li>
+<li>以此类推，根节点的高度最高。</li>
+<li>·层：根节点在第一层，以此类推</li>
+<li>●兄弟节点：拥有共同父节点的节点互称为兄弟节点</li>
+</ul>
+</li>
+<li><p>二叉查找树</p>
+<ul>
+<li><p>二叉查找树又称二叉排序树或者二叉搜索树。</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li>●1，每一个节点上最多有两个子节点</li>
+<li>·2,左子树上所有节点的值都小于根节点的值</li>
+<li>●3，右子树上所有节点的值都大于根节点的值</li>
+</ul>
+</li>
+<li><p>目的：提高检索数据的性能。</p>
+</li>
+<li><p>规则：</p>
+<ul>
+<li>小的存左边</li>
+<li>大的存右边</li>
+<li>一样的不存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>平衡二叉树</p>
+<ul>
+<li><p>平衡二叉树是在满足查找二叉树的大小规则下，让树尽可能矮小，以此提高查数据的性能。</p>
+</li>
+<li><p>平衡二叉树在添加元素后可能导致不平衡</p>
+<ul>
+<li>●基本策略是进行左旋，或者右旋保证平衡。</li>
+</ul>
+</li>
+<li><p>平衡二叉树-旋转的四种情况</p>
+<ul>
+<li><p>·左左</p>
+<ul>
+<li>当根节点左子树的左子树有节点插入，导致二叉树不平衡</li>
+</ul>
+</li>
+<li><p>·左右</p>
+<ul>
+<li>当根节点左子树的右子树有节点插入，导致二叉树不平衡</li>
+</ul>
+</li>
+<li><p>·右右</p>
+<ul>
+<li>当根节点右子树的右子树有节点插入，导致二叉树不平衡</li>
+</ul>
+</li>
+<li><p>·右左</p>
+<ul>
+<li>当根节点右子树的左子树有节点插入导致二叉树不平衡</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>红黑树</p>
+<ul>
+<li><p>概述</p>
+<ul>
+<li>·红黑树是一种自平衡的二叉查找树，是计算机科学中用到的一种数据结构。</li>
+<li>●1972年出现，当时被称之为平衡二叉B树。1978年被修改为如今的”红黑树”。</li>
+<li>·每一个节点可以是红或者黑；红黑树不是通过高度平衡的，它的平衡是通过“红黑规则”进行实现的。</li>
+</ul>
+</li>
+<li><p>规则</p>
+<ul>
+<li>每一个节点或是红色的，或者是黑色的，根节点必须是黑色。</li>
+<li>如果一个节点没有子节点或者父节点，则该节点相应的指针属性值为Nl,这些N视为叶节点，叶节点是黑色的。</li>
+<li>如果某一个节点是红色，那么它的子节点必须是黑色（不能出现两个红色节点相连的情况）。</li>
+<li>·对每一个节点，从该节点到其所有后代叶节点的简单路径上，均包含相同数目的黑色节点。</li>
+</ul>
+</li>
+<li><p>规则如下：</p>
+<ul>
+<li>。每一个节点或是红色的，或者是黑色的，根节点必须是黑色</li>
+<li>。如果一个节点没有子节点或者父节点，则该节点相应的指针属性值为Nl,这些N视为叶节点，每</li>
+<li>个叶节点(N是黑色的：</li>
+<li>。如果某一个节点是红色，那么它的子节点必须是黑色（不能出现两个红色节点相连的情况）</li>
+<li>●对每一个节点，从该节点到其所有后代叶节点的简单路径上，均包含相同数目的黑色节点。</li>
+<li>红黑树增删改查的性能都很好</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>总结</p>
+<ul>
+<li>各种数据结构的特点和作用是什么样的</li>
+<li>·队列：先进先出，后进后出。</li>
+<li>●栈：后进先出，先进后出。</li>
+<li>数组：内存连续区域，查询快，增删慢。</li>
+<li>链表：元素是游离的，查询慢，首尾操作极快。</li>
+<li>二叉树：永远只有一个根节点，每个结点不超过2个子节点的树。</li>
+<li>●查找二叉树：小的左边，大的右边，但是可能树很高，查询性能变差。</li>
+<li>平衡查找二叉树：让树的高度差不大于1，增删改查都提高了。</li>
+<li>。红黑树（就是基于红黑规则实现了自平衡的排序二叉树）</li>
+</ul>
+</li>
+</ul>
+<h3 id="List系列集合"><a href="#List系列集合" class="headerlink" title="List系列集合"></a>List系列集合</h3><ul>
+<li><p>List系列集合特点</p>
+<ul>
+<li><p>ArrayList、LinkedList:有序，可重复，有索引。</p>
+</li>
+<li><p>有序：存储和取出的元素顺序一致</p>
+</li>
+<li><p>有索引：可以通过索引操作元素</p>
+</li>
+<li><p>可重复：存储的元素可以重复</p>
+</li>
+<li><p>总结</p>
+<ul>
+<li><p>1、List系列集合特点</p>
+<ul>
+<li>●ArrayList、LinkedList:有序，可重复，有索引。</li>
+</ul>
+</li>
+<li><p>2、List的实现类的底层原理</p>
+<ul>
+<li>ArrayList)底层是基于数组实现的，根据查询元素快，增删相对慢。</li>
+<li>LinkedList底层基于双链表实现的，查询元素慢，增删首尾元素是非常快的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>List集合的遍历方式有几种？</p>
+<ul>
+<li>迭代器</li>
+<li>增强for循环</li>
+<li>Lambda表达式</li>
+<li>for循环（因为List集合存在索引）</li>
+</ul>
+</li>
+<li><p>ArrayList集合底层原理</p>
+<ul>
+<li>ArrayList底层是基于数组实现的：根据索引定位元素快，增删需要做元素的移位操作。</li>
+<li>第一次创建集合并添加第一个元素的时候，在底层创建一个默认长度为10的数组。</li>
+</ul>
+</li>
+<li><p>LinkedList的特点</p>
+<ul>
+<li>底层数据结构是双链表，查询慢，首尾操作的速度是极快的，所以多了很多首尾操作的特有API。</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识：集合的并发修改异常问题"><a href="#补充知识：集合的并发修改异常问题" class="headerlink" title="补充知识：集合的并发修改异常问题"></a>补充知识：集合的并发修改异常问题</h3><ul>
+<li><p>问题引出</p>
+<ul>
+<li>当我们从集合中找出某个元素并删除的时候可能出现一种并发修改异常问题。</li>
+</ul>
+</li>
+<li><p>哪些遍历存在问题？</p>
+<ul>
+<li>迭代器遍历集合且直接用集合删除元素的时候可能出现。</li>
+<li>增强for循环遍历集合且直接用集合删除元素的时候可能出现。</li>
+</ul>
+</li>
+<li><p>哪种遍历且删除元素不出问题</p>
+<ul>
+<li>●迭代器遍历集合但是用迭代器自己的删除方法操作可以解决。</li>
+<li>使用for循环遍历并删除元素不会存在这个问题。</li>
+</ul>
+</li>
+<li><p>解决办法</p>
+<ul>
+<li>a、选代器遍历删除</li>
+<li>b、foreach追历删除</li>
+<li>c、Lambda表达式</li>
+<li>d、for循环</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识：泛型深入"><a href="#补充知识：泛型深入" class="headerlink" title="补充知识：泛型深入"></a>补充知识：泛型深入</h3><ul>
+<li><p>泛型概述</p>
+<ul>
+<li>泛型：是DK5中引入的特性，可以在编译阶段约束操作的数据类型，并进行检查。</li>
+<li>泛型的格式：&lt;数据类型&gt;；注意：泛型只能支持引用数据类型。</li>
+<li>集合体系的全部接口和实现类都是支持泛型的使用的。</li>
+</ul>
+</li>
+<li><p>泛型的好处：</p>
+<ul>
+<li>统一数据类型。</li>
+<li>把运行时期的问题提前到了编译期间，避免了强制类型转换可能出现的异常，因为编译阶段类型就能确定下来。</li>
+</ul>
+</li>
+<li><p>泛型可以在很多地方进行定义：</p>
+<ul>
+<li><p>类后面</p>
+<ul>
+<li>泛型类</li>
+</ul>
+</li>
+<li><p>方法申明上</p>
+<ul>
+<li>泛型方法</li>
+</ul>
+</li>
+<li><p>接口后面</p>
+<ul>
+<li>泛型接口</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泛型类的概述</p>
+<ul>
+<li><p>定义类时同时定义了泛型的类就是泛型类。</p>
+</li>
+<li><p>泛型类的格式：修饰符class类名&lt;泛型变量&gt;}</p>
+<ul>
+<li>范例：public class MyArrayList<t>{}</t></li>
+</ul>
+</li>
+<li><p>1、泛型类的核心思想：</p>
+<ul>
+<li>●把出现泛型变量的地方全部替换成传输的真实数据类型</li>
+</ul>
+</li>
+<li><p>2、泛型类的作用</p>
+<ul>
+<li>·编译阶段约定操作的数据的类型，类似于集合的作用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泛型方法的概述</p>
+<ul>
+<li><p>定义方法时同时定义了泛型的方法就是泛型方法。</p>
+</li>
+<li><p>泛型方法的格式：修饰符&lt;泛型变量&gt;方法返回值方法名称（形参列表）（）</p>
+</li>
+<li><p>范例：public<t>void show(Tt)(}</t></p>
+</li>
+<li><p>作用：方法中可以使用泛型接收一切实际类型的参数，方法更具备通用性。</p>
+</li>
+<li><p>1、泛型方法的核心思想：</p>
+<ul>
+<li>●把出现泛型变量的地方全部替换成传输的真实数据类型</li>
+</ul>
+</li>
+<li><p>2、泛型方法的作用</p>
+<ul>
+<li>。方法中可以使用泛型接收一切实际类型的参数，方法更具备通用性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泛型接口的概述</p>
+<ul>
+<li><p>●使用了泛型定义的接口就是泛型接口。</p>
+</li>
+<li><p>●泛型接口的格式：修饰符interface接口名称&lt;泛型变量&gt;</p>
+<ul>
+<li>范例：public interface Data<e></e></li>
+</ul>
+</li>
+<li><p>作用：泛型接口可以让实现类选择当前功能需要操作的数据类型</p>
+</li>
+<li><p>泛型接口的原理：</p>
+<ul>
+<li>实现类可以在实现接口的时候传入自己操作的数据类型，这样重写的方法都将是针对于该类型的操作。</li>
+</ul>
+</li>
+<li><p>1、泛型接口的作用</p>
+<ul>
+<li>泛型接口可以约束实现类，实现类可以在实现接口的时候传入自己操作的数据类型这样重写的方法都将是针对于该类型的操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泛型的通配符</p>
+<ul>
+<li><p>？</p>
+<ul>
+<li><p>●？可以在“使用泛型”的时候代表一切类型。</p>
+</li>
+<li><p>●ETKV是在定义泛型的时候使用的。</p>
+</li>
+<li><p>虽然BMW和BENZ都继承了Car但是ArrayList<bmw>和ArrayList<benz>与ArrayList<car>没有关系的！！</car></benz></bmw></p>
+</li>
+<li><p>泛型的上下限：</p>
+<ul>
+<li>？extends Car:?必须是Car或者其子类   泛型上限</li>
+<li>？super Car:?必须是Car或者其父类     泛型下限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Set集合系列"><a href="#Set集合系列" class="headerlink" title="Set集合系列"></a>Set集合系列</h3><ul>
+<li><p>Set系列集系概述</p>
+<ul>
+<li><p>Set系列集合特点</p>
+<ul>
+<li>无序：存取顺序不一致</li>
+<li>不重复：可以去除重复</li>
+<li>无索引：没有带索引的方法，所以不能使用普通for循环遍历，也不能通过索引来获取元素。</li>
+</ul>
+</li>
+<li><p>Set集合实现类特点</p>
+<ul>
+<li>HashSet:无序、不重复、无索引。</li>
+<li>LinkedHashSet:有序、不重复、无索引。</li>
+<li>TreeSet:排序、不重复、无索引。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HashSet元素无序的底层原理：哈希表</p>
+<ul>
+<li><p>HashSet,底层原理</p>
+<ul>
+<li>●HashSets集合底层采取哈希表存储的数据。</li>
+<li>●哈希表是一种对于增删改查数据性能都较好的结构。</li>
+</ul>
+</li>
+<li><p>哈希表的组成</p>
+<ul>
+<li>JDK8之前的，底层使用数组+链表组成</li>
+<li>JDK8开始后，底层采用数组+链表+红黑树组成。</li>
+</ul>
+</li>
+<li><p>哈希表</p>
+<ul>
+<li><p>哈希值</p>
+<ul>
+<li><p>哈希值</p>
+<ul>
+<li>●是DK根据对象的地址，按照某种规则算出来的it类型的数值。</li>
+</ul>
+</li>
+<li><p>Object类的API</p>
+<ul>
+<li>●public int hashCode():返回对象的哈希值</li>
+</ul>
+</li>
+<li><p>对象的哈希值特点</p>
+<ul>
+<li>●同一个对象多次调用hashCode()方法返回的哈希值是相同的</li>
+<li>·默认情况下，不同对象的哈希值是不同的。</li>
+</ul>
+</li>
+<li><p>HashSet 1.7</p>
+<ul>
+<li>数组+链表+（结合哈希算法）</li>
+<li>结论：哈希表是一种对于增删改查数据性能都较好的结构。</li>
+</ul>
+</li>
+<li><p>HashSet 1.8</p>
+<ul>
+<li>数组 + 链表 + 红黑树</li>
+<li>哈希表对于红黑树的引入进一步提高了操作数据的性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.哈希表的详细流程</p>
+<ul>
+<li>①创建一个默认长度16，默认加载因为0.75的数组，数组名table</li>
+<li>②根据元素的哈希值跟数组的长度计算出应存入的位置</li>
+<li>③判断当前位置是否为nu,如果是nul直接存入，如果位置不为nul,表示有元素</li>
+<li>,则调用equals方法比较属性值，如果一样，则不存，如果不一样，则存入数组。</li>
+<li>④当数组存满到16*0.75=12时，就自动扩容，每次扩容原先的两倍</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HashSet元素去重复的底层原理</p>
+<ul>
+<li><p>创建一个默认长度16的数组，数组名table</p>
+</li>
+<li><p>根据元素的哈希值跟数组的长度求余计算出应存入的位置（哈希算法）</p>
+</li>
+<li><p>判断当前位置是否为nul,如果是null直接存入</p>
+</li>
+<li><p>如果位置不为null,表示有元素，则调用equals方法比较</p>
+</li>
+<li><p>如果一样，则不存，如果不一样，则存入数组，</p>
+</li>
+<li><p>结论：如果希望Set集合认为2个内容一样的对象是重复的，必须重写对象的hashCode()和equals()方法</p>
+</li>
+<li><p>如果希望Set集合认为2个内容相同的对象是重复的应该怎么办？</p>
+<ul>
+<li>●重写对象的hashCode和equals方法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>实现类：LinkedHashSet</p>
+<ul>
+<li>·有序、不重复、无索引。</li>
+<li>●这里的有序指的是保证存储和取出的元素顺序一致</li>
+<li>·原理：底层数据结构是依然哈希表，只是每个元素又额外的多了一个双链表的机制记录存储的顺序。</li>
+</ul>
+</li>
+<li><p>实现类：TreeSet</p>
+<ul>
+<li><p>TreeSet集合概述和特点</p>
+<ul>
+<li>不重复、无索引、可排序</li>
+<li>可排序：按照元素的大小默认升序（有小到大）排序。</li>
+<li>TreeSet集合底层是基于红黑树的数据结构实现排序的，增删改查性能都较好。</li>
+<li>注意：Treeset集合是一定要排序的，可以将元素按照指定的规则进行排序。</li>
+</ul>
+</li>
+<li><p>TreeSet集合默认的规则</p>
+<ul>
+<li>对于数值类型：Integer,Double,官方默认按照大小进行升序排序。</li>
+<li>对于字符串类型：默认按照首字符的编号升序排序。</li>
+<li>●对于自定义类型如Student对象，TreeSet无法直接排序。</li>
+<li>结论：想要使用TreeSet存储自</li>
+<li>定义类型，需要制定排序规则</li>
+</ul>
+</li>
+<li><p>自定义排序规则</p>
+<ul>
+<li><p>TreeSet:集合存储对象的的时候有2种方式可以设计自定义比较规侧则</p>
+</li>
+<li><p>方式一</p>
+<ul>
+<li>·让自定义的类（如学生类）</li>
+<li>实现Comparable接口重写里面的compareTo方法来定制比较规则。</li>
+</ul>
+</li>
+<li><p>方式二</p>
+<ul>
+<li>●TreeSet:集合有参数构造器，可以设置Comparator接口对应的比较器对象，来定制北比较规则。</li>
+</ul>
+</li>
+<li><p>两种方式中，关于返回值的规则：</p>
+<ul>
+<li>,如果认为第一个元素大于第二个元素返回正整数即可。</li>
+<li>如果认为第一个元素小于第二个元素返回负整数即可。</li>
+<li>如果认为第一个元素等于第二个元素返回0即可，此时Treeset:集合只会保留一个元素，认为两者重复。</li>
+</ul>
+</li>
+<li><p>注意：如果TreeSet:集合存储的对象有实现比较规则，集合也自带比较器，默认使用集合自带的比较器排序。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Collection体系的特点、使用场景总结"><a href="#Collection体系的特点、使用场景总结" class="headerlink" title="Collection体系的特点、使用场景总结"></a>Collection体系的特点、使用场景总结</h3><ul>
+<li><p>1.如果希望元素可以重复，又有索引，索引查询要快？</p>
+<ul>
+<li>●用ArrayList集合，基于数组的。（用的最多）</li>
+</ul>
+</li>
+<li><p>2.如果希望元素可以重复，又有索引，增删首尾操作快？</p>
+<ul>
+<li>●用LinkedList集合，基于链表的。</li>
+</ul>
+</li>
+<li><p>3.如果希望增删改查都快，但是元素不重复、无序、无索引。</p>
+<ul>
+<li>●用HashSet:集合，基于哈希表的。</li>
+</ul>
+</li>
+<li><p>4.如果希望增删改查都快，但是元素不重复、有序、无索引。</p>
+<ul>
+<li>●用LinkedHashSet:集合，基于哈希表和双链表。</li>
+</ul>
+</li>
+<li><p>5.如果要对对象进行排序。</p>
+<ul>
+<li>●用TreeSet集合，基于红黑树。后续也可以用List集合实现排序。</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识：可变参数"><a href="#补充知识：可变参数" class="headerlink" title="补充知识：可变参数"></a>补充知识：可变参数</h3><ul>
+<li><p>可变参数</p>
+<ul>
+<li><p>·可变参数用在形参中可以接收多个数据。</p>
+</li>
+<li><p>可变参数的格式：数据类型 … 参数名称</p>
+</li>
+<li><p>可变参数的作用</p>
+<ul>
+<li>·传输参数非常灵活，方便。可以不传输参数，可以传输1个或者多个，也可以传输一个数组</li>
+<li>可变参数在方法内部本质上就是一个数组。</li>
+</ul>
+</li>
+<li><p>可变参数的注意事项：</p>
+<ul>
+<li>●1.一个形参列表中可变参数只能有一个</li>
+<li>●2.可变参数必须放在形参列表的最后面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识：集合工具类Collections"><a href="#补充知识：集合工具类Collections" class="headerlink" title="补充知识：集合工具类Collections"></a>补充知识：集合工具类Collections</h3><ul>
+<li><p>Collections集合工具类</p>
+<ul>
+<li>●java.utils.Collections:是集合工具类</li>
+<li>·作用：Collections并不属于集合，是用来操作集合的工具类。</li>
+</ul>
+</li>
+<li><p>Collections常用的API</p>
+<ul>
+<li><p>public static <t>boolean addAll(Collection&lt;?super T&gt;c,T…elements)</t></p>
+<ul>
+<li>给集合对象批量添加元素</li>
+</ul>
+</li>
+<li><p>public static void shuffle(List&lt;?&gt;list)</p>
+<ul>
+<li>打乱List集合元素的顺序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Collections:排序相关API</p>
+<ul>
+<li><p>●使用范围：只能对于List集合的排序。</p>
+<ul>
+<li><p>public static <t>void sort(List<t>list)</t></t></p>
+<ul>
+<li>将集合中元素按照默认规则排序</li>
+<li>注意：本方式不可以直接对自定义类型的List集合排序，除非自定义类型实现了比较规则Comparable接口。</li>
+</ul>
+</li>
+<li><p>public static <t>void sort(List<t>list,Comparator&lt;?super T&gt;c)</t></t></p>
+<ul>
+<li>将集合中元素按照指定规则排序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Map集合系列"><a href="#Map集合系列" class="headerlink" title="Map集合系列"></a>Map集合系列</h3><ul>
+<li><p>Map集合的概述</p>
+<ul>
+<li><p>Map集合概述和使用</p>
+<ul>
+<li>Map集合是一种双列集合(键值对集合)，每个元素包含两个数据。</li>
+<li>Map集合的每个元素的格式：key=value(键值对元素)。</li>
+<li>Map集合也被称为“键值对集合”。</li>
+</ul>
+</li>
+<li><p>Map集合整体格式：</p>
+<ul>
+<li>Collection集合的格式：[元素1，元素2，元素3.]</li>
+<li>Map集合的完整格式：{key1=value1,key2=value2,key3=value.3,.}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合体系特点</p>
+<ul>
+<li><p>Map</p>
+<ul>
+<li><p>HashMap</p>
+<ul>
+<li>LinkedHashMap</li>
+</ul>
+</li>
+<li><p>HashTable</p>
+<ul>
+<li>Properties</li>
+</ul>
+</li>
+<li><p>AbstractMap</p>
+<ul>
+<li>TreeMap</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>体系特点</p>
+<ul>
+<li>●Map集合的特点都是由键决定的。</li>
+<li>●Mp集合的键是无序，不重复的，无索引的，值不做要求（可以重复）。</li>
+<li>●Map集合后面重复的键对应的值会覆盖前面重复键的值。</li>
+<li>●Map集合的键值对都可以为null。</li>
+</ul>
+</li>
+<li><p>实现类特点</p>
+<ul>
+<li>HashMap:元素按照键是无序，不重复，无索引，值不做要求。（与Map体系一致）</li>
+<li>LinkedHashMap:元素按照键是有序，不重复，无索引，值不做要求。</li>
+<li>TreeMap:元素按照建是排序，不重复，无索引的，值不做要求。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合常用API</p>
+<ul>
+<li><p>Map集合</p>
+<ul>
+<li>Map是双列集合的祖宗接口，它的功能是全部双列集合都可以继承使用的。</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合的遍历</p>
+<ul>
+<li><p>Map集合的遍历方式一：键找值</p>
+<ul>
+<li><p>先获取Map集合的全部键的Set集合。</p>
+</li>
+<li><p>遍历键的Set集合，然后通过键提取对应值。</p>
+</li>
+<li><p>键找值涉及到的API:</p>
+<ul>
+<li><p>Set<k>keySet()D</k></p>
+<ul>
+<li>获取所有键的集合</li>
+</ul>
+</li>
+<li><p>V get(Object key)</p>
+<ul>
+<li>根据键获取值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合的遍历方式二：键值对</p>
+<ul>
+<li><p>先把Map集合转换成Set集合，Set集合中每个元素都是键值对实体类型了。</p>
+</li>
+<li><p>遍历Set集合，然后提取键以及提取值。</p>
+</li>
+<li><p>键值对涉及到的API:</p>
+<ul>
+<li><p>Set&lt;Map.Entry&lt;K,V&gt;&gt;entrySet()</p>
+<ul>
+<li>获取所有键值对对象的集合</li>
+</ul>
+</li>
+<li><p>K getKey0</p>
+<ul>
+<li>获得键</li>
+</ul>
+</li>
+<li><p>V getValue()</p>
+<ul>
+<li>获取值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合的遍历方式三：lambda表达式</p>
+<ul>
+<li><p>得益于JDK8开始的新技术Lambda表达式，提供了一种更简单、更直接的遍历集合的方式。</p>
+</li>
+<li><p>Map结合Lambda遍历的APl</p>
+<ul>
+<li><p>default void forEach(BiConsumer&lt;?super K,super V&gt;action)</p>
+<ul>
+<li>结合lambdai遍历Map集合</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合的实现类HashMap</p>
+<ul>
+<li><p>HashMap的特点</p>
+<ul>
+<li>●HashMap是Map里面的一个实现类。特点都是由键决定的：无序、不重复、无索引</li>
+<li>●没有额外需要学习的特有方法，直接使用Map里面的方法就可以了。</li>
+<li>●HashMap跟HashSet)底层原理是一模一样的，都是哈希表结构，只是HashMap的每个元素包含两个值而已。</li>
+</ul>
+</li>
+<li><p>实际上：Set系列集合的底层就是Map实现的，只是Set集合中的元素只要键数据，不要值数据而已。</p>
+</li>
+<li><p>HashMap的特点和底层原理</p>
+<ul>
+<li>●由键决定：无序、不重复、无索引。HashMap底层是哈希表结构的。</li>
+<li>●依赖hashCode方法和equals方法保证键的唯一。</li>
+<li>如果键要存储的是自定义对象，需要重写hashCode和equals方法。</li>
+<li>●基于哈希表。增删改查的性能都较好。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合的实现类LinkedHashMap</p>
+<ul>
+<li><p>LinkedHashMap集合概述和特点</p>
+<ul>
+<li>·由键决定：有序、不重复、无索引。</li>
+<li>●这里的有序指的是保证存储和取出的元素顺序一致</li>
+</ul>
+</li>
+<li><p>·原理：底层数据结构是依然哈希表，只是每个键值对元素又额外的多了一个双链表的机制记录存储的顺序。</p>
+</li>
+</ul>
+</li>
+<li><p>Map集合的实现类TreeMap</p>
+<ul>
+<li><p>TreeMap集合概述和特点</p>
+<ul>
+<li>由键决定特性：不重复、无索引、可排序</li>
+<li>可排序：按照键数据的大小默认升序（有小到大)排序。只能对键排序。</li>
+<li>,注意：TreeMap:集合是一定要排序的，可以默认排序，也可以将键按照指定的规则进行排序</li>
+</ul>
+</li>
+<li><p>TreeMap跟TreeSet-一样底层原理是一样的。</p>
+</li>
+<li><p>TreeMap集合自定义排序规则有2种</p>
+<ul>
+<li>类实现Comparable接口，重写比较规则。</li>
+<li>●集合自定义Comparator比较器对象，重写比较规则。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Map集合实现类特点</p>
+<ul>
+<li>●HashMap:元素按照键是无序，不重复，无索引，值不做要求，基于哈希表（与Map体系一致）</li>
+<li>●LinkedHashMap:元素按照键是有序，不重复，无索引，值不做要求，基于哈希表</li>
+<li>●TreeMap:元素只能按照键排序，不重复，无索引的，值不做要求，可以做排序</li>
+</ul>
+</li>
+</ul>
+<h3 id="补充知识：集合的嵌套"><a href="#补充知识：集合的嵌套" class="headerlink" title="补充知识：集合的嵌套"></a>补充知识：集合的嵌套</h3><h2 id="Stream、异常体系、日志框架"><a href="#Stream、异常体系、日志框架" class="headerlink" title="Stream、异常体系、日志框架"></a>Stream、异常体系、日志框架</h2><h3 id="今天同学们需要学会什么"><a href="#今天同学们需要学会什么" class="headerlink" title="今天同学们需要学会什么"></a>今天同学们需要学会什么</h3><ul>
+<li><p>不可变集合</p>
+<ul>
+<li>有些业务场景下需要有不可变集合对象，Java如何得到不可变集合对象</li>
+</ul>
+</li>
+<li><p>Streami流</p>
+<ul>
+<li>集合自己提供的API非常繁琐，JDK8开始，得益于Lambda,提供了操作集合、数组更好用的技术：Stream</li>
+</ul>
+</li>
+<li><p>认识异常体系</p>
+<ul>
+<li>程序一旦出现了bug则会终止，如何尽力避免程序出现异常，出现异常如何进行处理让程序更稳健</li>
+</ul>
+</li>
+<li><p>日志框架</p>
+<ul>
+<li>系统在开发阶段或者上线后，一旦业务出现问题，需要有信息去定位，如何记录程序的运行情况？</li>
+</ul>
+</li>
+</ul>
+<h3 id="不可变集合"><a href="#不可变集合" class="headerlink" title="不可变集合"></a>不可变集合</h3><ul>
+<li><p>什么是不可变集合？</p>
+<ul>
+<li>不可变集合，就是不可被修改的集合。</li>
+<li>集合的数据项在创建的时候提供，并且在整个生命周期中都不可改变。否则报错。</li>
+</ul>
+</li>
+<li><p>为什么要创建不可变集合？</p>
+<ul>
+<li>如果某个数据不能被修改，把它防御性地拷贝到不可变集合中是个很好的实践。</li>
+<li>。或者当集合对象被不可信的库调用时，不可变形式是安全的。</li>
+</ul>
+</li>
+<li><p>如何创建不可变集合？</p>
+<ul>
+<li><p>。在List、Set、Map接口中，都存在of方法，可以创建一个不可变的集合。</p>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>static <e>List<e>of(E…elements)</e></e></p>
+<ul>
+<li>创建一个具有指定元素的List集合对像</li>
+</ul>
+</li>
+<li><p>static <e>Set<e>of(E…elements)</e></e></p>
+<ul>
+<li>创建一个具有指定元素的Set集合对像</li>
+</ul>
+</li>
+<li><p>static &lt;K,V&gt;Map&lt;K,V&gt;of(E…elements)</p>
+<ul>
+<li>创建一个具有指定元素的Map集合对像</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>问题</p>
+<ul>
+<li><p>1.不可变集合的特点？</p>
+<ul>
+<li>●定义完成后不可以修改，或者添加、删除</li>
+</ul>
+</li>
+<li><p>2.如何创建不可变集合？</p>
+<ul>
+<li>●List、Set、Map接口中，都存在of方法可以创建不可变集合。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Streami流"><a href="#Streami流" class="headerlink" title="Streami流"></a>Streami流</h3><ul>
+<li><p>◆Stream流的概述</p>
+<ul>
+<li><p>什么是Stream流？</p>
+<ul>
+<li>在ava8中，得益于Lambda所带来的函数式编程，引入了一个全新的Stream流概念。</li>
+<li>●目的：用于简化集合和数组操作的API。</li>
+</ul>
+</li>
+<li><p>体验Stream流的作用</p>
+<ul>
+<li>简化集合、数组操作的API。结合了Lambda表达式。</li>
+</ul>
+</li>
+<li><p>Stream流式思想的核心：</p>
+<ul>
+<li>1.先得到集合或者数组的Stream流（就是一根传送带）</li>
+<li>2.把元素放上去</li>
+<li>3.然后就用这个Stream流简化的API来方便的操作元素。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Stream流的获取</p>
+<ul>
+<li><p>Stream流的三类方法</p>
+<ul>
+<li><p>获取Stream流</p>
+<ul>
+<li>创建一条流水线，并把数据放到流水线上准备进行操作</li>
+</ul>
+</li>
+<li><p>中间方法</p>
+<ul>
+<li>■流水线上的操作。一次操作完毕之后，还可以继续进行其他操作。</li>
+</ul>
+</li>
+<li><p>终结方法</p>
+<ul>
+<li>■一个Stream流只能有一个终结方法，是流水线上的最后一个操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>集合获取Stream流的方式</p>
+<ul>
+<li><p>Stream操作集合或者数组的第一步是先得到Stream流，然后才能使用流的功能。</p>
+</li>
+<li><p>可以使用Collection接口中的默认方法stream(）生成流</p>
+<ul>
+<li><p>default Stream<e>stream()</e></p>
+<ul>
+<li>获取当前集合对象的Stream流</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数组获取Stream流的方式</p>
+<ul>
+<li><p>public static <t>StreamT&gt;stream(T[]array)</t></p>
+<ul>
+<li>获取当前数组的Stream流</li>
+</ul>
+</li>
+<li><p>public static<t>Stream<t>of(T…values)</t></t></p>
+<ul>
+<li>获取当前数组/可变数据的Stream流</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Stream流的常用API</p>
+<ul>
+<li><p>Stream流的常用API(中间操作方法)</p>
+<ul>
+<li><p>Stream<t>filter(Predicate&lt;?super T&gt;predicate)</t></p>
+<ul>
+<li>用于对流中的数据进行过滤。</li>
+</ul>
+</li>
+<li><p>Stream<t>limit(long maxSize)</t></p>
+<ul>
+<li>获取前几个元素</li>
+</ul>
+</li>
+<li><p>Stream<t>skip(long n)</t></p>
+<ul>
+<li>跳过前几个元素</li>
+</ul>
+</li>
+<li><p>Stream<t>distinct()</t></p>
+<ul>
+<li>去除流中重复的元素。依赖(hashCode和equals方法)</li>
+</ul>
+</li>
+<li><p>static <t>Stream<t>concat(Stream a,Stream b)</t></t></p>
+<ul>
+<li>合并a和b两个流为一个流</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>中间方法也称为非终结方法，调用完成后返回新的Stream流可以继续使用，支持链式编程。</li>
+<li>在Stream流中无法直接修改集合、数组中的数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Stream流的常见终结操作方法</p>
+<ul>
+<li><p>void forEach(Consumer action)</p>
+<ul>
+<li>对此流的每个元素执行遍历操作</li>
+</ul>
+</li>
+<li><p>long count()</p>
+<ul>
+<li>返回此流中的元素数</li>
+</ul>
+</li>
+<li><p>注意：终结操作方法，调用完成后流就无法继续使用了，原因是不会返回Stream了。</p>
+</li>
+</ul>
+</li>
+<li><p>1、终结和非终结方法的含义是什么？</p>
+<ul>
+<li>·终结方法后流不可以继续使用，非终结方法会返回新的流，支持链式编程。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆收集Stream流</p>
+<ul>
+<li><p>Stream流的收集操作</p>
+<ul>
+<li>●收集Stream流的含义：就是把Stream流操作后的结果数据转回到集合或者数组中去。</li>
+<li>●Stream流：方便操作集合/数组的手段。</li>
+<li>●集合/数组：才是开发中的目的。</li>
+</ul>
+</li>
+<li><p>Stream流的收集方法</p>
+<ul>
+<li><p>R collect(Collector collector)</p>
+<ul>
+<li>开始收集Stream流，指定收集器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Collectors工具类提供了具体的收集方式</p>
+<ul>
+<li><p>public static <t>Collector toList()</t></p>
+<ul>
+<li>把元素收集到List集合中</li>
+</ul>
+</li>
+<li><p>public static <t>Collector toSet()</t></p>
+<ul>
+<li>把元素收集到Set集合中</li>
+</ul>
+</li>
+<li><p>public static Collector toMap(Function keyMapper,Function valueMapper)</p>
+<ul>
+<li>把元素收集到Map集合中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>1、收集Stream流的作用？</p>
+<ul>
+<li>●Stream流是操作集合/数组的手段</li>
+<li>·操作的结果数据最终要恢复到集合或者数组中去。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="认识异常体系"><a href="#认识异常体系" class="headerlink" title="认识异常体系"></a>认识异常体系</h3><ul>
+<li><p>异常概述、体系</p>
+<ul>
+<li><p>什么是异常？</p>
+<ul>
+<li>·异常是程序在“编译”或者“执行”的过程中可能出现的问题，注意：语法错误不算在异常体系中。</li>
+<li>比如：数组索引越界、空指针异常、日期格式化异常，等…</li>
+</ul>
+</li>
+<li><p>为什么要学习异常？</p>
+<ul>
+<li>异常一旦出现了，如果没有提前处理，程序就会退出JVM虚拟机而终止，</li>
+<li>研究异常并且避免异常，然后提前处理异常，体现的是程序的安全，健壮性。</li>
+</ul>
+</li>
+<li><p>异常体系</p>
+<ul>
+<li><p>Throwable</p>
+<ul>
+<li><p>Error</p>
+<ul>
+<li>·系统级别问题、JVM退出等，代码无法控制。</li>
+</ul>
+</li>
+<li><p>Exception</p>
+<ul>
+<li><p>RuntimeException</p>
+<ul>
+<li>●RuntimeException及其子类：运行时异常，编译阶段不会报错。（空指针异常，数组索引越界异常）</li>
+</ul>
+</li>
+<li><p>除RuntimeException之外所有的异常</p>
+<ul>
+<li>除RuntimeException之外所有的异常：编译时异常，编译期必须处理的，否则程序不能通过编译。（日期格式化异常）。</li>
+</ul>
+</li>
+<li><p>Exception:java.lang包下，称为异常类，它表示程序本身可以处理的问题</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>学习异常的目的？</p>
+<ul>
+<li>避免异常的出现，同时处理可能出现的异常，让代码更稳健。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见运行时异常</p>
+<ul>
+<li><p>运行时异常，在编译成clss文件不需要处理，在运行字节码文件时可能出现的异常。</p>
+</li>
+<li><p>●直接继承自RuntimeException.或者其子类，编译阶段不会报错，运行时可能出现的错误。</p>
+</li>
+<li><p>运行时异常：一般是程序员业务设有考虑好或者是编程逻辑不严谨引起的程序错误，</p>
+</li>
+<li><p>运行时异常示例</p>
+<ul>
+<li>数组索引越界异常：ArraylndexOutOfBoundsException</li>
+<li>空指针异常：NullPointerException,直接输出没有问题，但是调用空指针的变量的功能就会报错。</li>
+<li>数学操作异常：ArithmeticException</li>
+<li>类型转换异常：ClassCastException</li>
+<li>数字转换异常：NumberFormatException</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见编译时异常</p>
+<ul>
+<li><p>●编译时异常，是在编译成clss文件时必须要处理的异常，也称之为受检异常</p>
+</li>
+<li><p>不是RuntimeException或者其子类的异常，编译阶就报错，必须处理，否则代码不通过。</p>
+</li>
+<li><p>编译时异常的作用是什么：</p>
+<ul>
+<li>●是担心程序员的技术不行，在编译阶段就爆出一个错误，目的在于提醒不要出错！</li>
+<li>●编译时异常是可遇不可求。遇到了就遇到了呗。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>异常的默认处理流程</p>
+<ul>
+<li>①默认会在出现异常的代码那里自动的创建一个异常对象：ArithmeticException。</li>
+<li>②异常会从方法中出现的点这里抛出给调用者，调用者最终抛出给JVM虚拟机。</li>
+<li>③虚拟机接收到异常对象后，先在控制台直接输出异常栈信息数据。</li>
+<li>④直接从当前执行的异常点干掉当前程序。</li>
+<li>⑤后续代码没有机会执行了，因为程序已经死亡。</li>
+<li>默认的异常处理机制并不好，一旦真的出现异常，程序立即死亡！</li>
+</ul>
+</li>
+<li><p>编译时异常的处理机制</p>
+<ul>
+<li><p>编译时异常是编译阶段就出错的，所以必须处理，否则代码根本无法通过</p>
+</li>
+<li><p>编译时异常的处理形式有三种：</p>
+<ul>
+<li><p>●出现异常直接抛出去给调用者，调用者也继续抛出去。</p>
+<ul>
+<li><p>异常处理方式1——throws</p>
+<ul>
+<li>●throws:用在方法上，可以将方法内部出现的异常抛出去给本方法的调用者处理。</li>
+<li>·这种方式并不好，发生异常的方法自己不处理异常，如果异常最终抛出去给虚拟机将引起程序死亡。</li>
+</ul>
+</li>
+<li><p>异常处理方式2一try..catch..</p>
+<ul>
+<li>●监视捕获异常，用在方法内部，可以将方法内部出现的异常直接捕获处理。</li>
+<li>·这种方式还可以，发生异常的方法自己独立完成异常的处理，程序可以继续往下执行。</li>
+</ul>
+</li>
+<li><p>异常处理方式3—一前两者结合</p>
+<ul>
+<li>●方法直接将异通过throws抛出去给调用者</li>
+<li>调用者收到异常后直接捕获处理。</li>
+</ul>
+</li>
+<li><p>1、异常处理的总结</p>
+<ul>
+<li>●在开发中按照规范来说第三种方式是最好的：底层的异常抛出去给最外层，最外层集中捕获处理。</li>
+<li>●实际应用中，只要代码能够编译通过，并且功能能完成，那么每一种异常处理方式似乎也都是可以的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>●出现异常自己捕获处理，不麻烦别人。</p>
+</li>
+<li><p>●前两者结合，出现异常直接抛出去给调用者，调用者捕获处理。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>运行时异常的处理机制</p>
+<ul>
+<li><p>运行时异常的处理形式</p>
+<ul>
+<li>●运行时异常编译阶段不会出错，是运行时才可能出错的，所以编译阶段不处理也可以。</li>
+<li>●按照规范建议还是处理：建议在最外层调用处集中捕获处理即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>自定义异常</p>
+<ul>
+<li><p>自定义异常的必要？</p>
+<ul>
+<li>●Java无法为这个世界上全部的问题提供异常类。</li>
+<li>●如果企业想通过异常的方式来管理自己的某个业务问题，就需要自定义异常类了。</li>
+</ul>
+</li>
+<li><p>自定义异常的好处：</p>
+<ul>
+<li>●可以使用异常的机制管理业务问题，如提醒程序员注意。</li>
+<li>●同时一旦出现bug,可以用异常的形式清晰的指出出错的地方。</li>
+</ul>
+</li>
+<li><p>自定义异常的分类</p>
+<ul>
+<li><p>1、自定义编译时异常</p>
+<ul>
+<li>定义一个异常类继承Exception.</li>
+<li>重写构造器。</li>
+<li>在出现异常的地方用throw new自定义对象抛出，</li>
+<li>作用：编译时异常是编译阶段就报错，提醒更加强烈，一定需要处理！！</li>
+</ul>
+</li>
+<li><p>2、自定义运行时异常</p>
+<ul>
+<li>●定义一个异常类继承RuntimeException.</li>
+<li>●重写构造器。</li>
+<li>●在出现异常的地方用throw new自定义对象抛出！</li>
+<li>作用：提醒不强烈，编译阶段不报错！！运行时才可能出现！！</li>
+</ul>
+</li>
+<li><p>throw；在方法内部直接创建一个异常对象，并从此抛出</p>
+</li>
+<li><p>throws:用在方法申明上的，抛出方法内部的异清异常</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="日志框架"><a href="#日志框架" class="headerlink" title="日志框架"></a>日志框架</h3><ul>
+<li><p>今天同学们需要学会什么</p>
+<ul>
+<li><p>日志框架</p>
+<ul>
+<li>系统在开发阶段或者上线后，一旦业务出现问题，需要有信息去定位，如何记录程序的运行信息？</li>
+</ul>
+</li>
+<li><p>阶段项目</p>
+<ul>
+<li>学以致用，使用Java程序处理数据、控制业务逻辑推进。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆日志技术的概述</p>
+<ul>
+<li><p>日志技术具备的优势</p>
+<ul>
+<li>·可以将系统执行的信息选择性的记录到指定的位置（控制台、文件中、数据库中）。</li>
+<li>●可以随时以开关的形式控制是否记录日志，无需修改源代码。</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>◆日志技术体系结构</p>
+<ul>
+<li>日志规范：一些接口，提供给日志的实现框架设计的标准。</li>
+<li>日志框架：牛人或者第三方公司已经做好的日志记录实现代码，后来者直接可以拿去使用。</li>
+<li>Commons Logging（JCL）</li>
+<li>Simple Logging Facade for Java（slf4j）</li>
+<li>因为对Commons Logging的接口不满意，有人就搞了SLF4。因为对Log4j的性能不满意，有人就搞了Logback。</li>
+</ul>
+</li>
+<li><p>◆Logback概述</p>
+<ul>
+<li><p>Logback日志框架</p>
+<ul>
+<li>●Logback是由log4j创始人设计的另一个开源日志组件，性能比log4j要好</li>
+<li>●Logback:是基于slf4j的日志规范实现的框架。</li>
+</ul>
+</li>
+<li><p>Logback主要分为三个技术模块：</p>
+<ul>
+<li>logback-core:logback-core模块为其他两个模块奠定了基础，必须有。</li>
+<li>●logback-classic:它是log4j的一个改良版本，同时它完整实现了slf4jAPI。</li>
+<li>logback-access模块与Tomcat和」etty等Servlet容器集成，以提供HTTP访问日志功能</li>
+</ul>
+</li>
+<li><p>1.使用Logback需要使用哪几个模块，各自的作用是什么。</p>
+<ul>
+<li>●slf4j-api:日志规范</li>
+<li>logback-core:基础模块。</li>
+<li>logback-classic:它是log4j的一个改良版本，同时它完整实现了slf4纠jAPI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Logback快速入门</p>
+<ul>
+<li><p>使用Logback的开发步骤是怎么样的？</p>
+<ul>
+<li>①：在项目下新建文件夹lib,导入Logback的相关jar包到该文件夹下，并添加到项目库中去。</li>
+<li>②：必须将Logback的核心配置文件logback,xml直接拷贝到src目录下。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Logbacki配置详解-输出位置、格式设置</p>
+<ul>
+<li><p>Logback日志系统的特性都是通过核心配置文件logback.Xml控制的。</p>
+</li>
+<li><p>Logback日志输出位置、格式设置：</p>
+<ul>
+<li>●通过logback.xml中的<append>标签可以设置输出位置和日志信息的详细格式。</append></li>
+<li>通常可以设置2个日志输出位置：一个是控制台、一个是系统文件中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Logback配置详解-日志级别设置</p>
+<ul>
+<li><p>日志级别</p>
+<ul>
+<li>级别程度依次是：TRACE&lt;DEBUG&lt;INFO&lt;WARN&lt;ERROR;默认级别是debug(忽路大小写)，对应其方法。</li>
+<li>作用：用于控制系统中哪些日志级别是可以输出的，只输出级别不低于设定级别的日志信息。</li>
+<li>ALL和OFF分别是打开全部日志信息，及关闭全部日志信息。</li>
+</ul>
+</li>
+<li><p>具体在&lt;root level:=”INFO”&gt;标签的level属性中设置日志级别。</p>
+</li>
+<li><p>1、设置日志输出级别的作用是什么？</p>
+<ul>
+<li>●用于控制系统中哪些日志级别是可以输出的。</li>
+</ul>
+</li>
+<li><p>2、Logback的日志级别是什么样的？</p>
+<ul>
+<li>级别程度依次是：TRACE&lt;DEBUG&lt;INFO&lt;WARN&lt;ERROR</li>
+<li>●默认级别是dbug(忽略大小写)，只输出不低于当前级别的日志</li>
+<li>●ALL和OFF分别是打开全部日志和关闭全部日志</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="阶段项目实战"><a href="#阶段项目实战" class="headerlink" title="阶段项目实战"></a>阶段项目实战</h3><ul>
+<li>电影购票系统简介、项目功能演示</li>
+<li>日志框架搭建、系统角色分析</li>
+<li>首页设计、登录、商家界面、用户界面实现</li>
+<li>商家-详情页设计、影片上架、退出</li>
+<li>商家-影片下架、影片修改</li>
+<li>用户-展示全部影片</li>
+<li>用户-购票功能</li>
+<li>用户评分功能</li>
+<li>用户评分降序展示（学生作业）</li>
+<li>用户-根据片名查询全部影片信息（学生作业）</li>
+</ul>
+<h2 id="File、方法递归、IO流"><a href="#File、方法递归、IO流" class="headerlink" title="File、方法递归、IO流"></a>File、方法递归、IO流</h2><h3 id="学习思路"><a href="#学习思路" class="headerlink" title="学习思路"></a>学习思路</h3><ul>
+<li><p>File类使用</p>
+<ul>
+<li>能够使用File的对象操作文件，如：删除、获取文件信息、创建文件夹等</li>
+</ul>
+</li>
+<li><p>方法递归</p>
+<ul>
+<li>理解递归算法思想并能完成常见递归题目以及文件搜索</li>
+</ul>
+</li>
+<li><p>字符集</p>
+<ul>
+<li>程序中经常要读取文件中的数据，程序员必须先知道数据的底层形式才能够去学习如何读写数据</li>
+</ul>
+</li>
+<li><p>IO流的作用、分类</p>
+<ul>
+<li>能够使用1O流完成文件数据的读写等操作</li>
+</ul>
+</li>
+<li><p>字节流、字符流</p>
+<ul>
+<li>数据的类型很多，要学会选择不同的流进行读写操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="File类概述"><a href="#File类概述" class="headerlink" title="File类概述"></a>File类概述</h3><ul>
+<li>File类在包java.io.File下、代表操作系统的文件对象（文件、文件夹）。</li>
+<li>File类提供了诸如：定位文件，获取文件本身的信息、删除文件、创建文件（文件夹）等功能。</li>
+<li></li>
+<li>File对象可以定位文件和文件夹</li>
+<li>Fil封装的对象仅仅是一个路径名，这个路径可以是存在的，也可以是不存在的。</li>
+<li>File创建对象，支持绝对路径支得相对路径（重点）</li>
+</ul>
+<h3 id="File类的常用API"><a href="#File类的常用API" class="headerlink" title="File类的常用API"></a>File类的常用API</h3><ul>
+<li><p>判断文件类型、获取文件信息</p>
+<ul>
+<li><p>public boolean isDirectory()</p>
+<ul>
+<li>测试此抽象路径名表示的Fi1e是否为文件夹</li>
+</ul>
+</li>
+<li><p>public boolean isFile()</p>
+<ul>
+<li>测试此抽象路径名表示的File是否为文件</li>
+</ul>
+</li>
+<li><p>public boolean exists()</p>
+<ul>
+<li>测试此抽象路径名表示的File是否存在</li>
+</ul>
+</li>
+<li><p>public String getAbsolutePath()</p>
+<ul>
+<li>返回此抽象路径名的绝对路径名字符串</li>
+</ul>
+</li>
+<li><p>public String getPath()</p>
+<ul>
+<li>将此抽象路径名转换为路径名字符串</li>
+</ul>
+</li>
+<li><p>public String getName()</p>
+<ul>
+<li>返回由此抽象路径名表示的文件或文件夹的名称</li>
+</ul>
+</li>
+<li><p>public long lastModified()</p>
+<ul>
+<li>返回文件最后修改的时间毫秒值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>创建文件、删除文件功能</p>
+<ul>
+<li><p>File类创建文件的功能</p>
+<ul>
+<li><p>public boolean createNewFile()</p>
+<ul>
+<li>创建一个新的空的文件</li>
+</ul>
+</li>
+<li><p>public boolean mkdir()</p>
+<ul>
+<li>只能创建一级文件夹</li>
+</ul>
+</li>
+<li><p>public boolean mkdirs()</p>
+<ul>
+<li>可以创建多级文件夹</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>File类删除文件的功能</p>
+<ul>
+<li><p>public boolean delete()</p>
+<ul>
+<li>删除由此抽像路径名表示的文件或空文件夹</li>
+</ul>
+</li>
+<li><p>delete方法直接删除不走回收站；如果删除的是一个文件，且文件没有被占用则直接删除。只能删除文件和空文件夹</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>遍历文件夹</p>
+<ul>
+<li><p>public String[] list()</p>
+<ul>
+<li>获取当前目录下所有的”一级文件名称”到一个字符串数组中去返回。</li>
+</ul>
+</li>
+<li><p>public File[] listFi1es()(常用)</p>
+<ul>
+<li>获取当前目录下所有的”一级文件对象”到一个文件对象数组中去返回（重点）</li>
+</ul>
+</li>
+<li><p>ListFiles方法注意事项：</p>
+<ul>
+<li>当调用者不存在时，返回null</li>
+<li>当调用者是一个文件时，返回nul</li>
+<li>当调用者是一个空文件夹时，返回一个长度为0的数组</li>
+<li>当调用者是一个有内容的文件夹时，将里面所有文件和文件夹的路径放在File数组中</li>
+<li>当调用者是一个有隐藏文件的文件夹时，将里面所有文件和文件夹的路径放在File数组中返回，包含隐藏内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="方法递归"><a href="#方法递归" class="headerlink" title="方法递归"></a>方法递归</h3><ul>
+<li><p>递归的形式和特点</p>
+<ul>
+<li><p>什么是方法递归？</p>
+<ul>
+<li>方法直接调用自己或者间接调用自己的形式称为方法递归(recursion)。</li>
+<li>递归做为一种算法在程序设计语言中广泛应用。</li>
+</ul>
+</li>
+<li><p>递归的形式</p>
+<ul>
+<li>直接递归：方法自己调用自己。</li>
+<li>间接递归：方法调用其他方法，其他方法又回调方法自己。</li>
+</ul>
+</li>
+<li><p>方法递归存在的问题？</p>
+<ul>
+<li>●递归如果没有控制好终止，会出现递归死循环，导致栈内存溢出现象。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>递归的算法流程、核心要素</p>
+<ul>
+<li><p>递归算法三要素大体可以总结为：</p>
+<ul>
+<li>递归的公式：f(n)=f(n-1)*n;</li>
+<li>递归的终结点：f(1)</li>
+<li>递归的方向必须走向终结点：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>非规律化递归案例-文件搜索</p>
+</li>
+<li><p>非规律化递归案例-啤酒问题</p>
+</li>
+</ul>
+<h3 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h3><ul>
+<li><p>字符集</p>
+<ul>
+<li><p>常见字符集介绍</p>
+<ul>
+<li><p>基础知识</p>
+<ul>
+<li>计算机底层不可以直接存储字符的。计算机中底层只能存储二进制(0、1)</li>
+<li>二进制是可以转换成十进制的</li>
+<li>结论：计算机底层可以表示十进制编号。计算机可以给人类字符进行编号存储，这套编号规则就是字符集。</li>
+</ul>
+</li>
+<li><p>常见字符集</p>
+<ul>
+<li><p>ASCII字符集</p>
+<ul>
+<li>ASCII使用1个字节存储一个字符，一个字节是8位</li>
+</ul>
+</li>
+<li><p>GBK</p>
+<ul>
+<li>GBK是中国的码表，一个中文以两个字节的形式存储</li>
+</ul>
+</li>
+<li><p>Unicode码表</p>
+<ul>
+<li>(又称统一码、万国码、单一码)是计算机科学领域里的一项业界字符编码标准。</li>
+<li>容纳世界上大多数国家的所有常见文字和符号。</li>
+<li>由于Unicode会先通过UTF-8,UTF-16,以及UTF-32的编码成二进制后再存储到计算机，其中最为常见的就是UTF-8。</li>
+</ul>
+</li>
+<li><p>注意</p>
+<ul>
+<li>Unicode是万国码，以UTF-8编码后一个中文一般以三个字节的形式存储。</li>
+<li>UTF-8也要兼容ASCII编码表，</li>
+<li>·技术人员都应该使用UTF-8的字符集编码。</li>
+</ul>
+</li>
+<li><p>编码前和编码后的字符集需要一致，否则会出现中文乱码。</p>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>1.字符串常见的字符底层组成是什么样的？</p>
+<ul>
+<li>英文和数字等在任何国家的字符集中都占1个字节</li>
+<li>●GBK字符中一个中文字符占2个字节</li>
+<li>●UTF-8编码中一个中文1般占3个字节</li>
+</ul>
+</li>
+<li><p>2.编码前的字符集和编码好的字符集有什么要求？</p>
+<ul>
+<li>●必须一致，否则会出现中文字符乱码</li>
+<li>英文和数字在任何国家的编码中都不会乱码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>字符集的编码、解码操作</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>I0流概述</p>
+<ul>
+<li><p>l表示intput,是数据从硬盘文件读入到内存的过程，称之输入，负责读。</p>
+</li>
+<li><p>O表示output,是内存程序的数据从内存到写出到硬盘文件的过程，称之输出，负责写。</p>
+</li>
+<li><p>IO流 分类</p>
+<h2 id="-7"><a href="#-7" class="headerlink" title="  - "></a>  - </h2></li>
+<li><p>●字节输入流：以内存为基准，来自磁盘文件/网络中的数据以字节的形式读入到内存中去的流称为字节输入流，。</p>
+</li>
+<li><p>·字节输出流：以内存为基准，把内存中的数据以字节写出到磁盘文件或者网络中去的流称为字节输出流，</p>
+</li>
+<li><p>·字符输入流：以内存为基准，来自磁盘文件/网络中的数据以字符的形式读入到内存中去的流称为字符输入流。</p>
+</li>
+<li><p>·字符输出流：以内存为基准，把内存中的数据以字符写出到磁盘文件或者网络介质中去的流称为字符输出流。</p>
+</li>
+</ul>
+</li>
+<li><p>字节流的使用</p>
+<ul>
+<li><p>文件字节输入流：每次读取一个字节</p>
+<ul>
+<li><p>文件字节输入流：FilelnputStream</p>
+</li>
+<li><p>●作用：以内存为基准，把磁盘文件中的数据以字节的形式读取到内存中去。</p>
+</li>
+<li><p>每次读取一个字节存在什么问题？</p>
+<ul>
+<li>性能较慢</li>
+<li>读取中文字符输出无法避免乱码问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件字节输入流：每次读取一个字节数组</p>
+<ul>
+<li><p>文件字节输入流：FilelnputStream</p>
+</li>
+<li><p>●作用：以内存为基准，把磁盘文件中的数据以字节的形式读取到内存中去。</p>
+</li>
+<li><p>每次读取一个字节数组存在什么问题？</p>
+<ul>
+<li>读取的性能得到了提升</li>
+<li>读取中文字符输出无法避免乱码问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件字节输入流：一次读完全部字节</p>
+<ul>
+<li><p>1、如何使用字节输入流读取中文内容输出不乱码呢？</p>
+<ul>
+<li>●定义一个与文件一样大的字节数组，一次性读取完文件的全部字节。</li>
+</ul>
+</li>
+<li><p>2、直接把文件数据全部读取到一个字节数组可以避免乱码，是否存在问题？</p>
+<ul>
+<li>●如果文件过大，字节数组可能引起内存溢出。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件字节输出流：写字节数据到文件</p>
+</li>
+<li><p>文件拷贝</p>
+</li>
+</ul>
+</li>
+<li><p>资源释放的方式</p>
+<ul>
+<li><p>try-catch-finally</p>
+<ul>
+<li>finally:在异常处理时提供finally块来执行所有清除操作，比如说IO流中的释放资源</li>
+<li>特点：被finally控制的语句最终一定会执行，除非JVM退出</li>
+<li>异常处理标准格式：try..catch..finally</li>
+<li>●finally代码块是最终一定要执行的，可以在代码执行完毕的最后用于释放资源。</li>
+</ul>
+</li>
+<li><p>try-with-resource</p>
+<ul>
+<li><p>什么是资源呢？</p>
+<ul>
+<li>资源都是实现了Closeable/AutoCloseable接口的类对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>字符流的使用</p>
+<ul>
+<li><p>文件字符输入流一次读取一个字符</p>
+<ul>
+<li>文件字符输入流：Reader</li>
+<li>●作用：以内存为基准，把磁盘文件中的数据以字符的形式读取到内存中去。</li>
+</ul>
+</li>
+<li><p>文件字符输入流~一次读取一个字符数组</p>
+<ul>
+<li>文件字符输入流：FileReader</li>
+<li>·作用：以内存为基准，把磁盘文件中的数据以字符的形式读取到内存中去。</li>
+</ul>
+</li>
+<li><p>文件字符输出流</p>
+<ul>
+<li>文件字符输出流：FileWriter</li>
+<li>·作用：以内存为基准，把内存中的数据以字符的形式写出到磁盘文件中去的流。</li>
+</ul>
+</li>
+<li><p>字节流、字符流如何选择使用？</p>
+<ul>
+<li>字节流适合做一切文件数据的拷贝（音视频，文本）</li>
+<li>字节流不适合读取中文内容输出</li>
+<li>字符流适合做文本文件的操作（读，写）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缓冲流</p>
+<ul>
+<li><p>缓冲流概述</p>
+<ul>
+<li><p>缓冲流也称为高效流、或者高级流。之前学习的字节流可以称为原始流。</p>
+</li>
+<li><p>·作用：缓冲流自带缓冲区、可以提高原始字节流、字符流读写数据的性能</p>
+</li>
+<li></li>
+<li><p>1.缓冲流的作用？</p>
+<ul>
+<li>·缓冲流自带缓冲区、可以提高原始字节流、字符流读写数据的性能</li>
+</ul>
+</li>
+<li><p>2.缓冲流有几种？</p>
+<ul>
+<li><p>字节缓冲流</p>
+<ul>
+<li>字节缓冲输入流：BufferedInputStream</li>
+<li>字节缓冲输出流：BufferedOutputStream</li>
+</ul>
+</li>
+<li><p>字符缓冲流</p>
+<ul>
+<li>字符缓冲输入流：BufferedReader</li>
+<li>字符缓冲输出流：BufferedWriter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>字节缓冲流</p>
+<ul>
+<li><p>字节缓冲流性能优化原理：</p>
+<ul>
+<li>·字节缓冲输入流自带了8KB缓冲池，以后我们直接从缓冲池读取数据，所以性能较好。</li>
+<li>·字节缓冲输出流自带了8KB缓冲池，数据就直接写入到缓冲池中去，写数据性能极高了。</li>
+</ul>
+</li>
+<li><p>字节缓冲流</p>
+<ul>
+<li>字节缓冲输入流：BufferedInputStream,提高字节输入流读取数据的性能，读写功能上并无变化。</li>
+<li>字节缓冲输出流：BufferedOutputStream,提高字节输出流读取数据的性能，读写功能上并无变化。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>字节缓冲流的性能分析</p>
+</li>
+<li><p>字符缓冲流</p>
+<ul>
+<li><p>字符缓冲输入流</p>
+<ul>
+<li>●字符缓冲输入流：BufferedReader。</li>
+<li>作用：提高字符输入流读取数据的性能，除此之外多了按照行读取数据的功能。</li>
+</ul>
+</li>
+<li><p>字符缓冲输出流</p>
+<ul>
+<li>,字符缓冲输出流：BufferedWriter。.</li>
+<li>作用：提高字符输出流写取数据的性能，除此之外多了换行功能</li>
+</ul>
+</li>
+<li><p>1.字符缓冲流为什么提高了操作数据的性能？</p>
+<ul>
+<li>字符缓冲流自带8K缓冲区</li>
+<li>可以提高原始字符流读写数据的性能</li>
+</ul>
+</li>
+<li><p>2.字符缓冲流的功能如何使用？</p>
+<ul>
+<li>public BufferedReader(Reader r)</li>
+<li>性能提升了，多了readLine()按照行读取的功能</li>
+<li>public BufferedWriter(Writer w)</li>
+<li>性能提升了，多了newLine()换行的功能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>转换流</p>
+<ul>
+<li><p>◆问题引出：不同编码读取乱码问题</p>
+<ul>
+<li>1.字符流直接读取文本内容。</li>
+<li>●必须文件和代码编码一致才不会乱码</li>
+<li>●如果文件和代码编码不一致，读取将出现乱码。</li>
+</ul>
+</li>
+<li><p>◆字符输入转换流</p>
+<ul>
+<li>l.字符输入转换流InputStreamReader作用：</li>
+<li>可以解决字符流读取不同编码乱码的问题</li>
+<li>public InputStreamReader(InputStream is,String charset):</li>
+<li>可以指定编码把原始字节流转换成字符流，如此字符流中的字符不乱码。</li>
+</ul>
+</li>
+<li><p>◆字符输出转换流</p>
+<ul>
+<li>1.字符输出转换流OutputStreamWriter的作用？</li>
+<li>public OutputstreamWriter(Outputstream os,String charset)</li>
+<li>●可以指定编码把字节输出流转换成字符输出流，从而可以指定写出去的字符编码！</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>序列化对象</p>
+<ul>
+<li><p>◆对象序列化</p>
+<ul>
+<li><p>作用：以内存为基准，把内存中的对象存储到磁盘文件中去，称为对象序列化。</p>
+</li>
+<li><p>使用到的流是对象字节输出流：ObjectOutputStream</p>
+</li>
+<li><p>对象如果要序列化，必领实现Serializable序列化接口，</p>
+</li>
+<li><p>1.对象序列化的含义是什么？</p>
+<ul>
+<li>●把对象数据存入到文件中去。</li>
+</ul>
+</li>
+<li><p>2.对象序列化用到了哪个流？</p>
+<ul>
+<li>●对象字节输出流objectOutputstram</li>
+<li>public void writeobject(object obj)</li>
+</ul>
+</li>
+<li><p>3.序列化对象的要求是怎么样的？</p>
+<ul>
+<li>●对象必须实现序列化接口</li>
+</ul>
+</li>
+<li><p>子主题 7</p>
+</li>
+</ul>
+</li>
+<li><p>◆对象反序列化</p>
+<ul>
+<li><p>●使用到的流是对象字节输入流：ObjectInputStream</p>
+</li>
+<li><p>·作用：以内存为基准，把存储到磁盘文件中去的对象数据恢复成内存中的对象，称为对象反序列化。</p>
+</li>
+<li><p>transient 修饰的成员变量不参与序列化</p>
+</li>
+<li><p>对象如果要序列化，必领实现Serializable序列化接口，</p>
+</li>
+<li><p>private static final long serialVersionUID = 1;</p>
+<ul>
+<li>申明序列化的版本号</li>
+<li>序列化的版本号与反序列化的版本号必须一致才不会出错</li>
+</ul>
+</li>
+<li><p>1.对象反序列化的含义是什么？</p>
+<ul>
+<li>●把磁盘中的对象数据恢复到内存的]ava对象中。</li>
+</ul>
+</li>
+<li><p>2.对象反序列化用到了哪个流？</p>
+<ul>
+<li>●对象字节输入流ObjectInputstram</li>
+<li>public Object readobject()</li>
+</ul>
+</li>
+<li><p>子主题 8</p>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>打印流</p>
+<ul>
+<li><p>Printstream,PrintWriter</p>
+<ul>
+<li><p>·作用：打印流可以实现方便、高效的打印数据到文件中去。打印流一般是指：PrintStream,PrintWriteri两个类。</p>
+</li>
+<li><p>●可以实现打印什么数据就是什么数据，例如打印整数97写出去就是97，打印boolean的true,写出去就是true。</p>
+</li>
+<li></li>
+<li><p>1.打印流有几种？各有什么特点？</p>
+<ul>
+<li>●打印流一般是指：PrintStream,PrintWriteri两个类。</li>
+<li>●打印功能2者是一样的使用方式</li>
+<li>PrintStream继承自字节输出流OutputStream,支持写字节</li>
+<li>●PrintWrite:继承自字符输出流Writer,支持写字符</li>
+</ul>
+</li>
+<li><p>2.打印流的优势是什么？</p>
+<ul>
+<li>●两者在打印功能上都是使用方便，性能高效（核心优势）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输出语句的重定向</p>
+<ul>
+<li>属于打印流的一种应用，可以把输出语句的打印位置改到文件。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Properties</p>
+<p>  - </p>
+<ul>
+<li><p>Properties属性集对象</p>
+<ul>
+<li>●其实就是一个Map集合，但是我们一般不会当集合使用，因为HashMap更好用。</li>
+</ul>
+</li>
+<li><p>Properties核心作用：</p>
+<ul>
+<li>●Properties代表的是一个属性文件，可以把自己对象中的键值对信息存入到一个属性文件中去。</li>
+<li>属性文件：后缀是.properties结尾的文件，里面的内容都是key=value,后续做系统配置信息的。</li>
+</ul>
+</li>
+<li><p>1.Properties的作用？</p>
+<ul>
+<li>void store(Writer writer,String comments)</li>
+<li>●可以存储Properties属性集的键值对数据到属性文件中去：</li>
+<li>void load(Reader reader)</li>
+<li>●可以加载属性文件中的数据到Properties.对象中来：</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IO框架</p>
+<ul>
+<li><p>commons-io概述</p>
+<ul>
+<li>commons-io是apache开源基金组织提供的一组有关IO操作的类库，可以提高IO功能开发的效率。</li>
+<li>●commons-io工具包提供了很多有关io操作的类。有两个主要的类FileUtils,1 DUtils</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="多线程-1"><a href="#多线程-1" class="headerlink" title="多线程"></a>多线程</h3><ul>
+<li><p>什么是线程？</p>
+<ul>
+<li>线程(thread)是一个程序内部的一条执行路径。</li>
+<li>我们之前启动程序执行后，main方法的执行其实就是一条单独的执行路径。</li>
+<li>程序中如果只有一条执行路径，那么这个程序就是单线程的程序。</li>
+</ul>
+</li>
+<li><p>多线程是什么？</p>
+<ul>
+<li>多线程是指从软硬件上实现多条执行流程的技术。</li>
+</ul>
+</li>
+</ul>
+<h3 id="多线程的创建"><a href="#多线程的创建" class="headerlink" title="多线程的创建"></a>多线程的创建</h3><ul>
+<li><p>◆方式一：继承Thread类</p>
+<ul>
+<li><p>Thread类</p>
+<ul>
+<li>Java是通过java.lang.Thread类来代表线程的.</li>
+<li>按照面向对象的思想，Thread类应该提供了实现多线程的方式。</li>
+</ul>
+</li>
+<li><p>实现方案</p>
+<ul>
+<li>①定义一个子类MyThread:继承线程类java.lang.Thread,重写run方法</li>
+<li>②创建MyThread类的对象</li>
+<li>③调用线程对象的start()方法启动线程（启动后还是执行run方法的)</li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>●优点：编码简单</li>
+<li>●缺点：线程类已经继承Thread,无法继承其他类，不利于扩展。</li>
+</ul>
+</li>
+<li><p>1、为什么不直接调用了run方法，而是调用start启动线程。</p>
+<ul>
+<li>●直接调用ru方法会当成普通方法执行，此时相当于还是单线程执行。</li>
+<li>●只有调用start方法才是启动一个新的线程执行。</li>
+</ul>
+</li>
+<li><p>2、把主线程任务放在子线程之前了。</p>
+<ul>
+<li>●这样主线程一直是先跑完的，相当于是一个单线程的效果了。</li>
+</ul>
+</li>
+<li><p>1.方式一是如何实现多线程的？</p>
+<ul>
+<li>继承Thread类</li>
+<li>重写run方法</li>
+<li>创建线程对象</li>
+<li>调用start()方法启动。</li>
+</ul>
+</li>
+<li><p>2.优缺点是什么？</p>
+<ul>
+<li>●优点：编码简单</li>
+<li>●缺点：存在单继承的局限性，线程类继承Thread后，不能继承其他类，不便于扩展。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆方式二：实现Runnable接口</p>
+<ul>
+<li><p>实现Runnable接口</p>
+<ul>
+<li><p>实现方案</p>
+<ul>
+<li>定义一个线程任务类MyRunnable实现Runnable接口，重写run(）方法</li>
+<li>创建MyRunnable任务对象</li>
+<li>把MyRunnable任务对象交给Thread处理。</li>
+<li>调用线程对象的start()方法启动线程</li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>●优点：线程任务类只是实现接口，可以继续继承类和实现接口，扩展性强。</li>
+<li>●缺点：编程多一层对象包装，如果线程有执行结果是不可以直接返回的。</li>
+</ul>
+</li>
+<li><p>1.第二种方式是如何创建线程的？</p>
+<ul>
+<li>●定义一个线程任务类MyRunnable实现Runnable接▣，重写run(）方法</li>
+<li>·创建MyRunnable对象</li>
+<li>●把MyRunnable任务对象交给Thread线程对象处理。</li>
+<li>●调用线程对象的start(0方法启动线程</li>
+</ul>
+</li>
+<li><p>2.第二种方式的优点</p>
+<ul>
+<li>●优点：线程任务类只是实现了Runnale接口，可以继续继承和实现。</li>
+<li>●缺点：如果线程有执行结果是不能直接返回的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>匿名内部类形式</p>
+<ul>
+<li><p>实现方案</p>
+<ul>
+<li>可以创建Runnable的匿名内部类对象。</li>
+<li>交给Thread处理。</li>
+<li>调用线程对象的start()启动线程。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆方式三：JDK5.0新增：实现Callable接口</p>
+<ul>
+<li><p>前2种线程创建方式</p>
+<ul>
+<li><p>1、前2种线程创建方式都存在一个问题：</p>
+<ul>
+<li>●他们重写的run方法均不能直接返回结果。</li>
+<li>●不适合需要返回线程执行结果的业务场景。</li>
+</ul>
+</li>
+<li><p>2、怎么解决这个问题呢？</p>
+<ul>
+<li>●JDK5.0提供了Callable和FutureTask来实现。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>实现方案</p>
+<ul>
+<li><p>①、得到任务对象</p>
+<ul>
+<li>1.定义类实现Callable接口，重写call方法，封装要做的事情。</li>
+<li>2.用FutureTask把Callable对象封装成线程任务对象。</li>
+</ul>
+</li>
+<li><p>2)、把线程任务对象交给Thread处理。</p>
+</li>
+<li><p>3)、调用Thread的start方法启动线程，执行任务</p>
+</li>
+<li><p>④、线程执行完毕后、通过FutureTask的get方法去获取任务执行的结果。</p>
+</li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>●优点：线程任务类只是实现接口，可以继续继承类和实现接口，扩展性强。</li>
+<li>可以在线程执行完毕后去获取线程执行的结果。</li>
+<li>●缺点：编码复杂一点。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h3 id="Thread的常用方法"><a href="#Thread的常用方法" class="headerlink" title="Thread的常用方法"></a>Thread的常用方法</h3><ul>
+<li><p>Thread常用API说明</p>
+<ul>
+<li>●Thread常用方法：获取线程名称getName()、设置名称setName()、获取当前线程对象currentThread()。</li>
+<li>●至于Thread类提供的诸如：yield、join、interrupt、不推荐的方法stop、守护线程、线程优先级等线程的控制方法，在开发中很少使用，这些方法会在高级篇以及后续需要用到的时候再为大家讲解。</li>
+</ul>
+</li>
+<li><p>1.当有很多线程在执行的时候，我们怎么去区分这些线程呢？</p>
+<ul>
+<li>此时需要使用Thread的常用方法：getName()、setName()、currentThread()等。</li>
+</ul>
+</li>
+<li><ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h3><ul>
+<li><p>线程安全问题是什么、发生的原因</p>
+<ul>
+<li><p>线程安全问题</p>
+<ul>
+<li>·多个线程同时操作同一个共享资源的时候可能会出现业务安全问题，称为线程安全问题。</li>
+</ul>
+</li>
+<li><p>1.线程安全问题出现的原因？</p>
+<ul>
+<li>存在多线程并发</li>
+<li>同时访问共享资源</li>
+<li>存在修改共享资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程安全问题案例模拟</p>
+<ul>
+<li>1.线程安全问题发生的原因是什么？</li>
+<li>●多个线程同时访问同一个共享资源且存在修改该资源。</li>
+</ul>
+</li>
+</ul>
+<h3 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h3><ul>
+<li><p>◆同步思想概述</p>
+<ul>
+<li><p>为了解决线程安全问题。</p>
+<ul>
+<li><p>1、取钱案例出现问题的原因？</p>
+<ul>
+<li>●多个线程同时执行，发现账户都是够钱的。</li>
+</ul>
+</li>
+<li><p>2、如何才能保证线程安全呢？</p>
+<ul>
+<li>●让多个线程实现先后依次访问共享资源，这样就解决了安全问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程同步的核心思想</p>
+<ul>
+<li>加锁，把共享资源进行上锁，每次只能一个线程进入访问完毕以后解锁，然后其他线程才能进来。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆方式一：同步代码块</p>
+<ul>
+<li><p>同步代码块</p>
+<ul>
+<li>●作用：把出现线程安全问题的核心代码给上锁。</li>
+<li>·原理：每次只能一个线程进入，执行完毕后自动解锁，其他线程才可以进来执行。</li>
+</ul>
+</li>
+<li><p>锁对象要求</p>
+<ul>
+<li>●理论上：锁对象只要对于当前同时执行的线程来说是同一个对象即可。</li>
+</ul>
+</li>
+<li><p>synchronized (this){     }</p>
+</li>
+<li><p>锁对象用任意唯一的对象好不好呢？</p>
+<ul>
+<li>●不好，会影响其他无关线程的执行。</li>
+</ul>
+</li>
+<li><p>锁对象的规范要求</p>
+<ul>
+<li>·规范上：建议使用共享资源作为锁对象。</li>
+<li>·对于实例方法建议使用this作为锁对象。</li>
+<li>·对于静态方法建议使用字节码（类名.class)对象作为锁对象。</li>
+</ul>
+</li>
+<li><p>1.同步代码块是如何实现线程安全的？</p>
+<ul>
+<li>●对出现问题的核心代码使用synchronized进行加锁</li>
+<li>●每次只能一个线程占锁进入访问</li>
+</ul>
+</li>
+<li><p>2.同步代码块的同步锁对象有什么要求？</p>
+<ul>
+<li>●对于实例方法建议使用this作为锁对象。</li>
+<li>●对于静态方法建议使用字节码（类名.clas5)对象作为锁对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆方式二：同步方法</p>
+<ul>
+<li><p>同步方法</p>
+<ul>
+<li>●作用：把出现线程安全问题的核心方法给上锁。</li>
+<li>·原理：每次只能一个线程进入，执行完毕以后自动解锁，其他线程才可以进来执行。</li>
+</ul>
+</li>
+<li><p>同步方法底层原理</p>
+<ul>
+<li>●同步方法其实底层也是有隐式锁对象的，只是锁的范围是整个方法代码。</li>
+<li>●如果方法是实例方法：同步方法默认用thS作为的锁对象。但是代码要高度面向对象！</li>
+<li>●如果方法是静态方法：同步方法默认用类名.clSS作为的锁对象。</li>
+</ul>
+</li>
+<li><p>1、是同步代码块好还是同步方法好一点？</p>
+<ul>
+<li>●同步代码块锁的范围更小，同步方法锁的范围更大。</li>
+</ul>
+</li>
+<li><p>1.同步方法是如何保证线程安全的？</p>
+<ul>
+<li>●对出现问题的核心方法使用synchronized修饰</li>
+<li>·每次只能一个线程占锁进入访问</li>
+</ul>
+</li>
+<li><p>2.同步方法的同步锁对象的原理？</p>
+<ul>
+<li>·对于实例方法默认使用ths作为锁对象。</li>
+<li>●对于静态方法默认使用类名.class对象作为锁对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方式三：Lock锁</p>
+<ul>
+<li><p>Lock锁</p>
+<ul>
+<li>·为了更清晰的表达如何加锁和释放锁，JDK5以后提供了一个新的锁对像Lock,更加灵活、方便，</li>
+<li>●Lock实现提供比使用synchronized方法和语句可以获得更广泛的锁定操作。</li>
+<li>●Lock是接口不能直接实例化，这里采用它的实现类ReentrantLock来构建Lock锁对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="线程通信"><a href="#线程通信" class="headerlink" title="线程通信"></a>线程通信</h3><ul>
+<li><p>什么是线程通信、如何实现？</p>
+<ul>
+<li>·所谓线程通信就是线程间相互发送数据，线程通信通常通过共享一个数据的方式实现。</li>
+<li>·线程间会根据共享数据的情况决定自己该怎么做，以及通知其他线程怎么做。</li>
+</ul>
+</li>
+<li><p>线程通信常见模型</p>
+<ul>
+<li>●生产者与消费者模型：生产者线程负责生产数据，消费者线程负责消费数据。</li>
+<li>要求：生产者线程生产完数据后，唤醒消费者，然后等待自己；消费者消费完该数据后，唤醒生产者，然后等待自己。</li>
+</ul>
+</li>
+<li><p>·线程通信的前提：线程通信通常是在多个线程操作同一个共享资源的时候需要进行通信，且要保证线程安全。</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3><ul>
+<li><p>线程池概述</p>
+<ul>
+<li><p>什么是线程池？</p>
+<ul>
+<li>·线程池就是一个可以复用线程的技术。</li>
+</ul>
+</li>
+<li><p>不使用线程池的问题</p>
+<ul>
+<li>●如果用户每发起一个请求，后台就创建一个新线程来处理，下次新任务来了又要创建新线程，而创建新线程的开销是很大的，这样会严重影响系统的性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程池实现的API、参数说明</p>
+<ul>
+<li><p>谁代表线程池？</p>
+<ul>
+<li>JDK5.0起提供了代表线程池的接口：ExecutorService</li>
+</ul>
+</li>
+<li><p>如何得到线程池对象</p>
+<ul>
+<li>●方式一：使用ExecutorServicel的实现类ThreadPoolExecutor自创建一个线程池对象</li>
+<li>●方式二：使用Executors(线程池的工具类)调用方法返回不同特点的线程池对象</li>
+</ul>
+</li>
+<li><p>ThreadPoolExecutor构造器的参数说明</p>
+<ul>
+<li><p>参数一：指定线程池的线程数量（核心线程）：corePoolSize</p>
+<ul>
+<li>不能小于0</li>
+</ul>
+</li>
+<li><p>参数二：指定线程池可支持的最大线程数 maximumPoolSize</p>
+<ul>
+<li>最大数量&gt;=核心线程数量</li>
+</ul>
+</li>
+<li><p>参数三：指定临时线程的最大存活时间：keepAliveTime</p>
+<ul>
+<li>不能小于0</li>
+</ul>
+</li>
+<li><p>参数四：指定存活时间的单位（秒、分、时、天）unit</p>
+<ul>
+<li>时间单位</li>
+</ul>
+</li>
+<li><p>参数五：指定任务队列：workQueue     不能为null</p>
+</li>
+<li><p>参数六：指定用哪个线程工厂创建线程：  threadFactory  不能为null</p>
+</li>
+<li><p>参数七：指定线程忙，任务满的时候，新任务来了怎么办：handler   不能为null</p>
+</li>
+</ul>
+</li>
+<li><p>线程池常见面试题</p>
+<ul>
+<li><p>临时线程什么时候创建啊？</p>
+<ul>
+<li>·新任务提交时发现核心线程都在忙，任务队列也满了，并且还可以创建临时线程，此时才会创建临时线程。</li>
+</ul>
+</li>
+<li><p>什么时候会开始拒绝任务？</p>
+<ul>
+<li>核心线程和临时线程都在忙，任务队列也满了，新的任务过来的时候才会开始任务拒绝。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>1.谁代表线程池？</p>
+<ul>
+<li>●ExecutorService接▣</li>
+</ul>
+</li>
+<li><p>2.ThreadPoolExecutor实现线程池对象的七个参数是什么意思</p>
+<ul>
+<li>●使用线程池的实现类ThreadPoolExecutor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程池处理Runnable任务</p>
+</li>
+<li><p>线程池处理Callable任务</p>
+<ul>
+<li><p>1.线程池如何处理Callable任务，并得到任务执行完后返回的结果。</p>
+<ul>
+<li>●使用ExecutorService的方法：</li>
+<li>Future<t>submit(Callable<t>command)</t></t></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Executors工具类实现线程池</p>
+<ul>
+<li><p>Executors得到线程池对象的常用方法</p>
+<ul>
+<li>Executors:线程池的工具类通过调用方法返回不同类型的线程池对象。</li>
+<li>注意：Executors的底层其实也是基于线程池的实现类ThreadPoolExecutor创建线程池对象的。</li>
+</ul>
+</li>
+<li><p>Executors使用可能存在的陷阱</p>
+<ul>
+<li>●大型并发系统环境中使用Executors如果不注意可能会出现系统风险，</li>
+</ul>
+</li>
+<li><p>1.Executors.工具类底层是基于什么方式实现的线程池对象？</p>
+<ul>
+<li>线程池ExecutorService的实现类：ThreadPoolExecutor</li>
+</ul>
+</li>
+<li><p>2.Executors是香适合做大型互联网场景的线程池方案？</p>
+<ul>
+<li>不合适。</li>
+<li>●建议使用ThreadPoolExecutor来指定线程池参数，这样可以明确线程池的运行规则,规避资源耗尽的风险。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><ul>
+<li><p>定时器</p>
+<ul>
+<li>·作用：闹钟、定时邮件发送。</li>
+<li>·定时器是一种控制任务延时调用，或者周期调用的技术。</li>
+</ul>
+</li>
+<li><p>定时器的实现方式</p>
+<ul>
+<li><p>●方式一：Timer</p>
+<ul>
+<li><p>Timer定时器的特点和存在的问题</p>
+<ul>
+<li>1,Tmer是单线程，处理多个任务按照顺序执行，存在延时与设置定时器的时间有出入。</li>
+<li>2、可能因为其中的某个任务的异常使Tmr线程死掉，从而影响后续任务执行，</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>●方式二：ScheduledExecutorService</p>
+<ul>
+<li><p>ScheduledExecutorService定时器</p>
+<ul>
+<li>●ScheduledExecutorService是jdkI.5中引入了并发包，目的是为了弥补Timer的缺陷，ScheduledExecutorService内部为线程池</li>
+</ul>
+</li>
+<li><p>ScheduledExecutorService的优点</p>
+<ul>
+<li>1、基于线程池，某个任务的执行情况不会影响其他定时任务的执行。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="并发并行"><a href="#并发并行" class="headerlink" title="并发并行"></a>并发并行</h3><ul>
+<li><p>并发与并行</p>
+<ul>
+<li>·正在运行的程序（软件）就是一个独立的进程，线程是属于进程的，多个线程其实是并发与并行同时进行的。</li>
+</ul>
+</li>
+<li><p>并发的理解：</p>
+<ul>
+<li>CPU同时处理线程的数量有限。</li>
+<li>CPU会轮询为系统的每个线程服务，由于CPU切换的速度很快，给我们的感觉这些线程在同时执行，这就是并发。</li>
+</ul>
+</li>
+<li><p>并行的理解：</p>
+<ul>
+<li>·在同一个时刻上，同时有多个线程在被CPU处理并执行。</li>
+</ul>
+</li>
+<li><p>1.简单说说并发和并行的含义</p>
+<ul>
+<li>●并发：CPU分时轮询的执行线程。</li>
+<li>●并行：同一个时刻同时在执行。</li>
+</ul>
+</li>
+</ul>
+<h3 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h3><ul>
+<li><p>线程的状态</p>
+<ul>
+<li>线程的状态：也就是线程从生到死的过程，以及中间经历的各种状态及状态转换。</li>
+<li>理解线程的状态有利于提升并发编程的理解能力。</li>
+</ul>
+</li>
+<li><p>Java线程的状态</p>
+<ul>
+<li><p>Java总共定义了6种状态</p>
+<h2 id="-8"><a href="#-8" class="headerlink" title="  - "></a>  - </h2></li>
+<li><p>6种状态都定义在Thread类的内部枚举类中。</p>
+</li>
+</ul>
+</li>
+<li><p>线程的六种状态：</p>
+<ul>
+<li>新建状态(NEW)</li>
+<li>就绪状态(RUNNABLE)</li>
+<li>阻寒状态(BLOCKED)</li>
+<li>等待状态(NAITING)</li>
+<li>计时等待(TIMED WAITING)</li>
+<li>结束状态(TERMINATED)</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h3 id="网络编程-1"><a href="#网络编程-1" class="headerlink" title="网络编程"></a>网络编程</h3><ul>
+<li><p>什么是网络编程？</p>
+<ul>
+<li>·网络编程可以让程序与网络上的其他设备中的程序进行数据交互。</li>
+</ul>
+</li>
+<li><p>网络通信基本模式</p>
+<ul>
+<li><p>●常见的通信模式有如下2种形式：Client-Server(CS)、Browser/Server(BS)</p>
+<ul>
+<li><p>CS</p>
+<ul>
+<li>需要程序员开发实现。</li>
+<li>用户需要安装客户端。</li>
+</ul>
+</li>
+<li><p><strong>BS</strong></p>
+<ul>
+<li>不需要程序员开发实现</li>
+<li>用户需要安装浏览器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="网络通信三要素"><a href="#网络通信三要素" class="headerlink" title="网络通信三要素"></a>网络通信三要素</h3><ul>
+<li><p>三要素概述、要素一：IP地址</p>
+<ul>
+<li><p>实现网络编程关键的三要素</p>
+<ul>
+<li>IP地址：设备在网络中的地址，是唯一的标识。</li>
+<li>端口：应用程序在设备中唯一的标识。</li>
+<li>协议：数据在网络中传输的规则，常见的协议有UDP协议和TCP协议。</li>
+</ul>
+</li>
+<li><p>IP地址</p>
+<ul>
+<li><p>●IP(Internet Protocol):全称”互联网协议地址”，是分配给上网设备的唯一标志。</p>
+</li>
+<li><p>●常见的IP分类为：1Pv4和IPv6</p>
+<ul>
+<li><p>IPv4</p>
+<ul>
+<li>32字节，采用点分十进制表示法</li>
+</ul>
+</li>
+<li><p>IPv6</p>
+<ul>
+<li>128位(16个字节)，号称可以为地球每一粒沙子编号。</li>
+<li>IPV6分成8个整数，每个整数用四个十六进制位表示，数之间用冒号(：)分开。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IP地址形式：</p>
+<ul>
+<li>公网地址、和私有地址（局域网使用）。</li>
+<li>192.168.开头的就是常见的局域网地址，范围即为192.168.0.0-192.168.255.255，专门为组织机构内部使用。</li>
+</ul>
+</li>
+<li><p>IP常用命令：</p>
+<ul>
+<li>ipconfig:查看本机IP地址</li>
+<li>ping IP地址/域名：检查网络是否连通</li>
+</ul>
+</li>
+<li><p>特殊IP地址：</p>
+<ul>
+<li>●本机IP:127.0.0.1或者localhost:称为回送地址也可称本地回环地址，只会寻找当前所在本机。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IP地址操作类-InetAddress</p>
+<ul>
+<li><p>InetAddress的使用</p>
+<ul>
+<li>此类表示Internet协议(IP)地址。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>要素二：端口号</p>
+<ul>
+<li><p>端口号：标识正在计算机设备上运行的进程（程序），被规定为一个16位的二进制，范围是0~65535。</p>
+</li>
+<li><p>端口类型</p>
+<ul>
+<li>●周知端口：01023，被预先定义的知名应用占用（如：HTTP占用80，FTP占用21）</li>
+<li>●注册端口：1024~49151，分配给用户进程或某些应用程序。（如：Tomcat占用8080，MySQL占用3306)</li>
+<li>动态端口：49152到65535，之所以称为动态端口，是因为它一般不固定分配某种进程，而是动态分配。</li>
+<li>注意：我们自己开发的程序选择注册端口，且一个设备中不能出现两个程序的端口号一样，否则出错。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>要素三：协议</p>
+<ul>
+<li><p>通信协议</p>
+<ul>
+<li>连接和通信数据的规则被称为网络通信协议</li>
+</ul>
+</li>
+<li><p>网络通信协议有两套参考模型</p>
+<ul>
+<li>OSI引参考模型：世界互联协议标准，全球通信规范，由于此模型过于理想化，未能在因特网上进行广泛推广。</li>
+<li>TCP/IP参考模型（或TCP/IP协议）：事实上的国际标准。</li>
+<li></li>
+</ul>
+</li>
+<li><p>传输层的2个常见协议</p>
+<ul>
+<li>TCP:传输控制协议</li>
+<li>UDP:用户数据报协议</li>
+</ul>
+</li>
+<li><p>TCP协议特点</p>
+<ul>
+<li>使用TCP协议，必须双方先建立连接，它是一种面向连接的可靠通信协议。</li>
+<li>传输前，采用“三次握手”方式建立连接，所以是可靠的。</li>
+<li>在连接中可进行大数据量的传输。</li>
+<li>连接、发送数据都需要确认，且传输完毕后，还需释放已建立的连接，通信效率较低。</li>
+</ul>
+</li>
+<li><p>TCP协议通信场景</p>
+<ul>
+<li>对信息安全要求较高的场景，例如：文件下载、金融等数据通信。</li>
+<li>采用三次握手建立连接，四次挥手断开连接</li>
+</ul>
+</li>
+<li><p>UDP协议：</p>
+<ul>
+<li>●UDP是一种无连接、不可靠传输的协议。</li>
+<li>●将数据源P、目的地P和端口封装成数据包，不需要建立连接</li>
+<li>●每个数据包的大小限制在64KB内</li>
+<li>●发送不管对方是否准备好，接收方收到也不确认，故是不可靠的</li>
+<li>●可以广播发送，发送数据结束时无需释放资源，开销小，速度快。</li>
+</ul>
+</li>
+<li><p>UDP协议通信场景</p>
+<ul>
+<li>●语音通话，视频会话等。</li>
+</ul>
+</li>
+<li><p>1、通信协议是什么？</p>
+<ul>
+<li>●计算机网络中，连接和通信数据的规则被称为网络通信协议。</li>
+</ul>
+</li>
+<li><p>2、TCP通信协议的特点是什么样的？</p>
+<ul>
+<li>●它是一种面向连接的可靠通信协议。</li>
+<li>●传输前，采用“三次握手”方式建立连接，点对点的通信，所以可靠。</li>
+<li>●在连接中可进行大数据量的传输。</li>
+<li>●通信效率较低。</li>
+</ul>
+</li>
+<li><p>3、UDP协议的特点是什么</p>
+<ul>
+<li>●用户数据报协议(User Datagram Protocol)</li>
+<li>●UDP是面向无连接，不可靠传输的通信协议。</li>
+<li>●速度快，有大小限制一次最多发送64K,数据不安全，易丢失数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="UDP通信"><a href="#UDP通信" class="headerlink" title="UDP通信"></a>UDP通信</h3><ul>
+<li><p>◆UDP通信：快速入门</p>
+<ul>
+<li><p>UDP协议的特点</p>
+<ul>
+<li>UDP是一种无连接、不可靠传输的协议。</li>
+<li>将数据源IP、目的地P和端口以及数据封装成数据包，大小限制在64KB内，直接发送出去即可。</li>
+</ul>
+</li>
+<li><p>DatagramPacket:数据包对象（韭菜盘子）</p>
+</li>
+<li><p>DatagramSocket:发送端和接收端对象（人）</p>
+</li>
+</ul>
+</li>
+<li><p>◆UDP通信：多发多收（单播）</p>
+<ul>
+<li><p>1.UDP的接收端为什么可以接收很多发送端的消息？</p>
+<ul>
+<li>●接收端只负责接收数据包，无所谓是哪个发送端的数据包</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="UDP通信-广播、组播"><a href="#UDP通信-广播、组播" class="headerlink" title="UDP通信-广播、组播"></a>UDP通信-广播、组播</h3><ul>
+<li><p>UDP的三种通信方式</p>
+<ul>
+<li>单播：单台主机与单台主机之间的通信</li>
+<li>广播：当前主机与所在网络中的所有主机通信。</li>
+<li>组播：当前主机与选定的一组主机的通信。</li>
+</ul>
+</li>
+<li><p>UDP如何实现广播</p>
+<ul>
+<li><p>使用广播地址：255.255.255.255</p>
+</li>
+<li><p>具体操作：</p>
+<ul>
+<li>发送端发送的数据包的目的地写的是广播地址、且指定端口。(255.255.255.255，9999)</li>
+<li>本机所在网段的其他主机的程序只要匹配端口成功即就可以收到消息了。(9999)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>UDP如何实现组播</p>
+<ul>
+<li><p>使用组播地址：224.0.0.0~239.255.255.255</p>
+</li>
+<li><p>具体操作：</p>
+<ul>
+<li>①发送端的数据包的目的地是组播1P(例如：224.0.1.1，端口：9999)</li>
+<li>②接收端必须绑定该组播1P(224.0.1.1),端口还要对应发送端的目的端口9999，这样即可接收该组播消息。</li>
+<li>③DatagramSocket的子类MulticastSocketi可以在接收端绑定组播IP.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>1.如何实现广播，具体怎么操作？</p>
+<ul>
+<li>●发送端目的IP使用广播IP:255.255.255.255 ，9999。</li>
+<li>·所在网段的其他主机对应了端口(9999)即可接收消息</li>
+</ul>
+</li>
+<li><p>2.如何实现组播，具体怎么操作？</p>
+<ul>
+<li>●发送端目的IP使用组播IP,且指定端口。</li>
+<li>●所在网段的其他主机注册了该组播工P和对应端口即可接收消息，</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信-快速入门"><a href="#TCP通信-快速入门" class="headerlink" title="TCP通信-快速入门"></a>TCP通信-快速入门</h3><ul>
+<li><p>TCP协议回顾：</p>
+<ul>
+<li>●TCP是一种面向连接，安全、可靠的传输数据的协议</li>
+<li>●传输前，采用“三次握手”方式，点对点通信，是可靠的</li>
+<li>●在连接中可进行大数据量的传输·</li>
+<li>注意：在java中只要是使用java.net.Socket:类实现通信，底层即是使用了TCP协议</li>
+</ul>
+</li>
+<li><p>◆编写客户端代码</p>
+<ul>
+<li><p>1.TCP通信的客户端的代表类是谁？</p>
+<ul>
+<li>●Socket类</li>
+<li>●public Socket(String host,int port)</li>
+</ul>
+</li>
+<li><p>2.TCP通信如何使用Socket管道发送、接收数据。</p>
+<ul>
+<li>●OutputStream getoutputStream():获得字节输出流对象（发）</li>
+<li>●Inputstream getinputStream():获得字节输入流对象（收）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆编写服务端代码、原理分析</p>
+<ul>
+<li><p>1,TCP通信服务端用的代表类？</p>
+<ul>
+<li>●ServerSocket类，注册端▣。</li>
+<li>●调用accept()方法阻塞等待接收客户端连接。得到Socket.对象。</li>
+</ul>
+</li>
+<li><p>2,TCP通信的基本原理？</p>
+<ul>
+<li>●客户端怎么发，服务端就应该怎么收。</li>
+<li>●客户端如果没有消息，服务端会进入阻塞等待。</li>
+<li>●Socket一方关闭或者出现异常、对方Socket也会失效或者出错。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信-多发多收消息"><a href="#TCP通信-多发多收消息" class="headerlink" title="TCP通信-多发多收消息"></a>TCP通信-多发多收消息</h3><ul>
+<li><p>本案例实现了多发多收，那么是否可以同时接收多个客户端的消息？</p>
+<ul>
+<li>·不可以的。</li>
+<li>·因为服务端现在只有一个线程，只能与一个客户端进行通信。</li>
+</ul>
+</li>
+<li><p>1,本次多发多收是如何实现的</p>
+<ul>
+<li>●客户端使用循环反复地发送消息。</li>
+<li>●服务端使用循环反复地接收消息。</li>
+</ul>
+</li>
+<li><p>2.现在服务端为什么不可以同时接收多个客户端的消息。</p>
+<ul>
+<li>●目前服务端是单线程的，每次只能处理一个客户端的消息。</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信-同时接受多个客户端消息"><a href="#TCP通信-同时接受多个客户端消息" class="headerlink" title="TCP通信-同时接受多个客户端消息"></a>TCP通信-同时接受多个客户端消息</h3><ul>
+<li><p>1、之前我们的通信是否可以同时与多个客户端通信，为什么？</p>
+<ul>
+<li>●不可以的</li>
+<li>●单线程每次只能处理一个客户端的Socket通信</li>
+</ul>
+</li>
+<li><p>2、如何才可以让服务端可以处理多个客户端的通信需求？</p>
+<ul>
+<li>●引入多线程。</li>
+</ul>
+</li>
+<li><p>1.本次是如何实现服务端接收多个客户端的消息的。</p>
+<ul>
+<li>●主线程定义了循环负责接收客户端Socket管道连接</li>
+<li>●每接收到一个Socketi通信管道后分配一个独立的线程负责处理它。</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信-使用线程池优化"><a href="#TCP通信-使用线程池优化" class="headerlink" title="TCP通信-使用线程池优化"></a>TCP通信-使用线程池优化</h3><ul>
+<li><p>1.本次使用线程池的优势在哪里？</p>
+<ul>
+<li>●服务端可以复用线程处理多个客户端，可以避免系统瘫痪。</li>
+<li>●适合客户端通信时长较短的场景。</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信实战案例-即时通信"><a href="#TCP通信实战案例-即时通信" class="headerlink" title="TCP通信实战案例-即时通信"></a>TCP通信实战案例-即时通信</h3><ul>
+<li><p>1.即时通信是什么含义，要实现怎么样的设计？</p>
+<ul>
+<li>●即时通信，是指一个客户端的消息发出去，其他客户端可以接收到。</li>
+<li>●之前我们的消息都是发给服务端的。</li>
+<li>●即时通信需要进行端口转发的设计思想。</li>
+</ul>
+</li>
+<li><p>1.即时通信是什么含义，要实现怎么样的设计？</p>
+<ul>
+<li>●即时通信，是指一个客户端的消息发出去，其他客户端可以接收到</li>
+<li>●即时通信需要进行端口转发的设计思想。</li>
+<li>●服务端需要把在线的Socket管道存储起来</li>
+<li>●一旦收到一个消息要推送给其他管道</li>
+</ul>
+</li>
+</ul>
+<h3 id="TCP通信实战案例-实现BS请求"><a href="#TCP通信实战案例-实现BS请求" class="headerlink" title="TCP通信实战案例-实现BS请求"></a>TCP通信实战案例-实现BS请求</h3><ul>
+<li><p>1、之前的客户端都是什么样的</p>
+<ul>
+<li>●其实就是CS架构，客户端实需要我们自己开发实现的。</li>
+</ul>
+</li>
+<li><p>2、BS结构是什么样的，需要开发客户端吗？</p>
+<ul>
+<li>●浏览器访问服务端，不需要开发客户端。</li>
+</ul>
+</li>
+<li><p>注意：服务器必须给浏览器响应HTTP协议格式的数据，否则浏览器不识别。</p>
+</li>
+<li><p>1.TCP通信如何实现BS请求网页信息回来呢？</p>
+<ul>
+<li>●客户端使用浏览器发起请求（不需要开发客户端）</li>
+<li>●服务端必须按照浏览器的协议规则响应数据。</li>
+<li>●浏览器使用什么协议规则呢？</li>
+<li>●HTTP协议（简单了解下）</li>
+</ul>
+</li>
+</ul>
+<h2 id="单元测试、反射、注解、动态代理"><a href="#单元测试、反射、注解、动态代理" class="headerlink" title="单元测试、反射、注解、动态代理"></a>单元测试、反射、注解、动态代理</h2><h3 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h3><ul>
+<li><p>◆单元测试概述</p>
+<ul>
+<li><p>●单元测试就是针对最小的功能单元编写测试代码，Java程序最小的功能单元是方法，因此，单元测试就是针对Java方法的测试，进而检查方法的正确性。</p>
+</li>
+<li><p>目前测试方法是怎么进行的，存在什么问题</p>
+<ul>
+<li>只有一个main方法，如果一个方法的测试失败了，其他方法测试会受到影响。</li>
+<li>无法得到测试的结果报告，需要程序员自己去观察测试是否成功。</li>
+<li>无法实现自动化测试。</li>
+</ul>
+</li>
+<li><p>Junit.单元测试框架</p>
+<ul>
+<li>●JUnit是使用ava语言实现的单元测试框架，它是开源的，Java开发者都应当学习并使用JUnits编写单元测试。</li>
+<li>此外，几乎所有的IDE工具都集成了JUnit,这样我们就可以直接在IDE中编写并运行Unit测试，JUnit目前最新版本是5。</li>
+</ul>
+</li>
+<li><p>JUnit优点</p>
+<ul>
+<li>●JUt可以灵活的选择执行哪些测试方法，可以一键执行全部测试方法。</li>
+<li>●Junit可以生成全部方法的测试报告。</li>
+<li>·单元测试中的某个方法测试失败了，不会影响其他测试方法的测试。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆单元测试快速入门</p>
+<ul>
+<li><p>1.JUnit单元测试的实现过程是什么样的</p>
+<ul>
+<li>●必须导入Junit框架的jar包。</li>
+<li>●定义的测试方法必须是无参数无返回值，且公开的方法。</li>
+<li>●测试方法使用@Test注解标记。</li>
+</ul>
+</li>
+<li><p>2.JUnit测试某个方法，测试全部方法怎么处理？成功的标志是什么</p>
+<ul>
+<li>·测试某个方法直接右键该方法启动测试。</li>
+<li>测试全部方法，可以选择类或者模块启动。</li>
+<li>●红色失败，绿色通过。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆单元测试常用注解</p>
+<h2 id="-9"><a href="#-9" class="headerlink" title="  - "></a>  - </h2></li>
+</ul>
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><ul>
+<li><p>反射概述</p>
+<ul>
+<li><p>概述</p>
+<ul>
+<li>反射是指对于任何一个Clss类，在”运行的时候”都可以直接得到这个类全部成分。</li>
+<li>在运行时，可以直接得到这个类的构造器对象：Constructor</li>
+<li>在运行时，可以直接得到这个类的成员变量对象：Field</li>
+<li>在运行时，可以直接得到这个类的成员方法对象：Method</li>
+<li>这种运行时动态获取类信息以及动态调用类中成分的能力称为Java语言的反射机制。</li>
+</ul>
+</li>
+<li><p>关键</p>
+<ul>
+<li>反射的第一步都是先得到编译后的Class类对象，然后就可以得到Class的全部成分。</li>
+</ul>
+</li>
+<li><p>1.反射的基本作用、关键？</p>
+<ul>
+<li>●反射是在运行时获取类的字节码文件对象：然后可以解析类中的全部成分。</li>
+<li>●反射的核心思想和关键就是：得到编译以后的class文件对象。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射获取类对象</p>
+<ul>
+<li><p>Class类中静态方法</p>
+<ul>
+<li>1、forName(String className)</li>
+<li>2、类名.class</li>
+<li>3、对象.getClass0</li>
+</ul>
+</li>
+<li><p>1.反射的第一步是什么？</p>
+<ul>
+<li>●获取Class类对象，如此才可以解析类的全部成分</li>
+</ul>
+</li>
+<li><p>2.获取Class:类的对象的三种方式</p>
+<ul>
+<li>●方式-：Class c1=Class.forName(“全类名”)月</li>
+<li>●方式二：Class c2=类名.class</li>
+<li>●方式三：Class c3=对象.getClass(0;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射获取构造器对象</p>
+<ul>
+<li><p>使用反射技术获取构造器对象并使用</p>
+<ul>
+<li>反射的第一步是先得到类对象，然后从类对象中获取类的成分对象。</li>
+<li>●Class类中用于获取构造器的方法</li>
+<li>·获取构造器的作用依然是初始化一个对象返回。</li>
+</ul>
+</li>
+<li><p>1.利用反射技术获取构造器对象的方式</p>
+<ul>
+<li>getDeclaredConstructors()</li>
+<li>getDeclaredConstructor (Class&lt;?&gt;…parameterTypes)</li>
+</ul>
+</li>
+<li><p>2.反射得到的构造器可以做什么？</p>
+<ul>
+<li><p>●依然是创建对象的</p>
+<ul>
+<li>public newlnstance(Object…initargs)</li>
+</ul>
+</li>
+<li><p>●如果是非pubc的构造器，需要打开权限（暴力反射)，然后再创建对象</p>
+<ul>
+<li>setAccessible(boolean)</li>
+<li>■反射可以破坏封装性，私有的也可以执行了。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射获取成员变量对象</p>
+<ul>
+<li><p>1.利用反射技术获取成员变量的方式</p>
+<ul>
+<li><p>●获取类中成员变量对象的方法</p>
+<ul>
+<li>getDeclaredFields()</li>
+<li>getDeclaredField (String name)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.反射得到成员变量可以做什么？</p>
+<ul>
+<li><p>●依然是在某个对象中取值和赋值。</p>
+<ul>
+<li>void set(object obj,Object value):</li>
+<li>Object get(Object obj)</li>
+</ul>
+</li>
+<li><p>●如果某成员变量是非public的，需要打开权限（暴力反射），然后再取值、赋值</p>
+<ul>
+<li>setAccessible(boolean)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射获取方法对象</p>
+<ul>
+<li><p>·获取成员方法的作用依然是在某个对象中进行执行此方法</p>
+</li>
+<li><p>1.利用反射技术获取成员方法对象的方式</p>
+<ul>
+<li>获取类中成员方法对象</li>
+<li>■getDeclaredMethods()</li>
+<li>■getDeclaredMethod (String name,class&lt;?&gt;…parameterTypes)</li>
+</ul>
+</li>
+<li><p>2.反射得到成员方法可以做什么？</p>
+<ul>
+<li><p>依然是在某个对象中触发该方法执行。</p>
+<ul>
+<li>object invoke(object obj,object…args)</li>
+</ul>
+</li>
+<li><p>●如果某成员方法是非pubc的，需要打开权限（暴力反射），然后再触发执行</p>
+<ul>
+<li>setAccessible(boolean)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射的作用-绕过编译阶段为集合添加数据</p>
+<ul>
+<li><p>·反射是作用在运行时的技术，此时集合的泛型将不能产生约束了，此时是可以为集合存入其他任意类型的元素的。</p>
+</li>
+<li><p>·泛型只是在编译阶段可以约束集合只能操作某种数据类型，在编译成C5s文件进入运行阶段的时候，其真实类型都是ArrayList了，泛型相当于被擦除了。</p>
+</li>
+<li><p>1.反射为何可以给约定了泛型的集合存入其他类型的元素？</p>
+<ul>
+<li>●编译成Clss文件进入运行阶段的时候，泛型会自动擦除。</li>
+<li>●反射是作用在运行时的技术，此时已经不存在泛型了。。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反射的作用-通用框架的底层原理</p>
+<ul>
+<li><p>反射做通用框架</p>
+<ul>
+<li>需求：给你任意一个对象，在不清楚对象字段的情况可以，可以把对象的字段名称和对应值存储到文件中去。</li>
+</ul>
+</li>
+<li><p>1.反射的作用？</p>
+<ul>
+<li>·可以在运行时得到一个类的全部成分然后操作。</li>
+<li>●可以破坏封装性。（很突出）</li>
+<li>●也可以破坏泛型的约束性。（很突出）</li>
+<li>●更重要的用途是适合：做Java高级框架</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><ul>
+<li><p>◆注解概述</p>
+<ul>
+<li><p>。Java注解(Annotation)又称Java标注，是JDK5.0引入的一种注释机制。</p>
+</li>
+<li><p>。Java语言中的类、构造器、方法、成员变量、参数等都可以被注解进行标注。</p>
+</li>
+<li><p>注解的作用</p>
+<ul>
+<li>·对Java中类、方法、成员变量做标记，然后进行特殊处理，至于到底做何种处理由业务需求来决定。</li>
+<li>·例如：JUnit框架中，标记了注解@Test的方法就可以被当成测试方法执行，而没有标记的就不能当成测试方法执行。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆自定义注解</p>
+<ul>
+<li><p>自定义注解格式</p>
+<ul>
+<li>。自定义注解就是自己做一个注解来使用。</li>
+</ul>
+</li>
+<li><p>特殊属性</p>
+<ul>
+<li>●value属性，如果只有一个value属性的情况下，使用value属性的时候可以省略value名称不写！</li>
+<li>●但是如果有多个属性，且多个属性没有默认值，那么vlue名称是不能省略的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆元注解</p>
+<ul>
+<li><p>●元注解：就是注解注解的注解。</p>
+</li>
+<li><p>元注解有两个：</p>
+<ul>
+<li><p>●@Target:约束自定义注解只能在哪些地方使用，</p>
+<ul>
+<li>@Target中可使用的值定义在ElementType枚举类中，常用值如下</li>
+<li>■ TYPE,类，接口</li>
+<li>■ FIELD,成员变量</li>
+<li>■ METHOD,成员方法</li>
+<li>■ PARAMETER,方法参数</li>
+<li>■ CONSTRUCTOR,构造器</li>
+<li>■ LOCAL_VARIABLE,局部变量</li>
+</ul>
+</li>
+<li><p>●@Retention:申明注解的生命周期</p>
+<ul>
+<li>@Retention中可使用的值定义在RetentionPolicy枚举类中，常用值如下</li>
+<li>■ SOURCE：注解只作用在源码阶段，生成的字节码文件中不存在</li>
+<li>■ CLASS:注解作用在源码阶段，字节码文件阶段，运行阶段不存在，默认值.</li>
+<li>■ RUNTIME:注解作用在源码阶段，字节码文件阶段，运行阶段（开发常用）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆注解解析</p>
+<ul>
+<li><p>注解的解析</p>
+<ul>
+<li>●注解的操作中经常需要进行解析，注解的解析就是判断是否存在注解，存在注解就解析出内容。</li>
+</ul>
+</li>
+<li><p>与注解解析相关的接口</p>
+<ul>
+<li>●Annotation:注解的顶级接口，注解都是Annotation类型的对象</li>
+<li>●AnnotatedElement:该接口定义了与注解解析相关的解析方法</li>
+<li>●所有的类成分Class,Method,Field,Constructor,都实现了AnnotatedElement:接口他们都拥有解析注解的能力：</li>
+</ul>
+</li>
+<li><p>解析注解的技巧</p>
+<ul>
+<li>●注解在哪个成分上，我们就先拿哪个成分对象。</li>
+<li>●比如注解作用成员方法，则要获得该成员方法对应的Method对象，再来拿上面的注解</li>
+<li>●比如注解作用在类上，则要该类的Class对象，再来拿上面的注解</li>
+<li>●比如注解作用在成员变量上，则要获得该成员变量对应的Fild对象，再来拿上面的注解</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>◆注解的应用场景一：junit框架</p>
+</li>
+</ul>
+<h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><ul>
+<li><p>◆动态代理概述、快速入门</p>
+<ul>
+<li><p>什么是代理？</p>
+<ul>
+<li>·代理：指某些场景下对象会找一个代理对象，来辅助自己完成一些工作，如：歌星（经济人），买房的人（房产中介）。</li>
+<li>代理主要是对对象的行为额外做一些辅助操作。</li>
+</ul>
+</li>
+<li><p>如何创建代理对象</p>
+<ul>
+<li>Java中代理的代表类是：java.lang.reflect.Proxy。</li>
+<li>Proxy提供了一个静态方法，用于为对象产生一个代理对象返回。</li>
+</ul>
+</li>
+<li><p>1.代理是什么？</p>
+<ul>
+<li>●一个对象，用来对被代理对象的行为额外做一些辅助工作。</li>
+</ul>
+</li>
+<li><p>2.在ava中实现动态代理的步骤是什么样的？</p>
+<ul>
+<li>●必须存在接▣</li>
+<li>●被代理对象需要实现接▣。</li>
+<li>●使用Proxy类提供的方法，的对象的代理对象。</li>
+</ul>
+</li>
+<li><p>3.通过代理对象调用方法，执行流程是什么样的？</p>
+<ul>
+<li>●先走向代理</li>
+<li>●代理可以为方法额外做一些辅助工作。</li>
+<li>●开发真正触发对象的方法的执行。</li>
+<li>●回到代理中，由代理负责返回结果给方法的调用者。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆动态代理的应用案例：做性能分析、代理的好处小结</p>
+<p>  - </p>
+<ul>
+<li><p>动态代理的优点</p>
+<ul>
+<li>可以在不改变方法源码的情况下，实现对方法功能的增强，提高了代码的复用。</li>
+<li>简化了编程工作、提高了开发效率，同时提高了软件系统的可扩展性，。</li>
+<li>可以为被代理对象的所有方法做代理。</li>
+<li>非常的灵活，支持任意接口类型的实现类对象做代理，也可以直接为接本身做代理。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="XML、XML解析、设计模式等"><a href="#XML、XML解析、设计模式等" class="headerlink" title="XML、XML解析、设计模式等"></a>XML、XML解析、设计模式等</h2><h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><ul>
+<li><p>◆XML概述</p>
+<ul>
+<li><p>XML是可扩展标记语言(eXtensible Markup Language)的缩写，它是是一种数据表示格式，可以描述非常复杂的数据结构，常用于传输和存储数据。</p>
+</li>
+<li><p>XML的几个特点和使用场景</p>
+<ul>
+<li>一是纯文本，默认使用UTF-8编码；二是可嵌套；</li>
+<li>如果把XML内容存为文件，那么它就是一个XML文件。</li>
+<li>XML的使用场景：XML内容经常被当成消息进行网络传输，或者作为配置文件用于存储系统的信息。</li>
+</ul>
+</li>
+<li><p>1.XML是什么？</p>
+<ul>
+<li>●XML的全称为(EXtensible Markup Language),是一种可扩展的标记语言。它是是一种数据表示格式，可以用于自定义数据格式。</li>
+</ul>
+</li>
+<li><p>2.XML的作用是什么？</p>
+<ul>
+<li>●用于进行存储数据和传输数据</li>
+<li>●作为软件的配置文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆XML的创建、语法规则</p>
+<ul>
+<li><p>XML的创建</p>
+<ul>
+<li>就是创建一个XML类型的文件，要求文件的后缀必须使用xml,如world.xml</li>
+</ul>
+</li>
+<li><p>XML的语法规则</p>
+<ul>
+<li>●XML文件的后缀名为：xml</li>
+<li>·文档声明必须是第一行</li>
+</ul>
+</li>
+<li><p>XML的标签（元素）规则</p>
+<ul>
+<li>●标签由一对尖括号和合法标识符组成：<name></name>,必须存在一个根标签，有且只能有一个。</li>
+<li>●标签必须成对出现，有开始，有结束：<name></name></li>
+<li>●特殊的标签可以不成对，但是必须有结束标记，如：<b></b></li><b>
+<li>●标签中可以定义属性，属性和标签名空格隔开，属性值必须用引号引起来<student id="“1”"></student></li>
+<li>●标签需要正确的嵌套</li>
+</b></ul><b>
+</b></li><b>
+<li><p>XML的其他组成</p>
+<ul>
+<li><p>●XML文件中可以存在CDATA区：&lt;I[CDATA[.内容.·]&gt;</p>
+</li>
+<li><p>●XML文件中可以存在以下特殊字符</p>
+<ul>
+<li>&lt;  &gt; &amp; ‘ “</li>
+<li>&lt;   &gt;    &amp;   '   "</li>
+</ul>
+</li>
+<li><p>●XML文件中可以定义注释信息：&lt;！-注释内容-&gt;</p>
+</li>
+</ul>
+</li>
+<li><p>1.XML的组成格式要求是什么样的？</p>
+<ul>
+<li>●文件后缀必须是xml</li>
+<li>·文档声明必须是第一行</li>
+<li>●必须存在一个根标签，有且只能有一个</li>
+<li>●XML文件中可以定义注释信息：<!--注释内容--></li>
+<li>●标签必须成对出现，有开始，有结束标签：<name></name></li>
+<li>●必须能够正确的嵌套</li>
+</ul>
+</li>
+</b></ul><b>
+</b></li><b>
+<li><p>◆XML文档约束方式</p>
+<ul>
+<li><p>问题：由于XML文件可以自定义标签，导致XML文件可以随意定义，程序在解析的时候可能出现问题。</p>
+</li>
+<li><p>什么是文档约束？</p>
+<ul>
+<li>●文档约束：是用来限定x文件中的标签以及属性应该怎么写。</li>
+<li>以此强制约束程序员必须按照文档约束的规定来编写xml文件。</li>
+</ul>
+</li>
+<li><p>文档约束的分类</p>
+<ul>
+<li><p>DTD</p>
+<ul>
+<li><p>XML的文档约束-DTD的作用和问题？</p>
+<ul>
+<li>·可以约束XML文件的编写。</li>
+<li>·不能约束具体的数据类型。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>schema</p>
+<ul>
+<li><p>文档约束-schema</p>
+<ul>
+<li>●schema可以约束具体的数据类型，约束能力上更强大。</li>
+<li>●schema本身也是一个xml文件，本身也受到其他约束文件的要求，所以编写的更加严谨</li>
+</ul>
+</li>
+<li><p>后缀名  .xsd</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</b></ul><b>
+<h3 id="XML解析技术"><a href="#XML解析技术" class="headerlink" title="XML解析技术"></a>XML解析技术</h3><ul>
+<li><p>◆XML解析技术概述</p>
+<ul>
+<li><p>什么是XML解析</p>
+<ul>
+<li>使用程序读取XML中的数据</li>
+</ul>
+</li>
+<li><p>两种解析方式</p>
+<ul>
+<li>●SAX解析</li>
+<li>●DOM解析</li>
+<li></li>
+</ul>
+</li>
+<li><ul>
+<li><p>1.Dom解析的文档对象模型是怎么样的</p>
+<ul>
+<li>Documenti对象：整个xml文档</li>
+<li>Element对象：标签</li>
+<li>Attribute对象：属性</li>
+<li>Text对象：文本内容</li>
+</ul>
+</li>
+<li><p>2.Dom解析常用技术框架</p>
+<ul>
+<li>·Dom4</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>◆Dom4J解析XML文件</p>
+<p>  - </p>
+</li>
+<li><p>◆Dom4J解析XML文件-案例实战</p>
+</li>
+</ul>
+<h3 id="XML检索技术：Xpath"><a href="#XML检索技术：Xpath" class="headerlink" title="XML检索技术：Xpath"></a>XML检索技术：Xpath</h3><ul>
+<li><p>如果需要从XML文件中检索需要的某个信息（如name)怎么解决？</p>
+<ul>
+<li>●Dom4j需要进行文件的全部解析，然后再寻找数据。</li>
+<li>●Xpath技术更加适合做信息检索。</li>
+</ul>
+</li>
+<li><p>XPath介绍</p>
+<ul>
+<li>●XPth在解析XML文档方面提供了一独树一帜的路径思想，更加优雅，高效</li>
+<li>●XPth使用路径表达式来定位XML文档中的元素节点或属性节点。</li>
+</ul>
+</li>
+<li><p>Xpath的四大检索方案</p>
+<ul>
+<li>●检索XML文件中的信息</li>
+<li>●绝对路径：/根元素/子元素/孙元素</li>
+<li>●相对路径：./子元素/孙元素</li>
+<li>●全文检索：//contact</li>
+<li>●属性查找：//@属性名、//元素[@属性名]、//元素[@属性名=’值]</li>
+</ul>
+</li>
+</ul>
+<h3 id="设计模式：工厂模式"><a href="#设计模式：工厂模式" class="headerlink" title="设计模式：工厂模式"></a>设计模式：工厂模式</h3><ul>
+<li><p>什么是工厂设计模式？</p>
+<ul>
+<li>之前我们创建类对象时，都是使用new对象的形式创建，在很多业务场景下也提供了不直接new的方式。</li>
+<li>工厂模式(Factory Pattern)是Java中最常用的设计模式之一，这种类型的设计模式属于创建型模式，它提供了一种获取对象的方式。</li>
+</ul>
+</li>
+<li><p>工厂设计模式的作用：</p>
+<ul>
+<li>工厂的方法可以封装对象的创建细节，比如：为该对象进行加工和数据注入。</li>
+<li>可以实现类与类之间的解耦操作（核心思想）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="设计模式：装饰模式"><a href="#设计模式：装饰模式" class="headerlink" title="设计模式：装饰模式"></a>设计模式：装饰模式</h3><ul>
+<li><p>什么是装饰设计模式？</p>
+<ul>
+<li>●创建一个新类，包装原始类，从而在新类中提升原来类的功能。</li>
+</ul>
+</li>
+<li><p>装饰设计模式的作用：</p>
+<ul>
+<li>·作用：装饰模式指的是在不改变原类的基础上，动态地扩展一个类的功能。</li>
+<li>·装饰模式指的是在不改变原类的基础上，动态地扩展一个类的功能</li>
+<li>定义父类。</li>
+<li>定义原始类，继承父类，定义功能。</li>
+<li>定义装饰类，继承父类，包装原始类，增强功能！！</li>
+</ul>
+</li>
+</ul>
+</b></object></li></ul></li></ul></li></ul>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itzyj</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://hcyany.github.io/2023/07/16/java-se-ji-chu/">http://hcyany.github.io/2023/07/16/java-se-ji-chu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itzyj</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                                    <span class="chip bg-color">作者：赵燕军</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/07/16/java-se-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java SE基础">
+                        
+                        <span class="card-title">Java SE基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java SE基础
+Java技术体系
+技术体系
+- 
+
+cmd常用命令
+- 
+开发步骤
+- 
+- 
+
+Java基础语法
+字面量
+- 
+变量
+ * 变量：存储数据的内存区域
+   
+    * 作用：存储数据
+   
+   
+ * • 类变量
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            itzyj
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                        <span class="chip bg-color">作者：赵燕军</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/07/16/java-web/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Java Web">
+                        
+                        <span class="card-title">Java Web</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            定义文档的主体
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            itzyj
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%9C%E8%80%85%EF%BC%9A%E8%B5%B5%E7%87%95%E5%86%9B/">
+                        <span class="chip bg-color">作者：赵燕军</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">itzyj</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
